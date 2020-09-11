@@ -1,0 +1,27 @@
+table p {
+  margin:0;
+}
+
+ul p{
+  margin-top:1px;
+}
+
+@media screen and (max-width: 500px){
+
+  p, .rst-content div[class^='highlight'], .wy-table-responsive {
+    margin-right: 0em;
+  }
+  .rst-content p.rubric {
+    float: inherit;
+    margin-top: inherit;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: inherit;
+    width: inherit;
+    text-align:inherit;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wy-table-responsive {
+    overflow: auto; } }

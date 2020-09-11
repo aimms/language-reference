@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="discrete-distributions-pspic1.pdf"
+   id="svg7"
+   version="1.2"
+   viewBox="0 0 62.359371 49.449284"
+   height="49.449284pt"
+   width="62.359371pt">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview9"
+     inkscape:window-height="480"
+     inkscape:window-width="640"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     transform="translate(-113.38281,-411.67969)"
+     id="surface1">
+    <path
+       id="path2"
+       transform="matrix(0.1,0,0,-0.1,0,842)"
+       d="m 1162.1875,3818.0859 v 15.4688 m 56.6797,-15.4688 v 107.8907 m 56.6797,-107.8907 v 281.875 m 56.7187,-281.875 v 445.7813 m 56.6797,-445.7813 v 485.1172 m 56.6797,-485.1172 V 4203.75 m 56.6797,-385.6641 v 230.8204 m 56.7187,-230.8204 v 104.6875 m 56.6797,-104.6875 v 34.4922 m 56.6797,-34.4922 v 5.8594"
+       style="fill:none;stroke:#000000;stroke-width:19.9253;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" />
+    <path
+       id="path4"
+       transform="matrix(0.1,0,0,-0.1,0,842)"
+       d="m 1133.8281,3812.6953 h 623.5938"
+       style="fill:none;stroke:#000000;stroke-width:7.97011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+</svg>
