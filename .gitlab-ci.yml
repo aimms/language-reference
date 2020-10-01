@@ -16,9 +16,27 @@ before_script:
 linkcheck:
   stage: test
   script:
-  - sphinx-build -b linkcheck . _build/html
+  - python3.8 -msphinx -W -b linkcheck . _build/linkcheck
   tags: 
     - ubuntu
+
+build:
+  stage: test
+  script:
+    - python3.8 -msphinx -W -b html . _build/html
+  tags: 
+    - ubuntu
+
+deploy:
+  stage: deploy
+  script:
+    - python3.8 -msphinx -b html . _build/html 
+    - python3.8 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
+    - rsync -rt _build/html/ support@data.aimms.com:/home/aimms/www/documentation.aimms.com/language-reference
+  tags: 
+    - ubuntu
+  only:
+    - master
 
 
 
