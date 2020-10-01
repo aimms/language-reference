@@ -92,7 +92,7 @@ known quantity), and can be declared as follows.
 	    Index :  (d,c);
 	}
 
-In this example the identifier ``Distance`` is referred to as an ndexed
+In this example the identifier ``Distance`` is referred to as an indexed
 identifier, because it has a nonempty index domain.
 
 .. rubric:: Scalar data

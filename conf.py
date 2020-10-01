@@ -45,7 +45,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.builders.linkcheck',
     'sphinx_aimms_theme',
-    'sphinxcontrib.bibtex'
+    'sphinxcontrib.bibtex',
+    'sphinx_last_updated_by_git'
 ]
 
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
@@ -82,7 +83,7 @@ language = None
 exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'default'
+pygments_style = 'aimmslexer'
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -149,11 +150,14 @@ latex_elements = {
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    'pointsize': '11pt',
+    #'pointsize': '11pt',
 
     # Additional stuff for the LaTeX preamble.
     #
     'preamble': my_preamble,
+    #changes color of internal hyperlinks
+    'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
+    'sphinxsetup': 'InnerLinkColor={RGB}{203,65,84}, OuterLinkColor={RGB}{0,102,204}',
 
     # Latex figure (float) alignment
     #
@@ -163,18 +167,21 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
+latex_doc_name = 'AIMMS_LR.tex'
+
 latex_documents = [
-    (master_doc, 'master.tex', book_title,
-     u'AIMMS User Support', 'manual', True),
+    (master_doc, latex_doc_name, book_title,
+     u'AIMMS', 'manual', True),
 ]
 
 latex_logo = "AIMMS_logo_BlackWhite-PRINT-900x508.jpg"
 
-latex_show_pagerefs = True
+latex_show_pagerefs = False
 
-latex_show_urls = 'footnote'
+#latex_show_urls = 'footnote'
 
-latex_additional_files = ['_fortex/Makefile']
+#latex_additional_files = ['_fortex/Makefile']
+
 
 # -- Options for manual page output ------------------------------------------
 
