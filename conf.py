@@ -93,6 +93,17 @@ pygments_style = 'aimmslexer'
 
 html_theme = 'sphinx_aimms_theme'
 
+if os.name == 'nt':
+   
+   Display_edit_on_gitlab = True
+   # if builds locally (a windows machine), do not displays external extensions (Google Analytics, Community Embeddable, Algolia search, etc.)
+   Display_3rd_Party_Extensions = False
+else:
+
+   # if builds on GitLab (a Linux machine), force "Edit on Gitlab" not to be shown, and displays external extensions (Google Analytics, Community Embeddable, Algolia search, etc.)
+   Display_edit_on_gitlab = False
+   Display_3rd_Party_Extensions = True
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -103,10 +114,12 @@ html_theme_options = {
     'doc_title': 'Language Reference',
     'home_page_title': 'AIMMS Language Reference',
     'home_page_description': 'Find all AIMMS modeling language descriptions and constructs',
-    'display_community_embeddable' : False,
+    'display_community_embeddable' : True,
     'display_local_toc' : True,
     'titles_only' : True,
     'display_algolia_search': False,
+    'google_analytics_id': 'UA-1290545-13',
+    'generate_google_analytics' : Display_3rd_Party_Extensions,
 
 }
 
