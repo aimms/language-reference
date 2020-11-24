@@ -7,7 +7,7 @@ Expressions and Statements Allowed in Definitions
 
 In most applications, the functional relationship between input and
 output identifiers in the definition of a set or a parameter can be
-expressed as an ordinary set-valued, set element-valued or numerical
+expressed as an ordinary string-valued, set-valued, set element-valued or numerical
 expression. In rare occasions where a functional relationship cannot be
 written as a single symbolic statement, a function or procedure can be
 used instead.
@@ -16,6 +16,8 @@ used instead.
 
 In summary, you may use one of the following items in set and parameter
 definitions:
+
+-  a string-valued expression,
 
 -  a set-valued expression,
 
@@ -69,7 +71,13 @@ Since there is no cyclic reference, the above definition is allowed.
 
 You can use a call to either a function or a procedure to compute those
 definitions that cannot be expressed as a single statement. If you use a
-procedure, then only a single output argument is allowed. In addition,
+procedure, then 
+
+#.  for sets, no arguments are allowed, 
+
+#.  for parameters, some input arguments and at most one output argument are allowed. 
+
+In addition,
 the procedure cannot have any side-effects on other global sets or
 parameters. This means that no direct assignments to other global sets
 or parameters are allowed.
