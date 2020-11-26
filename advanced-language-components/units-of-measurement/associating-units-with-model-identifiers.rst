@@ -7,6 +7,8 @@ Associating Units with Model Identifiers
 
 .. rubric:: The :any:`Unit` attribute
 
+.. _attribute.unit:
+
 To associate units with scalar or multi-dimensional identifiers in your
 model, you can specify a unit definition for such identifiers through
 the :any:`Unit` attribute. The :any:`Unit` attribute is only supported for the
