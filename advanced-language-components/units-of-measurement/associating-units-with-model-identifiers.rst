@@ -5,13 +5,13 @@ Associating Units with Model Identifiers
 
 .. _unit-LR:
 
-.. rubric:: The :any:`Unit` attribute
+.. rubric:: The Unit attribute
 
 .. _attribute.unit:
 
 To associate units with scalar or multi-dimensional identifiers in your
 model, you can specify a unit definition for such identifiers through
-the :any:`Unit` attribute. The :any:`Unit` attribute is only supported for the
+the Unit attribute. The Unit attribute is only supported for the
 following identifier types:
 
 -  parameters,
@@ -28,17 +28,17 @@ following identifier types:
 
 -  internal and external functions.
 
-.. rubric:: Visibility of the :any:`Unit` attribute
+.. rubric:: Visibility of the Unit attribute
 
-Within the AIMMS **Model Explorer**, the :any:`Unit` attribute is only
+Within the AIMMS **Model Explorer**, the Unit attribute is only
 visible in the attribute forms of the identifier types listed above if
 your model already contains the declarations of one or more quantities.
-If you only want to use the :any:`Unit` attribute to specify a scale factor
-for an identifier (see below), you can make the :any:`Unit` attribute
+If you only want to use the Unit attribute to specify a scale factor
+for an identifier (see below), you can make the Unit attribute
 visible in all attribute forms by adding a *unitless* quantity to your
 model (i.e. a quantity with base unit 1).
 
-.. rubric:: :any:`Unit` attribute value
+.. rubric:: Unit attribute value
 
 In its simplest form, the unit definition of a parameter, variable or
 constraint is just a reference to a base or compound unit symbol. In
@@ -73,7 +73,7 @@ derived unit symbol ``km``.
 
 .. rubric:: Units also for scaling
 
-When you do not use unit symbols, you can still use the :any:`Unit`
+When you do not use unit symbols, you can still use the Unit
 attribute to indicate the appropriate scale factor to be used for an
 identifier. These scale factors, whether or not in the presence of unit
 symbols, will be used by AIMMS to scale the corresponding data during
@@ -98,10 +98,10 @@ will perform the following unit-related tasks for you:
 
 .. rubric:: The ``.Unit`` suffix
 
-For all identifier types for which you can specify a :any:`Unit` attribute,
+For all identifier types for which you can specify a Unit attribute,
 there is also an associated ``.Unit`` suffix. The value of the ``.Unit``
 suffix is a unit expression that equals the unit specified within the
-:any:`Unit` attribute of the identifier at hand.
+Unit attribute of the identifier at hand.
 
 .. rubric:: Use of the ``.Unit`` suffix
 
@@ -116,7 +116,7 @@ The ``.Unit`` suffix is most commonly used in the following situations:
    :ref:`sec:set-expr.string.format`), and
 
 -  when performing sensitivity analysis of mathematical programs in the
-   presence of variables and constraints which have a non-empty :any:`Unit`
+   presence of variables and constraints which have a non-empty Unit
    attribute (see :ref:`sec:units.scaling.mp`).
 
 .. rubric:: Indices not always required
@@ -124,7 +124,7 @@ The ``.Unit`` suffix is most commonly used in the following situations:
 If you want to reference the ``.Unit`` suffix of a multidimensional
 identifier, it is not always necessary to use the corresponding indices
 of the identifier in its ``.Unit`` suffix reference. The use of indices
-is only necessary if the :any:`Unit` attribute actively depends on the
+is only necessary if the Unit attribute actively depends on the
 indices, for instance, because it
 
 -  contains a multidimensional scale factor, or
@@ -147,7 +147,7 @@ obtain through the (scalar) reference
 
 .. rubric:: Unit-valued parameters are permitted
 
-When the :any:`Unit` attribute of an identifier contains references to
+When the Unit attribute of an identifier contains references to
 *unit-valued* parameters (see :ref:`sec:units.unit-par`), such
 references will be evaluated, within the context of the ``.Unit``
 suffix, to their corresponding unit expressions. Thus, the ``.Unit``

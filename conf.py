@@ -120,6 +120,10 @@ html_theme_options = {
     'display_algolia_search': False,
     'google_analytics_id': 'UA-1290545-13',
     'generate_google_analytics' : Display_3rd_Party_Extensions,
+    'display_algolia_search' : Display_3rd_Party_Extensions,
+    'algolia_appid': 'BH4D9OD16A', 
+    'algolia_appkey': 'f7e44f5b57ababa5c5ceb1e1087ae3b1', 
+    'algolia_indexname': 'aimms',
 
 }
 
