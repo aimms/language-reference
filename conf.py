@@ -20,7 +20,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = u'AIMMS Language Reference'
-copyright = u'2020, AIMMS B.V.'
+copyright = u'2021, AIMMS B.V.'
 author = u'AIMMS'
 
 book_title = "Language Reference"
@@ -48,6 +48,8 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx_last_updated_by_git'
 ]
+
+bibtex_bibfiles = "appendices/bibbase.bib"
 
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
                                   (None,'objects-functionreference.inv'))}
