@@ -49,7 +49,7 @@ extensions = [
     'sphinx_last_updated_by_git'
 ]
 
-bibtex_bibfiles = "appendices/bibbase.bib"
+bibtex_bibfiles = ['appendices/bibbase.bib']
 
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
                                   (None,'objects-functionreference.inv'))}
