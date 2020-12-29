@@ -36,6 +36,8 @@ There are three ways in which index binding takes place:
 
 -  *context* binding.
 
+.. _in-operator:
+
 .. rubric:: Local binding
 
 *Local binding* takes place through the use of an ``IN`` modifier at the
