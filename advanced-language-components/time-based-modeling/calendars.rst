@@ -103,7 +103,7 @@ Any period references that start outside this range will be ignored by
 the system. This makes it easy to select all relevant time-dependent
 data from a database.
 
-.._calendar.reference_date_format:
+.. _calendar.reference_date_format:
 
 .. rubric:: Reference date format
 
