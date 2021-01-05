@@ -23,31 +23,31 @@ new ones are discussed in this section.
 
 .. table:: Calendar attributes
 
-   +--------------------+-------------------+----------------------------+-----------+
-   | Attribute          | Value-type        | See also page              | Mandatory |
-   +====================+===================+============================+===========+
-   | ``BeginDate``      | *string*          |                            | yes       |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``EndDate``        | *string*          |                            | yes       |
-   +--------------------+-------------------+----------------------------+-----------+
-   | :any:`Unit`        | *unit*            |                            | yes       |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``TimeslotFormat`` | *string*          |                            | yes       |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``Index``          | *identifier-list* | :ref:`attr:set.index`      | yes       |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``Parameter``      | *identifier-list* | :ref:`attr:set.parameter`  |           |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``Text``           | *string*          | :ref:`attr:prelim.text`    |           |
-   +--------------------+-------------------+----------------------------+-----------+
-   | ``Comment``        | *comment string*  | :ref:`attr:prelim.comment` |           |
-   +--------------------+-------------------+----------------------------+-----------+
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | Attribute          | Value-type        | See also page                                                | Mandatory |
+   +====================+===================+==============================================================+===========+
+   | ``BeginDate``      | *string*          |                                                              | yes       |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``EndDate``        | *string*          |                                                              | yes       |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``Unit``           | *unit*            |                                                              | yes       |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``TimeslotFormat`` | *string*          |                                                              | yes       |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``Index``          | *identifier-list* | :ref:`The Index attribute <attr:set.index>`                  | yes       |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``Parameter``      | *identifier-list* | :ref:`The Parameter attribute <attr:set.parameter>`          |           |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``Text``           | *string*          | :ref:`The Text and Comment attributes <attr:prelim.text>`    |           |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
+   | ``Comment``        | *comment string*  | :ref:`The Text and Comment attributes <attr:prelim.comment>` |           |
+   +--------------------+-------------------+--------------------------------------------------------------+-----------+
 
 .. _calendar.unit:
 
 .. rubric:: Unit
 
-The :any:`Unit` attribute defines the length of a single time slot in the
+The ``Unit`` attribute defines the length of a single time slot in the
 calendar. It must be specified as one of the following time units or an
 integer multiple thereof:
 
@@ -76,11 +76,11 @@ the length of the time slots in the calendar
 .. rubric:: Not predefined
 
 Although you can only use the fixed unit names listed above to specify
-the :any:`Unit` attribute of a calendar, AIMMS does not have a predefined
+the ``Unit`` attribute of a calendar, AIMMS does not have a predefined
 ``Quantity`` for time (see also :ref:`chap:units`). This means that the
 units of time you want to use in your model, do not have to coincide
 with the time units required in the calendar declaration. Therefore,
-prior to specifying the :any:`Unit` attribute of a calendar, you must first
+prior to specifying the ``Unit`` attribute of a calendar, you must first
 specify a quantity defining both your own time units and the conversion
 factors to the time units required by AIMMS. In the **Model Explorer**,
 AIMMS will automatically offer to add the relevant time ``Quantity`` to
@@ -102,6 +102,8 @@ the ``EndDate`` does not lie on a 3-day boundary from the ``BeginDate``.
 Any period references that start outside this range will be ignored by
 the system. This makes it easy to select all relevant time-dependent
 data from a database.
+
+.._calendar.reference_date_format:
 
 .. rubric:: Reference date format
 
