@@ -5,7 +5,7 @@ Unit-based Scaling
 
 .. rubric:: Scaled versus unscaled values
 
-With each identifier for which you have specified a :any:`Unit` attribute,
+With each identifier for which you have specified a Unit attribute,
 AIMMS associates two values:
 
 -  the *scaled* value (i.e. expressed in terms of the unit specified),
@@ -61,7 +61,7 @@ for internal storage.
 .. rubric:: Override default scaling
 
 You can override the default scaling based on the content of the
-:any:`Unit` attribute either locally within the graphical end-user
+Unit attribute either locally within the graphical end-user
 interface or model source, or globally using ``Conventions``. Local and
 global overrides are discussed in complete detail in
 :ref:`sec:units.local-override` and :ref:`sec:units.convention`.
@@ -75,7 +75,7 @@ Unit-based Scaling of Mathematical Programs
 
 During communications with a solver, AIMMS will scale all variables and
 constraints (including variable definitions) in accordance with the
-scale factor associated with the :any:`Unit` attribute in their
+scale factor associated with the Unit attribute in their
 declaration. This choice is based on the assumption that the specified
 units reflect the expected order of magnitude of the numbers associated
 with the variables, parameters and constraints, and that these numbers

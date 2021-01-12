@@ -35,7 +35,7 @@ most common declaration errors for this type of model.
 	+------------------+----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 	| ``Range``        | *range*                    | :ref:`here <attr:var.range>`                                                                                                          |
 	+------------------+----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`Unit`      | *unit-valued expression*   | :ref:`The Parameter Unit attribute <attr:par.unit>`, :ref:`The Variable Unit attribute <attr:var.unit>`                               |
+	| ``Unit``         | *unit-valued expression*   | :ref:`The Parameter Unit attribute <attr:par.unit>`, :ref:`The Variable Unit attribute <attr:var.unit>`                               |
 	+------------------+----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 	| ``Text``         | *string*                   | :ref:`here <attr:prelim.text>`, :ref:`here <attr:par.text>`                                                                           |
 	+------------------+----------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -137,9 +137,9 @@ values.
 
 .. _complementarity_variable.unit:
 
-.. rubric:: The :any:`Unit` attribute
+.. rubric:: The Unit attribute
 
-Providing a :any:`Unit` for a complementarity variable will help you in a
+Providing a unit for a complementarity variable will help you in a
 number of ways.
 
 -  AIMMS will help you to check the consistency of all the constraints

@@ -72,7 +72,7 @@ model.
 Without any such convention, AIMMS will use the default convention,
 i.e. arguments will be scaled according to the unit specified for each
 argument, and AIMMS will assume that the result of an external function
-is scaled according to the unit specified in its :any:`Unit` attribute.
+is scaled according to the unit specified in its Unit attribute.
 Unit analysis for functions and procedures is discussed in full detail
 in :ref:`sec:units.analysis.arg`.
 

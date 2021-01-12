@@ -40,7 +40,7 @@ icon. The attributes of parameters are given in
 	+------------------+-----------------------------+---------------------------------------------------------------+
 	| ``Default``      | *constant-expression*       |                                                               |
 	+------------------+-----------------------------+---------------------------------------------------------------+
-	| :any:`Unit`      | *unit-expression*           |                                                               |
+	| ``Unit``         | *unit-expression*           |                                                               |
 	+------------------+-----------------------------+---------------------------------------------------------------+
 	| ``Property``     | ``NoSave``, ``Stochastic``, |                                                               |
 	+------------------+-----------------------------+---------------------------------------------------------------+
@@ -286,14 +286,14 @@ lead to severe inefficiencies for high-dimensional defined parameters.
 You can find a more detailed discussion on this issue in
 :ref:`sec:eff.definition`.
 
-.. rubric:: The :any:`Unit` attribute
+.. rubric:: The Unit attribute
    :name: attr:par.unit
 
 .. _parameter.unit:
 
-By associating a :any:`Unit` to every numerical identifier in your model,
+By associating a unit to every numerical identifier in your model,
 you can let AIMMS help you check your model's consistency. AIMMS also
-uses the :any:`Unit` attribute when presenting data and results in both the
+uses the Unit attribute when presenting data and results in both the
 output files of a model and the graphical user interface. You can find
 more information on the use of units in :ref:`chap:units`.
 

@@ -25,7 +25,7 @@ attributes of variables are given in :numref:`table:var.attr-variable`.
 	+------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 	| ``Default``      | *constant-expression*                                         | :ref:`here <attr:par.default>`                                                                                             |
 	+------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-	| :any:`Unit`      | *unit-expression*                                             | :ref:`The Parameter Unit attribute <attr:par.unit>`, :ref:`chap:units`                                                     |
+	| ``Unit``         | *unit-expression*                                             | :ref:`The Parameter Unit attribute <attr:par.unit>`, :ref:`chap:units`                                                     |
 	+------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 	| ``Priority``     | *expression*                                                  |                                                                                                                            |
 	+------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -180,12 +180,12 @@ the solver. You can specify the default value using the ``Default``
 attribute. The value of this attribute *must* be a constant expression.
 If you do not provide a default value, AIMMS will use a default of 0.
 
-.. rubric:: The :any:`Unit` attribute
+.. rubric:: The Unit attribute
    :name: attr:var.unit
 
 .. _variable.unit:
 
-Providing a :any:`Unit` for every variable and constraint in your model
+Providing a unit for every variable and constraint in your model
 will help you in a number of ways.
 
 -  AIMMS will help you to check the consistency of all your constraints
