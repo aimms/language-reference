@@ -137,6 +137,8 @@ html_context = {
     'css_files': ['_static/css.css'],
 }
 
+html_last_updated_fmt = '%b %d, %Y'
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
