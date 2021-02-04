@@ -93,7 +93,7 @@ application. More specifically, the API functions allow you to
 
 AIMMS only provides a ``C`` interface to the functions in its API. When
 you are using a different language which requires a different interface,
-you should implement the required interface yourself in /++ or in a
+you should implement the required interface yourself in ``C++`` or in a
 compatible language.
 
 .. rubric:: Single example
