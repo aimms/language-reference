@@ -107,7 +107,7 @@ The ``SolveMasterMIP`` procedure implements the actual Benders'
 decomposition algorithm using the modern approach. It first installs a
 lazy constraint callback for which the module implements four different
 versions. We assume that the control parameters have their default
-settings (see :numref:`table:benders.controlparam`) in which case the
+settings (see :ref:`this table <table:benders.controlparam>`) in which case the
 procedure ``BendersCallbackLazyFeasOnlySingleMIP`` is installed. Next
 the master problem is solved and if a feasible solution is found, the
 subproblem is solved one last time to obtain a combined optimal solution

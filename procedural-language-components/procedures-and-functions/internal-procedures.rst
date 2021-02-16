@@ -22,7 +22,7 @@ model text and inside the graphical user interface.
 Procedures are added by inserting a special type of node in the model
 tree. The attributes of a ``Procedure`` specify its arguments and
 execution code. All possible attributes of a ``Procedure`` node are
-given in :numref:`table:intern.attr-proc`.
+given in :ref:`this table <table:intern.attr-proc>`.
 
 .. _table:intern.attr-proc:
 

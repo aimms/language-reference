@@ -32,7 +32,7 @@ has the following features:
 
 Horizons, like calendars, have a number of associated attributes, some
 of which are inherited from sets. They are summarized in
-:numref:`table:time.attr-horizon`.
+:ref:`this table <table:time.attr-horizon>`.
 
 .. _horizon.parameter:
 

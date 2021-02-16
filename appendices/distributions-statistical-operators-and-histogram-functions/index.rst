@@ -8,8 +8,8 @@ Distributions, Statistical Operators and Histogram Functions
 
 This chapter provides a more elaborate description of the distributions
 and distribution and sample operators listed in
-:numref:`table:expr.distrib`, :numref:`table:expr.stat-iter` and
-:numref:`table:expr.distrib-oper`. You can use this information when you
+:ref:`this table <table:expr.distrib>`, :ref:`this table <table:expr.stat-iter>` and
+:ref:`this table <table:expr.distrib-oper>`. You can use this information when you
 want to set up an experiment around your (optimization-based) AIMMS
 model.
 

@@ -44,7 +44,7 @@ to let solvers find multiple solutions is solver specific:
 .. rubric:: Solution repository functions
 
 The procedures and functions of the ``GMP::Solution`` namespace are
-listed in :numref:`table:gmp.solution`. Through these functions you can
+listed in :ref:`this table <table:gmp.solution>`. Through these functions you can
 
 -  transfer a solution between the solution repository on the one side
    and the symbolic model or the solver on the other side,

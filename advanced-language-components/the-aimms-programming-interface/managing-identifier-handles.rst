@@ -9,7 +9,7 @@ AIMMS offers the capability to dynamically create and delete handles to
 any desired identifier slice over any desired local subdomain from
 within a DLL. In addition, a subset of the AIMMS data control operators
 (as discussed in :ref:`sec:data.control`) can be called from within
-external DLLs. :numref:`table:api.identifier` lists all available AIMMS
+external DLLs. :ref:`this table <table:api.identifier>` lists all available AIMMS
 API functions for creating handles and performing data control
 operations.
 

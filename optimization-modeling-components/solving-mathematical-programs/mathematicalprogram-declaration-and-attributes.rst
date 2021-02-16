@@ -10,7 +10,7 @@
 .. rubric:: Attributes
 
 The attributes of mathematical programs are listed in
-:numref:`table:mp.attr-mp`.
+:ref:`this table <table:mp.attr-mp>`.
 
 .. _table:mp.attr-mp:
 
@@ -252,7 +252,7 @@ easily switch between the ``mip`` and ``rmip`` types.
 .. rubric:: Available types
 
 A complete list of the mathematical program types available within AIMMS
-is given in :numref:`table:mp.types`. Most are self-explanatory. When
+is given in :ref:`this table <table:mp.types>`. Most are self-explanatory. When
 the type ``rmip`` is specified, all integer variables are treated as
 continuous within their bounds. The ``rmip`` type is the global version
 of the ``Relax`` attribute associated with individual variables (see

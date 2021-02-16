@@ -175,7 +175,7 @@ mapping file.
 .. rubric:: ``AimmsXMLSchemaMapping`` attributes
 
 The ``AimmsXMLSchemaMapping`` node supports the attributes listed in
-:numref:`table:xml.attr-AimmsXMLSchemaMapping`.
+:ref:`this table <table:xml.attr-AimmsXMLSchemaMapping>`.
 
 .. _table:xml.attr-AimmsXMLSchemaMapping:
 
@@ -220,7 +220,7 @@ and use the same semantics.
 .. rubric:: ``ElementMapping`` attributes
 
 An ``ElementMapping`` node supports the attributes listed in
-:numref:`table:xml.attr-ElementMapping`.
+:ref:`this table <table:xml.attr-ElementMapping>`.
 
 .. _table:xml.attr-ElementMapping:
 
@@ -376,7 +376,7 @@ how numerical data will be formatted when writing an XML file.
 .. rubric:: ``AttributeMapping`` attributes
 
 ``AttributeMapping`` nodes support the attributes listed in
-:numref:`table:xml.attr-AttributeMapping`.
+:ref:`this table <table:xml.attr-AttributeMapping>`.
 
 .. _table:xml.attr-AttributeMapping:
 
@@ -455,7 +455,7 @@ project.
 .. rubric:: ``VirtualAttributeMapping`` attributes
 
 ``VirtualAttributeMapping`` nodes support the attributes listed in
-:numref:`table:xml.attr-VirtualAttributeMapping`.
+:ref:`this table <table:xml.attr-VirtualAttributeMapping>`.
 
 .. _table:xml.attr-VirtualAttributeMapping:
 

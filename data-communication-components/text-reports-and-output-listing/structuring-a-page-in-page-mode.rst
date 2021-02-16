@@ -54,7 +54,7 @@ the ``PUT`` statement.
 
 .. rubric:: Page structure
 
-:numref:`table:report.file-suffix` summarizes the file attributes for
+:ref:`this table <table:report.file-suffix>` summarizes the file attributes for
 structuring pages. With the exception of the page body size (read only)
 you can modify their defaults by using assignment statements.
 

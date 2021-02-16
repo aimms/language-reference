@@ -30,7 +30,7 @@ quantity.
 
 Conventions must be declared before their use. The list of attributes of
 a ``Convention`` declaration are described in
-:numref:`table:units.attr-convention`.
+:ref:`this table <table:units.attr-convention>`.
 
 .. _table:units.attr-convention:
 

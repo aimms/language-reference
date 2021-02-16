@@ -134,7 +134,7 @@ ElementVariable Declaration and Attributes
 
 An element variable is a variable that takes an element as its value. It
 can have the attributes specified in
-:numref:`table:cp.attr-element-variable`. The attributes
+:ref:`this table <table:cp.attr-element-variable>`. The attributes
 ``IndexDomain``, ``Priority``, ``NonvarStatus``, ``Text``, ``Comment``
 are the same as those for the variables introduced in :ref:`chap:var`.
 
@@ -449,7 +449,7 @@ meta-constraints:
 .. rubric:: Global constraints
 
 AIMMS supports the global constraints presented in
-:numref:`table:constraint.programming.special.restrictions`. These
+:ref:`this table <table:constraint.programming.special.restrictions>`. These
 global constraints come with powerful filtering techniques that may
 significantly reduce the search tree and thus the time needed to solve a
 problem.

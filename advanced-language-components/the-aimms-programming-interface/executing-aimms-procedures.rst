@@ -9,7 +9,7 @@ The AIMMS API allows you to execute procedures contained in the AIMMS
 model from within an external application. Both procedures with and
 without arguments can be executed, and scalar output results can be
 directly passed back to the external application.
-:numref:`table:api.execution` lists the AIMMS API functions offered to
+:ref:`this table <table:api.execution>` lists the AIMMS API functions offered to
 obtain procedure handles, to execute AIMMS procedures or to schedule
 AIMMS procedures for later execution.
 

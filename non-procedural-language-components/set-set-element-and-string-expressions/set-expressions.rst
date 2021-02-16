@@ -1609,7 +1609,7 @@ Set Operators
 
 There are four binary set operators in AIMMS: Cartesian product,
 intersection, union, and difference. Their notation and precedence are
-given in :numref:`table:set-expr.set-op`. Expressions containing these
+given in :ref:`this table <table:set-expr.set-op>`. Expressions containing these
 set operators are read from left to right and the operands can be any
 set expression. There are no unary set operators.
 

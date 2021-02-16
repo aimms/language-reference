@@ -11,7 +11,7 @@
 to store parts of your model in separate source files. A ``Section``
 node is always a child of the ``Model`` node, of another ``Section``
 node, or of a ``Module`` node. The attributes of ``Section`` nodes are
-listed in :numref:`table:module.attr-section`.
+listed in :ref:`this table <table:module.attr-section>`.
 
 .. _table:module.attr-section:
 

@@ -10,7 +10,7 @@ The ``Quantity`` Declaration
 In AIMMS, all units are uniquely coupled to declared quantities. For
 each declared ``Quantity`` you must specify an identifier together with
 one or more of its attributes listed in
-:numref:`table:units.attr-quantity`.
+:ref:`this table <table:units.attr-quantity>`.
 
 .. _table:units.attr-quantity:
 

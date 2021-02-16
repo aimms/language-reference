@@ -227,7 +227,7 @@ to approximate the chance constraint.
 
 .. rubric:: Possible approximations per distribution
 
-:numref:`table:robust.chance-approximations` shows for each (supported)
+:ref:`this table <table:robust.chance-approximations>` shows for each (supported)
 distribution which approximation types are possible. It also shows
 whether the approximation will result in a linear or a second-order cone
 robust counterpart.
@@ -265,7 +265,7 @@ A chance constraint cannot contain both bounded random parameters and
 Gaussian random parameters. Different types of bounded random parameters
 can be combined, in which case only a part of the available information
 will be used. The possible combinations of bounded random parameters are
-given in :numref:`table:robust.distr-mix`.
+given in :ref:`this table <table:robust.distr-mix>`.
 
 .. _table:robust.distr-mix:
 
@@ -286,7 +286,7 @@ given in :numref:`table:robust.distr-mix`.
 If a random parameter with a :math:`{\texttt{Bounded}}(m,l,u)`
 distribution and a random parameter with a
 :math:`{\texttt{Support}}(l,u)` distribution are used in a single chance
-constraint, then :numref:`table:robust.distr-mix` states that the
+constraint, then :ref:`this table <table:robust.distr-mix>` states that the
 :math:`{\texttt{Bounded}}(m,l,u))` distribution of the first random
 parameter will be treated as a :math:`{\texttt{Support}}(l,u)`
 distribution. Unimodal distributions can only be mixed with unimodal

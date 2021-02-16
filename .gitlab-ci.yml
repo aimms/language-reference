@@ -11,7 +11,7 @@ before_script:
   - python3.8 -mvenv ../myenv
   - source ../myenv/bin/activate
   - python3.8 -mpip install -U  pip
-  - python3.8 -mpip install sphinx==3.2.1
+  - python3.8 -mpip install -U sphinx
   - python3.8 -mpip install -U sphinx-aimms-theme aimms-pygments-style sphinx-sitemap sphinx-last-updated-by-git sphinxcontrib-bibtex sphinxcontrib-spelling
 
 linkcheck:

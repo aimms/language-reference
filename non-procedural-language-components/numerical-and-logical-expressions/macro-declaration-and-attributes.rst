@@ -15,7 +15,7 @@ and avoiding inconsistencies in frequently used expressions.
 
 Macros are declared as ordinary identifiers in your model. They can have
 arguments. The attributes of a ``Macro`` declaration are listed in
-:numref:`table:expr.attr-macro`.
+:ref:`this table <table:expr.attr-macro>`.
 
 .. _table:expr.attr-macro:
 

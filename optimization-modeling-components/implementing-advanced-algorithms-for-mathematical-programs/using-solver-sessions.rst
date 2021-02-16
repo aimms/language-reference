@@ -6,7 +6,7 @@ Using Solver Sessions
 .. rubric:: Using solver sessions
 
 The procedures and functions of the ``GMP::SolverSession`` namespace are
-listed in :numref:`table:gmp.solver`. Solver sessions are created
+listed in :ref:`this table <table:gmp.solver>`. Solver sessions are created
 implicitly by AIMMS or explicitly by calling the procedure
 :any:`GMP::Instance::CreateSolverSession`.
 

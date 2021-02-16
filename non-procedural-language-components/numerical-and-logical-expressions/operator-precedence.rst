@@ -7,7 +7,7 @@ Operator Precedence
 
 In the previous sections we have introduced unary and binary operators
 for several types of expressions, together with their relative
-precedence order. :numref:`table:expr.oper-prec` provides an overview of
+precedence order. :ref:`this table <table:expr.oper-prec>` provides an overview of
 all of them. The last column lists the expression types in which the
 operator is used, where the letters "N", "L", "E", and "S" stand for
 *N*\ umerical, *L*\ ogical, set *E*\ lement and *S*\ et expressions,

@@ -252,10 +252,10 @@ is equal to ``0.0`` or not (see also :ref:`sec:exec.flow`).
 
 .. rubric:: Example
 
-:numref:`table:expr.logic-values` illustrates the different
+:ref:`this table <table:expr.logic-values>` illustrates the different
 interpretation of a number of numerical and logical expressions as
 either a numerical or a logical expression. See also
-:numref:`table:expr.logic-oper` for the results associated with the
+:ref:`this table <table:expr.logic-oper>` for the results associated with the
 ``AND`` operator.
 
 .. _table:expr.logic-values:
@@ -287,7 +287,7 @@ Logical Operator Expressions
 .. rubric:: Unary and binary logical operators
 
 AIMMS supports the unary logical operator ``NOT`` and the binary logical operators ``AND``, ``OR``, and
-``XOR``. :numref:`table:expr.logic-oper` gives the logical results of
+``XOR``. :ref:`this table <table:expr.logic-oper>` gives the logical results of
 these operators for zero and nonzero operands.
 
 .. _table:expr.logic-oper:
@@ -617,7 +617,7 @@ number :math:`\varepsilon_{x,y}` is given by the formula
        x,\varepsilon_r \cdot y),
 
 then the relational operators evaluate as shown in the
-:numref:`table:expr.equal.tol`.
+:ref:`this table <table:expr.equal.tol>`.
 
 .. _table:expr.equal.tol:
 
@@ -925,7 +925,7 @@ Logical Iterative Expressions
 
 Logical iterative operators verify whether some or all elements in a
 domain satisfy a certain logical condition.
-:numref:`table:expr.logic-iter` lists all logical iterative operators
+:ref:`this table <table:expr.logic-iter>` lists all logical iterative operators
 supported by AIMMS. The second column in this table refers to the
 required number of expression arguments following the binding domain
 argument.
@@ -951,7 +951,7 @@ argument.
 .. rubric:: Example
 
 The following statements illustrate the use of some of the logical
-iterative operators listed in :numref:`table:expr.logic-iter`.
+iterative operators listed in :ref:`this table <table:expr.logic-iter>`.
 
 .. code-block:: aimms
 

@@ -11,7 +11,7 @@ unary, binary and iterative operators in AIMMS.
 .. rubric:: Unary operators and functions
 
 The unary operators and functions presented in
-:numref:`table:sparseness.unary` are divided in two groups: sparse and
+:ref:`this table <table:sparseness.unary>` are divided in two groups: sparse and
 dense.
 
 -  *sparse*: Here, when the argument is 0.0, the result is 0.0. The
@@ -47,7 +47,7 @@ dense.
 	
 .. rubric:: Binary operators
 
-The binary operators presented in :numref:`table:sparseness.binary` can
+The binary operators presented in :ref:`this table <table:sparseness.binary>` can
 be divided in three groups:
 
 -  *intersection sparse*: Here, when either of the arguments is 0.0, the
@@ -87,7 +87,7 @@ be divided in three groups:
 .. rubric:: Iterative operators
 
 The iterative operators presented in
-:numref:`table:sparseness.iterative` are divided in three groups as
+:ref:`this table <table:sparseness.iterative>` are divided in three groups as
 follows:
 
 -  *sparse* A value 0.0 of an argument does not influence the result and

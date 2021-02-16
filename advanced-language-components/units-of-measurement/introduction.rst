@@ -96,7 +96,7 @@ relationship :math:`x` ``km = 1000*x m``. Similarly, the unit ``degC``
 
 Frequently, related units are a multiple of their own base unit, which
 is reflected through a prefix notation that indicates the level of
-scaling. :numref:`table:units.unit-mult` shows the standard SI prefix
+scaling. :ref:`this table <table:units.unit-mult>` shows the standard SI prefix
 symbols and their corresponding scaling factor. Familiar examples are
 ``kton``, ``MHz``, ``kJ``, etc. Note that any prefix can be applied to
 any base unit except the kilogram. The kilogram takes prefixes as if the
@@ -132,8 +132,8 @@ possible.
 .. rubric:: Summary of terminology
 
 Thus far you have encountered *basic* quantities
-(:numref:`table:units.si-basic`) and *derived* quantities
-(:numref:`table:units.si-derived`). Each quantity has a *base* unit. The
+(:ref:`this table <table:units.si-basic>`) and *derived* quantities
+(:ref:`this table <table:units.si-derived>`). Each quantity has a *base* unit. The
 base unit of a basic quantity is defined through a unit symbol, referred
 to as an *atomic* unit. All other base units are *derived* base units.
 Such units are defined through an expression in terms of other base

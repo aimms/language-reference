@@ -9,7 +9,7 @@
 
 Each set has an optional list of attributes which further specify its
 intended behavior in the model. The attributes of sets are given in
-:numref:`table:set.attr-set`. The attributes ``IndexDomain`` is only
+:ref:`this table <table:set.attr-set>`. The attributes ``IndexDomain`` is only
 relevant to indexed sets.
 
 .. _table:set.attr-set:

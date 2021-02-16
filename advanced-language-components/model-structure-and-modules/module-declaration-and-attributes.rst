@@ -13,7 +13,7 @@ separate namespace for all identifier declarations in that subtree. Like
 can be stored in a separate source file. A ``Module`` node is always a
 child of the main ``Model`` node, of a ``Section`` node, or of another
 ``Module`` node. The attributes of ``Module`` nodes are listed in
-:numref:`table:module.attr-module`.
+:ref:`this table <table:module.attr-module>`.
 
 .. _table:module.attr-module:
 

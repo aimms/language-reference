@@ -111,7 +111,7 @@ the period.
 
 .. rubric:: Illustration of aggregation
 
-:numref:`table:time.conv-during` demonstrates the aggregation and
+:ref:`this table <table:time.conv-during>` demonstrates the aggregation and
 disaggregation taking place for each conversion rule. The conversion
 operates on a single period consisting of 3 time slots in the calendar.
 
@@ -162,7 +162,7 @@ works well for loci of 0 and 1, which are the most common values.
 
 .. rubric:: Illustration of interpolation
 
-:numref:`table:time.conv-interpol` demonstrates aggregation and
+:ref:`this table <table:time.conv-interpol>` demonstrates aggregation and
 disaggregation of a horizon of 3 periods, each consisting of 3 time
 slots, for loci of 0, 1, and 0.5. The underlined values are the values
 determined by the reverse conversion.

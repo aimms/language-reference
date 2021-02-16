@@ -10,7 +10,7 @@
 Variables have some additional attributes above those of parameters.
 These extra attributes are used to steer a solver, or to hold additional
 information about solution values provided by the solver. The possible
-attributes of variables are given in :numref:`table:var.attr-variable`.
+attributes of variables are given in :ref:`this table <table:var.attr-variable>`.
 
 .. _table:var.attr-variable:
 

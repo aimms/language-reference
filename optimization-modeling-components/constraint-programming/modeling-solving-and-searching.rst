@@ -217,7 +217,7 @@ its begin.
 .. rubric:: Variable and value selection
 
 The variable and value selection heuristics offered by AIMMS are
-presented in :numref:`table:constraint.programming.search.heuristics`.
+presented in :ref:`this table <table:constraint.programming.search.heuristics>`.
 They can be accessed through the 'solver options' configuration window.
 As an example, we can define a 'constructive' scheduling heuristic that
 builds up the schedule from the begin of the schedule domain by using

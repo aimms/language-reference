@@ -9,7 +9,7 @@ For every identifier handle passed to (or created from within) an
 external function, AIMMS can provide additional attributes that are
 either related to the declaration of the identifier associated with the
 handle, or to the particular identifier slice that was passed as an
-argument in the external function call. :numref:`table:api.info` lists
+argument in the external function call. :ref:`this table <table:api.info>` lists
 all AIMMS API functions which can be used to obtain these additional
 attributes.
 

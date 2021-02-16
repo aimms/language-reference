@@ -12,7 +12,7 @@ special type of variable, the ``ComplementaryVariable``. The attributes
 of a complementarity variable allow you to declare an (indexed) class of
 variables in a complementarity model along with their associated
 constraints. The attributes of a ``ComplementaryVariable`` are listed in
-:numref:`table:compl.attr-compl`.
+:ref:`this table <table:compl.attr-compl>`.
 
 .. rubric:: Automatic sanity checks
 

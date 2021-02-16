@@ -127,7 +127,7 @@ The Benders' module defines several parameters that influence the
 Benders' decomposition algorithm. These parameters have a similar
 functionality as options of a solver, e.g., CPLEX. The most important
 parameters, with their default setting, are shown in
-:numref:`table:benders.controlparam`.
+:ref:`this table <table:benders.controlparam>`.
 
 .. _table:benders.controlparam:
 

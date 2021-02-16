@@ -229,7 +229,7 @@ arguments. A conversion specifier is a code to indicate that data of a
 specified type is to be inserted as text. Each conversion specifier
 starts with the ``%`` character followed by a letter indicating its
 type. The conversion specifier for every argument type are given in
-:numref:`table:set-expr.string.conv-codes`.
+:ref:`this table <table:set-expr.string.conv-codes>`.
 
 .. _table:set-expr.string.conv-codes:
 
@@ -366,7 +366,7 @@ modification flags.
 
 AIMMS offers a number of special characters to allow you to use the full
 range of characters in composing strings. These special characters are
-contained in :numref:`table:set-expr.string.spec-kars`.
+contained in :ref:`this table <table:set-expr.string.spec-kars>`.
 
 .. _table:set-expr.string.spec-kars:
 

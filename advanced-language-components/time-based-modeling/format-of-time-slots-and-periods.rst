@@ -88,7 +88,7 @@ The date-specific components act as conversion specifiers to denote
 portions of a date description. They may seem rather cryptic at first,
 but you will find them useful and constructive when creating customized
 references to time. They are summarized in
-:numref:`table:time.cal-date`.
+:ref:`this table <table:time.cal-date>`.
 
 .. _table:time.cal-date:
 
@@ -163,7 +163,7 @@ Time-specific Components
 .. rubric:: Time-specific components
 
 The conversion specifiers for time components are listed in
-:numref:`table:time.cal-time`. There are no custom time-specific
+:ref:`this table <table:time.cal-time>`. There are no custom time-specific
 references in this table, because the predefined numerical values are
 standard throughout the world.
 
@@ -227,7 +227,7 @@ By including a period-specific component in a time slot or period
 format, you indicate to AIMMS that any date, or time, specific component
 following it refers to either the beginning or the end of a time slot or
 period. The list of available period-specific conversion specifiers is
-given in :numref:`table:time.cal-per-ref`.
+given in :ref:`this table <table:time.cal-per-ref>`.
 
 .. _table:time.cal-per-ref:
 
@@ -355,7 +355,7 @@ To support you in scenarios as described above, AIMMS provides
 .. rubric:: Time zone specifier
 
 With the conversion specifier ``%TZ``, described in
-:numref:`table:time.tz`, you can accomplish the following
+:ref:`this table <table:time.tz>`, you can accomplish the following
 ``Calendar``-related tasks:
 
 -  create the ``Calendar`` elements between the given ``BeginDate`` and

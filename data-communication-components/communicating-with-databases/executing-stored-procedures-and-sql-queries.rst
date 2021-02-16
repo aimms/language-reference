@@ -41,7 +41,7 @@ non-standard mechanism for that (involving so-called *ref cursors*).
 Every stored procedure or SQL query that you want to call from within
 AIMMS must be declared as a ``DatabaseProcedure`` within your
 application. The attributes of a ``DatabaseProcedure`` are listed in
-:numref:`table:db.attr-db-procedure`.
+:ref:`this table <table:db.attr-db-procedure>`.
 
 .. _table:db.attr-db-procedure:
 

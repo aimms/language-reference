@@ -11,7 +11,7 @@ associated with tuples of set element numbers used by AIMMS internally.
 The AIMMS API functions discussed in this section allow you to add
 elements to simple sets, and let you convert element numbers into
 ordinal numbers and element names, or vice versa.
-:numref:`table:api.set` presents all set related API functions.
+:ref:`this table <table:api.set>` presents all set related API functions.
 
 .. _table:api.set:
 

@@ -5,7 +5,7 @@ Opening and Closing a Project
 
 .. rubric:: Opening and closing a project
 
-The AIMMS API functions in :numref:`table:api.project` allow you to open
+The AIMMS API functions in :ref:`this table <table:api.project>` allow you to open
 and close an AIMMS project from within your own application.
 
 .. _table:api.project:

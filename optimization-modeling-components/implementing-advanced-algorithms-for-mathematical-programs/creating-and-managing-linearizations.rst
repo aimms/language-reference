@@ -21,7 +21,7 @@ discussed in :ref:`sec:aoa.impl`.
 .. rubric:: Managing linearizations
 
 The procedures and functions of the ``GMP::Linearization`` namespace are
-listed in :numref:`table:gmp.linearization`.
+listed in :ref:`this table <table:gmp.linearization>`.
 
 .. _GMP::Linearization::SetType-LR:
 

@@ -9,7 +9,7 @@ The multistart module defines several parameters that influence the
 multistart algorithm. These parameters have a similar functionality as
 options of a solver, e.g., CPLEX. The most important parameters, with
 their default setting, are shown in
-:numref:`table:multistart.controlparam`.
+:ref:`this table <table:multistart.controlparam>`.
 
 .. _table:multistart.controlparam:
 

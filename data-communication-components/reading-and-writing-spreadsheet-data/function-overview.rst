@@ -27,14 +27,14 @@ operating on an Excel workbook.
 
 .. rubric:: Control functions
 
-The control functions listed in :numref:`table:spreadsheet.control`
+The control functions listed in :ref:`this table <table:spreadsheet.control>`
 allow you to perform actions such as opening and closing workbooks and
 worksheets, copying and printing ranges, and running macros contained in
 the workbook.
 
 .. rubric:: Not in Excel add-in
 
-The control functions listed in :numref:`table:spreadsheet.control` do
+The control functions listed in :ref:`this table <table:spreadsheet.control>` do
 not have a direct counterpart in the AIMMS Excel add-in. They represent
 a subset of common spreadsheet commands, which may be convenient when
 reading and writing data to an Excel or OpenOffice Calc workbook.
@@ -77,7 +77,7 @@ reading and writing data to an Excel or OpenOffice Calc workbook.
 
 .. rubric:: Data exchange functions
 
-The functions listed in :numref:`table:spreadsheet.exchange` can be used
+The functions listed in :ref:`this table <table:spreadsheet.exchange>` can be used
 to exchange set data, scalar values, one- and two-dimensional
 identifiers, and general multi-dimensional identifiers with tabular
 ranges in an Excel or Calc sheet. Each of these functions corresponds to

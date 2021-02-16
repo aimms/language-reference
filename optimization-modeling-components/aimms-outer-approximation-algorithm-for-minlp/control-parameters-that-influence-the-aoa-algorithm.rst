@@ -9,7 +9,7 @@ The multistart module defines several parameters that influence the
 outer approximation algorithm. These parameters have a similar
 functionality as options of a solver, e.g., CPLEX. The most important
 parameters, with their default setting, are shown in
-:numref:`table:aoa.controlparam`.
+:ref:`this table <table:aoa.controlparam>`.
 
 .. _table:aoa.controlparam:
 

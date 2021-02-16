@@ -25,7 +25,7 @@ following four data types:
 Prior to declaring a parameter in the model editor you need to decide on
 its data type. In the model tree parameters of each type have their own
 icon. The attributes of parameters are given in
-:numref:`table:par.attr-param`.
+:ref:`this table <table:par.attr-param>`.
 
 .. _table:par.attr-param:
 

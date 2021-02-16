@@ -16,7 +16,7 @@ session executing in parallel.
 .. rubric:: Customizing progress
 
 The procedures and functions of the ``GMP::ProgressWindow`` namespace
-are listed in :numref:`table:gmp.progress`. They allow you to modify
+are listed in :ref:`this table <table:gmp.progress>`. They allow you to modify
 every aspect of the solver part of the AIMMS progress window.
 
 .. _GMP::ProgressWindow::UnfreezeLine-LR:

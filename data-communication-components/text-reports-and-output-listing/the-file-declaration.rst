@@ -14,7 +14,7 @@ AIMMS identifiers in your model. In this way, external file names become
 data. Whenever you want to send output to a particular external file,
 you must refer to its associated identifier. This linking is achieved
 using a ``File`` declaration, the attributes of which are given in
-:numref:`table:report.attr-file`.
+:ref:`this table <table:report.attr-file>`.
 
 .. _table:report.attr-file:
 

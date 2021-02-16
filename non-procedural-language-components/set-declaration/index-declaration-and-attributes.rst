@@ -17,7 +17,7 @@ previous examples show indirect declaration of indices.
 When you choose to declare an index not as an attribute of a set
 declaration, you can use the ``Index`` declaration. The attributes of
 each single index declaration are given in
-:numref:`table:set.attr-index`.
+:ref:`this table <table:set.attr-index>`.
 
 .. _table:set.attr-index:
 

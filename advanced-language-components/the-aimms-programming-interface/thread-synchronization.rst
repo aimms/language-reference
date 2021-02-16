@@ -37,7 +37,7 @@ a new thread. This AIMMS thread will deal with
 Whenever you want to call AIMMS API functions from within a thread
 started by yourself, you must make sure that the thread is well-equipped
 to do so by calling the AIMMS thread (un)initialization functions listed
-in :numref:`table:api.thread-initialization`.
+in :ref:`this table <table:api.thread-initialization>`.
 
 .. _table:api.thread-initialization:
 
@@ -83,7 +83,7 @@ from one thread is interrupted by a request from another thread.
 When the proper functioning of your application requires that your
 execution and data retrieval requests to AIMMS are not interrupted by
 requests from competing threads, you can use the functions listed in
-:numref:`table:api.control` to obtain exclusive control over the AIMMS
+:ref:`this table <table:api.control>` to obtain exclusive control over the AIMMS
 execution engine.
 
 .. _table:api.control:

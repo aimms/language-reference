@@ -349,7 +349,7 @@ Traditional arithmetic is defined on the real line,
 :math:`\mathbb{R}=(-\infty,\infty)`, which does not contain either
 :math:`+\infty` or :math:`-\infty`. AIMMS' arithmetic is defined on the
 set :math:`\mathbb{R}\cup\{{}`\ ``-INF``, ``INF``, ``NA``, ``UNDF``,
-``ZERO``\ :math:`{}\}` and summarized in :numref:`table:expr.arith-ext`.
+``ZERO``\ :math:`{}\}` and summarized in :ref:`this table <table:expr.arith-ext>`.
 The symbols ``INF`` and ``-INF`` are mostly used to model unbounded
 variables. The symbols ``NA`` and ``UNDF`` stand for *not available* and
 *undefined* data values respectively. The symbol ``ZERO`` denotes the
@@ -1019,7 +1019,7 @@ Arithmetic Functions
 
 AIMMS provides the commonly used standard arithmetic functions such as
 the trigonometric functions, logarithms, and exponentiations.
-:numref:`table:expr.num-func` lists the available arithmetic functions
+:ref:`this table <table:expr.num-func>` lists the available arithmetic functions
 with their arguments and result, where :math:`x` is an extended range
 arithmetic expressions, :math:`m`, :math:`n` are integer expressions,
 :math:`i` is an index, :math:`l` is a set element, :math:`I` is a set
@@ -1088,7 +1088,7 @@ identifier, and :math:`e` is a scalar reference.
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
    | :any:`Card`:math:`(I[,\mathit{suffix}])` | cardinality of (suffix of) set, parameter or variable :math:`I`                                              |
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-   | :any:`Ord`:math:`(i)`                    | ordinal number of index :math:`i` in set :math:`I` (see also :numref:`table:set-expr.set-func`)              |
+   | :any:`Ord`:math:`(i)`                    | ordinal number of index :math:`i` in set :math:`I` (see also :ref:`this table <table:set-expr.set-func>`)    |
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
    | :any:`Ord`:math:`(l[,I])`                | ordinal number of element :math:`l` in set :math:`I`                                                         |
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
@@ -1106,7 +1106,7 @@ identifier, and :math:`e` is a scalar reference.
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
    | :math:`\mathtt{NonDefault}(e)`           | :math:`1` if :math:`e` is not at its default value, :math:`0` otherwise                                      |
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-   | :any:`MapVal`:math:`(x)`                 | :any:`MapVal` value of :math:`x` according to :numref:`table:expr.arith-ext`                                 |
+   | :any:`MapVal`:math:`(x)`                 | :any:`MapVal` value of :math:`x` according to :ref:`this table <table:expr.arith-ext>`                       |
    +------------------------------------------+--------------------------------------------------------------------------------------------------------------+
 
 .. rubric:: Functions and extended arithmetic
@@ -1251,7 +1251,7 @@ follows.
 .. rubric:: Standard numerical operators
 
 The order of precedence of the standard numerical operators in AIMMS is
-given in :numref:`table:expr.num-oper`. Parentheses may be used to
+given in :ref:`this table <table:expr.num-oper>`. Parentheses may be used to
 override the precedence order. Expression evaluation is from left to
 right.
 
@@ -1331,7 +1331,7 @@ Numerical Iterative Operators
 Iterative operators are used to express repeated arithmetic operations,
 such as summation, in a concise manner. The arithmetic iterative
 operators supported by AIMMS are listed in
-:numref:`table:expr.num-iter`. The second column in this table refers to
+:ref:`this table <table:expr.num-iter>`. The second column in this table refers to
 the required number of expression arguments following the binding domain
 argument, while the last column refers to the result of the operator in
 case of an empty domain.
@@ -1384,7 +1384,7 @@ Statistical Functions and Operators
 .. rubric:: Distributions
 
 AIMMS provides the most commonly used distributions. They are listed in
-:numref:`table:expr.distrib`, together with the required type of
+:ref:`this table <table:expr.distrib>`, together with the required type of
 arguments and a description of the result. You can find a more detailed
 description of these distributions in :ref:`app:distribution.discrete`
 and :ref:`app:distribution.cont`. When called as functions inside your
@@ -1442,7 +1442,7 @@ explicitly you can guarantee that your model results are reproducible.
 
 .. rubric:: Cumulative distributions and their derivatives
 
-Each distribution in :numref:`table:expr.distrib` can be used as an
+Each distribution in :ref:`this table <table:expr.distrib>` can be used as an
 argument for four operators: :any:`DistributionCumulative` and
 :any:`DistributionInverseCumulative`, and their derivatives
 :any:`DistributionDensity` and :any:`DistributionInverseDensity`. In the
@@ -1471,7 +1471,7 @@ distributed according to the given distribution *distr*.
 
 .. rubric:: Use in constraints
 
-For the continuous distributions in :numref:`table:expr.distrib`, AIMMS
+For the continuous distributions in :ref:`this table <table:expr.distrib>`, AIMMS
 can compute the derivatives of the cumulative and inverse cumulative
 distribution functions. As a consequence, you may use these functions in
 the constraints of a nonlinear model when the second argument is a
@@ -1506,16 +1506,16 @@ to perform statistical tasks.
 
 .. rubric:: Statistical operators
 
-The distributions, listed in :numref:`table:expr.distrib`, make it
+The distributions, listed in :ref:`this table <table:expr.distrib>`, make it
 possible for you to execute a stochastic experiment based on your model
 representation. In order to analyze the subsequent results, AIMMS
 provides a number of statistical iterative operators which are listed in
-:numref:`table:expr.stat-iter`. The second column in this table refers
+:ref:`this table <table:expr.stat-iter>`. The second column in this table refers
 to the required number of expression arguments following the binding
 domain argument. For the most common sample operators, AIMMS provides
 distribution operators to calculate the corresponding expected values,
 assuming the sample is drawn from a given distribution. These
-distribution operators are listed in :numref:`table:expr.distrib-oper`.
+distribution operators are listed in :ref:`this table <table:expr.distrib-oper>`.
 A more detailed description of these operators is provided in
 :ref:`app:distribution`.
 
@@ -1602,7 +1602,7 @@ histograms, as well as an illustrative example, you are referred to
 
 In addition to the distribution and statistical operators listed above,
 AIMMS also offers support for the most common combinatoric calculations.
-:numref:`table:expr.combinatoric` contains the list of combinatoric
+:ref:`this table <table:expr.combinatoric>` contains the list of combinatoric
 functions that are available in AIMMS.
 
 .. _permutation-LR:
