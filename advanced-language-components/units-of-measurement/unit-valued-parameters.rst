@@ -89,7 +89,7 @@ multidimensional collections of unit values. The unit values stored in a
 unit parameter can be used, for instance:
 
 -  to associate a parametrized (i.e. multidimensional) collection of
-   units with a single multidimensional identifier (through its :any:`Unit`
+   units with a single multidimensional identifier (through its Unit
    attribute), or
 
 -  to specify a local unit override based on a unit (or collection of
@@ -97,7 +97,7 @@ unit parameter can be used, for instance:
 
 .. rubric:: Unit analysis...
 
-When a :any:`Unit` attribute of an identifier contains a reference to a
+When a Unit attribute of an identifier contains a reference to a
 unit parameter, this can, but need not, modify the way in which AIMMS
 conducts its usual unit analysis. There are two distinct scenarios, both
 described below.
@@ -138,7 +138,7 @@ Consider the following declarations of unit-valued parameters, where
 	}
 
 With these unit-valued parameters you can specify meaningful indexed
-unit expressions for the :any:`Unit` attribute of the following parameters.
+unit expressions for the Unit attribute of the following parameters.
 
 .. code-block:: aimms
 
@@ -169,7 +169,7 @@ symbolic level.
 
 .. rubric:: Indexed scaling
 
-When the :any:`Unit` attribute of an identifier is parametrized by means of
+When the Unit attribute of an identifier is parametrized by means of
 indexed unit parameter, AIMMS will correctly scale all data exchange
 with external components (see :ref:`sec:units.scaling`). During data
 exchange with an external component, AIMMS considers the specified units
@@ -224,7 +224,7 @@ must be unit constants, and must be stored without square brackets.
 
 When a composite table in a data file, or a table in a database contains
 both the values of a multidimensional unit parameter, and a
-corresponding numeric parameter whose :any:`Unit` attribute references that
+corresponding numeric parameter whose Unit attribute references that
 unit parameter, AIMMS allows you to read both identifiers in a single
 pass. When reading both identifiers, AIMMS will make sure that the
 numeric values are interpreted with respect to the corresponding unit

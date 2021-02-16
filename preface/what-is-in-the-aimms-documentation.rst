@@ -126,18 +126,7 @@ working knowledge of the system and its language. One tutorial is
 intended for beginning users, while the other is aimed at professional
 users of AIMMS.
 
-- AIMMS Tutorial for beginners 
-
-  - `PDF Format <https://download.aimms.com/aimms/download/references/AIMMS_tutorial_beginner.pdf>`_
-  - `Video tutorial format <https://www.youtube.com/embed/videoseries?list=PLZqh3oAyX6qlV23t7c-McVJA-rHQHjnKD>`__
-    
-    .. only:: html
-    
-      .. raw:: html
-         
-         <div style="max-width=100%">
-         <iframe src="https://www.youtube.com/embed/videoseries?list=PLZqh3oAyX6qlV23t7c-McVJA-rHQHjnKD" frameborder="0" style="width: -webkit-fill-available;height: -webkit-fill-available;" allowfullscreen></iframe>
-         </div>
+- `AIMMS Tutorial for beginners <https://how-to.aimms.com/Articles/505/index.html>`__
     
 - `AIMMS Tutorial for Professionals PDF <https://download.aimms.com/aimms/download/references/AIMMS_tutorial_professional.pdf>`_
 

@@ -113,7 +113,7 @@ procedures.
 	``Arguments``   *argument-list*      
 	``IndexDomain`` *index-domain*    :ref:`here <attr:par.index-domain>`
 	``Range``       *range*           :ref:`here <attr:par.range>`
-	:any:`Unit`     *unit-expression* :ref:`here <attr:par.unit>`
+	``Unit``        *unit-expression* :ref:`here <attr:par.unit>`
 	``Property``    ``RetainsValue``     
 	``Body``        *statements*      :ref:`chap:exec`
 	``Comment``     *comment string*     
@@ -145,17 +145,17 @@ This is similar as for parameters (see also page :ref:`attr:par.range`).
 Upon return from the function, AIMMS will verify that the function
 result lies within the specified range.
 
-.. rubric:: The :any:`Unit` attribute
+.. rubric:: The Unit attribute
    :name: attr:function.unit
 
 .. _function.unit:
 
-Through the :any:`Unit` attribute of a function you can associate a unit
+Through the Unit attribute of a function you can associate a unit
 with the function result. AIMMS will use the unit specified here during
 the unit consistency check of each assignment to the result parameter
 within the function body, based on the units of the global identifiers
 and function arguments that are referenced in the assigned expression.
-In addition, AIMMS will use the value of the :any:`Unit` attribute during
+In addition, AIMMS will use the value of the Unit attribute during
 unit consistency checks of all expressions that contain calls to the
 function at hand. You can find general information on the use of units
 in :ref:`chap:units`. :ref:`sec:units.analysis.arg` focusses on unit
