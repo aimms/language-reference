@@ -37,6 +37,10 @@ facilities to
    It is usually worthwhile to apply all these checks to your
    application.
 
+.. tip::
+    
+    You may refer to our online training about error handling `following this link <https://academy.aimms.com/course/view.php?id=50>`__.
+
 .. _sec:exec.error.handling:
 
 Handling Errors
@@ -783,3 +787,9 @@ into common and strict groups. The range of options for
 ``{off, warning_collect, warning_handle, error}``. The default of the
 option ``common_warning_default`` is ``warning_handle`` and the default
 of the option ``strict_warning_default`` is ``off``.
+
+Train on error handling
+--------------------------
+
+You may refer to our online training about error handling `following this link <https://academy.aimms.com/course/view.php?id=50>`__ 
+to apply error handling on concrete models.

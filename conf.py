@@ -116,7 +116,7 @@ html_theme_options = {
     'doc_title': 'Language Reference',
     'home_page_title': 'AIMMS Language Reference',
     'home_page_description': 'Find all AIMMS modeling language descriptions and constructs',
-    'display_community_embeddable' : True,
+    'display_community_embeddable' : Display_3rd_Party_Extensions,
     'display_local_toc' : True,
     'titles_only' : True,
     'display_algolia_search': False,
