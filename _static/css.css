@@ -25,3 +25,5 @@ ul p{
 @media screen and (min-width: 767px) {
   .wy-table-responsive {
     overflow: auto; } }
+
+.wy-menu-vertical { margin-top: 130px!important;}
