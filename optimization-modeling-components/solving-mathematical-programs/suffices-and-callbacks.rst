@@ -10,18 +10,18 @@ various purposes. Typical examples are:
 
 -  To obtain information about the solution process. This information is
    filled in by the solver at the end of the solution process. These
-   suffixes are presented in :numref:`table:mp.suffix-mp.Solver`.
+   suffixes are presented in :ref:`this table <table:mp.suffix-mp.Solver>`.
 
 -  To determine when and how to activate a callback procedure. This
    information can be filled in between solution steps. See also
    :ref:`chap:gmp` where an alternative method for callbacks is
    presented. These suffixes are presented in
-   :numref:`table:mp.suffix-mp.User`.
+   :ref:`this table <table:mp.suffix-mp.User>`.
 
 -  To get statistics of the generated mathematical program. These
    statistics are determined when the generated mathematical program is
    constructed. These suffixes are presented in
-   :numref:`table:mp.suffix-mp.Aimms`.
+   :ref:`this table <table:mp.suffix-mp.Aimms>`.
 
 .. _sumofinfeasibilities:
 
@@ -354,7 +354,7 @@ function value.
 
 Both the ``ProgramStatus`` and the ``SolverStatus`` suffix take their
 value in the predefined set :any:`AllSolutionStates` presented in
-:numref:`table:mp.status`.
+:ref:`this table <table:mp.status>`.
 
 .. _table:mp.status:
 

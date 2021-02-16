@@ -5,7 +5,7 @@ Control Parameters That Influence the Algorithm
 
 .. rubric:: This section
 
-Some of the control parameters of :numref:`table:benders.controlparam`
+Some of the control parameters of :ref:`this table <table:benders.controlparam>`
 can be used to influence the behavior of the Benders' decomposition
 algorithm. We discuss these parameters in this section.
 

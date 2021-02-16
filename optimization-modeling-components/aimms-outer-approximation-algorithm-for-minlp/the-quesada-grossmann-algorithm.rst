@@ -26,7 +26,7 @@ The procedure ``DoConvexOuterApproximation`` inside the module
 implements the Quesada-Grossmann algorithm. This procedure is called in
 the same way as the ``DoOuterApproximation`` procedure of
 :ref:`sec:aoa.using.algorithm`, which implements the basic algorithm.
-The following control parameters in :numref:`table:aoa.controlparam` can
+The following control parameters in :ref:`this table <table:aoa.controlparam>` can
 be used to influence the Quesada-Grossmann algorithm: ``TimeLimit``,
 ``CreateStatusFile``, ``UsePresolver`` and
 ``RelativeOptimalityTolerance``.

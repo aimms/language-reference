@@ -22,7 +22,7 @@ optimality and feasibility cuts.
 .. rubric:: Calling ``DoBendersDecompositionClassic``
 
 We have to change some of the control parameters of
-:numref:`table:benders.controlparam` to let the
+:ref:`this table <table:benders.controlparam>` to let the
 ``DoBendersDecomposition`` procedure execute the textbook algorithm. The
 relevant changes are listed below.
 

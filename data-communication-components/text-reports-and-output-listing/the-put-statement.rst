@@ -52,7 +52,7 @@ statement, which designates the file as the *current file*.
 .. rubric:: ``PUT`` without file identifier
 
 If you use the ``DISPLAY`` statement or any of the ``PUT`` operators
-listed in :numref:`table:report.put-keyword` without a file identifier,
+listed in :ref:`this table <table:report.put-keyword>` without a file identifier,
 AIMMS will direct the output to the current file, i.e., the file last
 opened through the ``PUT`` statement.
 
@@ -323,7 +323,7 @@ follows.
 .. rubric:: ``PUT`` operators
 
 All possible variants of the ``PUT`` operator are listed in
-:numref:`table:report.put-keyword`. The ``PUT`` and ``PUTCLOSE``
+:ref:`this table <table:report.put-keyword>`. The ``PUT`` and ``PUTCLOSE``
 operators can be used in both stream mode and page mode. The operators
 ``PUTHD``, ``PUTFT`` and ``PUTPAGE`` only make sense in page mode, and
 are discussed in :ref:`sec:report.page-mode`.
@@ -535,7 +535,7 @@ With the format field you specify
 
 Customized default values for the justification, field width and
 precision can be specified through ``PUT``-related options, which can be
-set via the Options menu. :numref:`table:report.put-arg` shows a number
+set via the Options menu. :ref:`this table <table:report.put-arg>` shows a number
 of examples of format fields, where :math:`m` and :math:`n` are
 expressions evaluating to integers.
 
@@ -715,7 +715,7 @@ used to position printable items in a file:
 
 -  the newline operator ``/``.
 
-These three operators are explained in :numref:`table:report.put-pos`,
+These three operators are explained in :ref:`this table <table:report.put-pos>`,
 where the symbols :math:`k` and :math:`l` are expressions evaluating to
 integers.
 

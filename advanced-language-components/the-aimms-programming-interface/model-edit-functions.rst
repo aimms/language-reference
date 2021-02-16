@@ -88,7 +88,7 @@ The model edit functions follow the following conventions:
 
 .. rubric:: Model roots
 
-:numref:`table:api.model.edit.roots` lists the functions available for
+:ref:`this table <table:api.model.edit.roots>` lists the functions available for
 manipulating model editor roots. The number of roots available for model
 editing is stored by the function ``AimmsMeRootCount(count)`` in its
 output argument ``count``. Note that ``count`` is always at least 1,
@@ -153,7 +153,7 @@ where ``n`` was the old number of children of ``pMEH``.
 
 .. rubric:: Closing or destroying a node
 
-:numref:`table:api.model.edit.roots` not only lists the functions to
+:ref:`this table <table:api.model.edit.roots>` not only lists the functions to
 open or create nodes, but also shows the complementary functions to
 close or destroy nodes. The function ``AimmsMeCloseNode(MEH)``
 de-allocates the handle ``MEH`` but leaves the corresponding node in the
@@ -163,7 +163,7 @@ subsequently deallocates the handle ``MEH``.
 
 .. rubric:: The name of a node
 
-:numref:`table:api.model.edit.name` lists the functions that return the
+:ref:`this table <table:api.model.edit.name>` lists the functions that return the
 name of a node. The function ``AimmsMeName(MEH, name)`` stores the name
 of the node to which ``MEH`` refers without any prefixes in the output
 argument ``name``. The function
@@ -190,7 +190,7 @@ argument ``rName``. A fully qualified name is stored in ``rName`` when
 
 .. rubric:: The type of a node
 
-In addition, :numref:`table:api.model.edit.name` lists the functions for
+In addition, :ref:`this table <table:api.model.edit.name>` lists the functions for
 the type of a node. The function ``AimmsMeType(MEH, meType)`` stores the
 type of the node ``MEH`` in the output argument ``meType``. The value of
 ``meType`` refers to one of the constants in ``aimmsapi.h`` starting
@@ -218,7 +218,7 @@ stores the name of the type ``typeNo`` in the output argument ``tName``.
 
 .. rubric:: The attributes of a node
 
-:numref:`table:api.model.edit.attributes` lists the functions available
+:ref:`this table <table:api.model.edit.attributes>` lists the functions available
 for handling the attributes of a node. All attributes correspond to
 constants in the ``aimmsapi.h`` file. These constants start with
 ``AIMMSAPI_ME_ATTR_``. The function
@@ -254,7 +254,7 @@ the name of ``attr`` in ``name``.
 
 The functions that support changing the aspects of a node such as name,
 location, and type of a node are also shown in
-:numref:`table:api.model.node.manipulations`. The function
+:ref:`this table <table:api.model.node.manipulations>`. The function
 ``AimmsMeNodeRename(MEH, newName)`` changes the name of a node, and the
 namechange is applied to the attribute texts that reference this node.
 An entry is appended to the name change file if the node is not a
@@ -276,7 +276,7 @@ of types into which ``MEH`` can be changed is stored in ``maxNoTypes``.
 
 .. rubric:: Tree walk of the model
 
-:numref:`table:api.model.edit.tree.walk` lists the functions that permit
+:ref:`this table <table:api.model.edit.tree.walk>` lists the functions that permit
 walking all nodes in the model editor tree. The function
 ``AimmsMeParent(MEH, pMEH)`` creates a model editor handle to the parent
 of ``MEH``, and stores this handle in the output argument ``pMEH``. The
@@ -309,7 +309,7 @@ not fail.
 
 The functions that allow the reading of an AIMMS section from a file, or
 writing a section to a file are also listed in
-:numref:`table:api.model.edit.tree.walk`. They use the ``Text .ams``
+:ref:`this table <table:api.model.edit.tree.walk>`. They use the ``Text .ams``
 file format. The function ``AimmsMeImportNode(MEH, fn, pwd)`` reads a
 file ``fn`` and stores the resulting model structure at node ``MEH``.
 The function ``AimmsMeExportNode(MEH, fn, pwd)`` writes the model
@@ -320,7 +320,7 @@ an AIMMS section, module, library, or model, the functions
 .. rubric:: Compilation
 
 The model edit functions available for compilation and model status
-queries are listed in :numref:`table:api.model.edit.compilation`. The
+queries are listed in :ref:`this table <table:api.model.edit.compilation>`. The
 central function ``AimmsMeCompile (MEH)`` compiles the node ``MEH`` and
 all its sub-nodes. The entire application (main model and libraries) is
 compiled if the argument ``MEH`` equals

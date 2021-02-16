@@ -9,7 +9,7 @@ With every identifier handle AIMMS lets you retrieve all associated
 nondefault data values on an element-by-element basis. In addition,
 AIMMS lets you search whether a nondefault value exists for a particular
 element tuple, and make assignments to individual element tuples.
-:numref:`table:api.value` lists all the available AIMMS API functions
+:ref:`this table <table:api.value>` lists all the available AIMMS API functions
 for this purpose.
 
 .. _table:api.value:
@@ -168,7 +168,7 @@ special number value associated with the handle as is (see also
 represents special numbers as double precision floating point numbers
 outside AIMMS' ordinary range of computation. The function
 ``AimmsValueDoubleToMapval`` returns the :any:`MapVal` value associated
-with any double value (see also :numref:`table:expr.arith-ext`), while
+with any double value (see also :ref:`this table <table:expr.arith-ext>`), while
 the function ``AimmsValueMapvalToDouble`` returns the double
 representation associated with any type of special number.
 

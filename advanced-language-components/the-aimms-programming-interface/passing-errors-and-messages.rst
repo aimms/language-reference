@@ -5,7 +5,7 @@ Passing Errors and Messages
 
 .. rubric:: Passing errors and messages
 
-The AIMMS API functions in :numref:`table:api.error` let you send error
+The AIMMS API functions in :ref:`this table <table:api.error>` let you send error
 and warning messages to AIMMS and get the current AIMMS status. In
 addition, you can obtain the error number and description of the last
 AIMMS API error.

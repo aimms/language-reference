@@ -103,7 +103,7 @@ inequalities
 where :math:`f_i(x)` is a nonlinear expression, and *exactly* two of the
 constants :math:`l_{x_i}`, :math:`u_{x_i}`, :math:`l_{f_i}` and
 :math:`u_{f_i}` are finite. The six possible cases are enumerated in
-:numref:`table:compl.poss`, and are discussed below.
+:ref:`this table <table:compl.poss>`, and are discussed below.
 
 .. _table:compl.poss:
 

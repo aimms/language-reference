@@ -108,8 +108,8 @@ after the constraint has been regenerated.
 .. rubric:: Scalar arguments only
 
 All matrix procedures listed in
-:numref:`table:gmp.coefficient`-:numref:`table:gmp.column` and most
-procedures listed in :numref:`table:gmp.linearization` have
+:ref:`this table <table:gmp.coefficient>`-:ref:`this table <table:gmp.column>` and most
+procedures listed in :ref:`this table <table:gmp.linearization>` have
 scalar-valued arguments. The *row* argument should always be
 
 -  a scalar reference to an existing constraint name in your model, or
@@ -127,7 +127,7 @@ The *column* argument should always be
 .. rubric:: Modifying a group of columns or rows
 
 For most matrix procedures listed in
-:numref:`table:gmp.coefficient`-:numref:`table:gmp.column`, that can be
+:ref:`this table <table:gmp.coefficient>`-:ref:`this table <table:gmp.column>`, that can be
 used to modify a generated mathematical program, there also exists a *multi* variant which can be
 applied to a group of columns of rows, belonging to one variable or constraint respectively. These
 procedures are listed in :ref:`sec:matrix.multiproc`.
@@ -135,7 +135,7 @@ procedures are listed in :ref:`sec:matrix.multiproc`.
 .. rubric:: Mathematical program instance required
 
 Before you can apply any of the procedures of
-:numref:`table:gmp.coefficient`-:numref:`table:gmp.column`, you must
+:ref:`this table <table:gmp.coefficient>`-:ref:`this table <table:gmp.column>`, you must
 first create a mathematical program instance using any of the functions
 for this purpose discussed in :ref:`sec:gmp.instance`. Either of these
 methods will set up the initial row-column matrix required by the matrix
@@ -153,7 +153,7 @@ Coefficient Modification Procedures
 .. rubric:: Coefficient modification procedures
 
 The procedures and functions of the ``GMP::Coefficient`` namespace are
-listed in :numref:`table:gmp.coefficient` and take care of the
+listed in :ref:`this table <table:gmp.coefficient>` and take care of the
 modification of coefficients in the matrix and objective of a generated
 mathematical program instance.
 
@@ -205,7 +205,7 @@ Quadratic Coefficient Modification Procedures
 .. rubric:: Quadratic coefficient modification procedures
 
 The procedures and functions of the ``GMP::QuadraticCoefficient``
-namespace are listed in :numref:`table:gmp.quadratic` and take care of
+namespace are listed in :ref:`this table <table:gmp.quadratic>` and take care of
 the modification of coefficients of quadratic rows in the matrix other
 than the objective of a generated mathematical program instance.
 
@@ -240,7 +240,7 @@ Row Modification Procedures
 .. rubric:: Row modification procedures
 
 The procedures and functions of the ``GMP::Row`` namespace are listed in
-:numref:`table:gmp.row` and take care of the modification of properties
+:ref:`this table <table:gmp.row>` and take care of the modification of properties
 of existing rows and the creation of new rows.
 
 .. _GMP::Row::SetPoolType-LR:
@@ -395,7 +395,7 @@ Column Modification Procedures
 ------------------------------
 
 The procedures and functions of the ``GMP::Column`` namespace are listed
-in :numref:`table:gmp.column` and take care of the modification of
+in :ref:`this table <table:gmp.column>` and take care of the modification of
 properties of existing columns and the creation of new columns.
 
 .. _GMP::Column::SetAsMultiObjective-LR:
@@ -506,7 +506,7 @@ More Efficient Modification Procedures
 
 If you want to change the data of many columns or rows belonging to some variable or constraint then
 it is more efficient to use the multi variant of a modification procedure. The available multi
-procedures of the ``GMP`` namespace are listed in :numref:`table:gmp.multiproc`.
+procedures of the ``GMP`` namespace are listed in :ref:`this table <table:gmp.multiproc>`.
 
 .. _GMP::Coefficient::SetMulti-LR:
 
@@ -578,7 +578,7 @@ procedures of the ``GMP`` namespace are listed in :numref:`table:gmp.multiproc`.
 
 .. rubric:: Binding argument
 
-All procedures in :numref:`table:gmp.multiproc` contain an index binding argument. The index binding argument
+All procedures in :ref:`this table <table:gmp.multiproc>` contain an index binding argument. The index binding argument
 specifies which columns or rows will be modified. If the procedure contains a value argument then the size of this vector is defined by the 
 index binding argument. Further information on index binding can be found in :ref:`chap:bind`.
 

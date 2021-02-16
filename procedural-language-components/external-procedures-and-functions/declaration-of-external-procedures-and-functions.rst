@@ -13,7 +13,7 @@ External procedures and functions are special types of nodes in the
 model tree. They have the same attributes as internal procedures and
 functions with the exception of the ``Body`` and ``Derivative``
 attributes, which are replaced by the attributes in
-:numref:`table:extern.attr`.
+:ref:`this table <table:extern.attr>`.
 
 .. _table:extern.attr:
 
@@ -555,7 +555,7 @@ external argument.
 In translating AIMMS arguments into values (or arrays of values)
 suitable as arguments for an external procedure or function, AIMMS
 supports the external data types listed in
-:numref:`table:extern.external-types`.
+:ref:`this table <table:extern.external-types>`.
 
 .. _table:extern.external-types:
 
@@ -576,7 +576,7 @@ supports the external data types listed in
 
 Not all combinations of input-output types, translation types and
 external data types are supported (or even useful).
-:numref:`table:extern.translation-types` describes all allowed
+:ref:`this table <table:extern.translation-types>` describes all allowed
 combinations, as well as the resulting argument type that is passed on
 to the external procedure. The external data types printed in bold are
 the default, and can be omitted if appropriate. Throughout the table,
@@ -709,7 +709,7 @@ default, pass ``ZERO`` as 0.0, ``INF`` and ``-INF`` as
 AIMMS will pass all special numbers by their internal representation as
 a double precision floating point number. You can use the AIMMS API
 functions discussed in :ref:`sec:api.value` to obtain the :any:`MapVal`
-value (see also :numref:`table:expr.arith-ext`) associated with each
+value (see also :ref:`this table <table:expr.arith-ext>`) associated with each
 number. The translation modifier ``retainspecials`` can be specified for
 numeric arguments that are passed either as a full array or as an
 integer handle.

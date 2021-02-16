@@ -25,7 +25,7 @@ domain, and take appropriate action when you find an inconsistency.
 Assertions can be verified from within the model through the ``ASSERT``
 statement, or automatically upon data changes by the user from within
 the graphical user interface. The attributes of the ``Assertion`` type
-are given in :numref:`table:data.attr-assertion`.
+are given in :ref:`this table <table:data.attr-assertion>`.
 
 .. _table:data.attr-assertion:
 

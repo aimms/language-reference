@@ -85,7 +85,7 @@ matching elements resulting in parameter ``C(i,j)``:
 
 .. rubric:: Merging rows
 
-As illustrated in :numref:`fig:sparse.union`, this statement can be
+As illustrated in :ref:`the following figure <fig:sparse.union>`, this statement can be
 executed in a sparse manner by merging the ordered views of ``A`` and
 ``B`` and adding the values as one progresses.
 
@@ -130,7 +130,7 @@ ordered views of ``A`` and ``B`` and multiplying the corresponding
 values. Intersection is sufficient because only for those tuples
 ``(i,j)`` for which both ``A(i,j)`` and ``B(i,j)`` are non-zero, will a
 non-zero be computed. This is illustrated in the
-:numref:`fig:sparse.intersection`
+:ref:`the following figure <fig:sparse.intersection>`
 
 .. figure:: storage-and-basic-operations-of-the-execution-engine-pspic2.svg
    :name: fig:sparse.intersection
@@ -263,7 +263,7 @@ parameter ``A(i,j)`` in a parameter ``AI(i)``:
 
 	AI(i) := Sum( j, A(i,j) );
 
-This operation is illustrated in :numref:`fig:sparse.aggr-i`.
+This operation is illustrated in :ref:`the following figure <fig:sparse.aggr-i>`.
 
 .. figure:: storage-and-basic-operations-of-the-execution-engine-pspic3.svg
    :name: fig:sparse.aggr-i
@@ -316,7 +316,7 @@ maintains other views of the parameter ``A`` known as *reordered views*.
 A reordered view of an ordered view is a lexicographic order of the
 elements such that the order of the indices in the identifier matches
 the order of the running indices. A reordered view, and the grouping
-according to this view, are illustrated in :numref:`fig:sparse.aggr-j`.
+according to this view, are illustrated in :ref:`the following figure <fig:sparse.aggr-j>`.
 
 .. figure:: storage-and-basic-operations-of-the-execution-engine-pspic4.svg
    :name: fig:sparse.aggr-j

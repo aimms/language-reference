@@ -9,7 +9,7 @@
 
 The ``Model`` node defines the root node of the entire model tree
 associated with an AIMMS modeling project. The attributes of the main
-``Model`` node are listed in :numref:`table:module.attr-model`. All
+``Model`` node are listed in :ref:`this table <table:module.attr-model>`. All
 attributes of the ``Model`` node have a global impact on the entire
 modeling project.
 

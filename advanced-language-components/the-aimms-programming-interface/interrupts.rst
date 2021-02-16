@@ -16,7 +16,7 @@ manner in such situations.
 
 .. rubric:: Handling interrupts
 
-You can use the functions listed in :numref:`table:api.interrupt` to
+You can use the functions listed in :ref:`this table <table:api.interrupt>` to
 handle two-way interrupts.
 
 .. _table:api.interrupt:

@@ -19,7 +19,7 @@ In order to deal with such situations, AIMMS allows the declaration of
 definition of the other parameters and variables in your model. In the
 model tree, unit-valued parameters are available as a special type of
 parameter declaration, with attributes as given in
-:numref:`table:units.attr-unit-par`.
+:ref:`this table <table:units.attr-unit-par>`.
 
 .. _table:units.attr-unit-par:
 

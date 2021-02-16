@@ -15,7 +15,7 @@ of calendar time.
 .. rubric:: Calendar attributes
 
 Calendars have several associated attributes, which are listed in
-:numref:`table:time.attr-calendar`. Some of these attributes are
+:ref:`this table <table:time.attr-calendar>`. Some of these attributes are
 inherited from sets, while others are new and specific to calendars. The
 new ones are discussed in this section.
 

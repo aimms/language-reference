@@ -11,7 +11,7 @@ Each node in a network has a number of associated incoming and outgoing
 flows. Unless stated otherwise, these flows should be in balance. Based
 on the flows specified in the model, AIMMS will automatically generate a
 balancing constraint for every node. The possible attributes of a
-``Node`` declaration are given in :numref:`table:net.attr-node`.
+``Node`` declaration are given in :ref:`this table <table:net.attr-node>`.
 
 .. _table:net.attr-node:
 

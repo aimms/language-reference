@@ -11,7 +11,7 @@ handling described in this section, however, is encouraged as it is more
 in line with the error handling framework described in
 :ref:`sec:exec.error`. In addition, all errors, including all their
 parts, can be retrieved. The AIMMS API functions in
-:numref:`table:api.handle.error` enable the raising and handling of
+:ref:`this table <table:api.handle.error>` enable the raising and handling of
 errors and retrieving the current AIMMS status.
 
 .. _table:api.handle.error:

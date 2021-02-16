@@ -213,7 +213,7 @@ straightforward:
 
 The *characteristic* argument must be an element of the predefined set
 ``TimeslotCharacteristics``. The elements of this set, as well as the
-associated function values are listed in :numref:`table:time.time-char`.
+associated function values are listed in :ref:`this table <table:time.time-char>`.
 
 .. _table:time.time-char:
 

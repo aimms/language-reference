@@ -11,7 +11,7 @@ You can make a database table known to AIMMS by means of a
 declaration you can specify the ODBC data source name of the database
 and the name of the database table from which you want to read, or to
 which you want to write. The list of attributes of a ``DatabaseTable``
-is given in :numref:`table:db.attr-db-table`.
+is given in :ref:`this table <table:db.attr-db-table>`.
 
 .. _table:db.attr-db-table:
 

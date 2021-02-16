@@ -15,7 +15,7 @@ containing expressions in terms of variables, parameters and constants.
 .. rubric:: Constraint attributes
 
 The possible attributes of constraints are given in
-:numref:`table:var.attr-constraint`.
+:ref:`this table <table:var.attr-constraint>`.
 
 .. _table:var.attr-constraint:
 

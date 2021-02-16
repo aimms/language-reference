@@ -72,7 +72,7 @@ measured and reconciled values are stored in the identifiers
 -  ``Composition(f,c)``,
 
 where ``f`` is an index into a set of ``Flows``, and ``c`` is an index
-into a set of ``Components``. :numref:`table:xml.example-data` contains
+into a set of ``Components``. :ref:`this table <table:xml.example-data>` contains
 the measured and reconciled flow values and compositions used throughout
 this chapter.
 

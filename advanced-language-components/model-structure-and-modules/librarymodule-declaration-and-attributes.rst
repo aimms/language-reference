@@ -16,7 +16,7 @@ the ``LibraryModule`` declaration. Rather, it is specified when you add
 the library to your project using the **Library Manager**, as discussed
 in Section 3.1 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__. The
 attributes of ``LibraryModule`` nodes are listed in
-:numref:`table:module.attr-library`.
+:ref:`the following table <table:module.attr-library>`.
 
 .. _table:module.attr-library:
 

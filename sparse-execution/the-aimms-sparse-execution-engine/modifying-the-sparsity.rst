@@ -98,7 +98,7 @@ follows.
 
 .. rubric:: Where allowed?
 
-:numref:`table:sparse.binary-sparsity` summarizes the operators to which
+:ref:`this table <table:sparse.binary-sparsity>` summarizes the operators to which
 the ``$`` sparsity modifier can be applied, and whether it can be
 applied to the left-hand side operand, to the right-hand side operand,
 or to both.
@@ -164,40 +164,40 @@ sparsity modifier we can shorten the above as follows:
 
 .. rubric:: Where allowed?
 
-:numref:`table:sparse.iterative-sparsity` summarizes the iterative
+:ref:`this table <table:sparse.iterative-sparsity>` summarizes the iterative
 operators to which the ``$`` sparsity modifier can be applied.
 
 .. _table:sparse.iterative-sparsity:
 
 .. table:: Sparsity modifiers of iterative operators
 
-   +--------------------------------------------+---------------------------+
-   | Iterative operator                         | Sparsity modifier allowed |
-   |                                            +---------------------------+
-   |                                            | ``$`` added               |
-   +============================================+===========================+
-   | ``Sort``, ``NBest``                        | yes                       |
-   +--------------------------------------------+---------------------------+
-   | ``Intersection``                           | yes                       |
-   +--------------------------------------------+---------------------------+
-   | :any:`First`, :any:`Last`, ``Nth``         | no                        |
-   +--------------------------------------------+---------------------------+
-   | ``ArgMin``, ``ArgMax``                     | yes                       |
-   +--------------------------------------------+---------------------------+
-   | ``Sum``, ``Union``                         | no                        |
-   +--------------------------------------------+---------------------------+
-   | ``Prod``                                   | yes                       |
-   +--------------------------------------------+---------------------------+
-   | :any:`Min`, :any:`Max`                     | yes                       |
-   +--------------------------------------------+---------------------------+
-   | Statistical operators                      | yes                       |
-   | (see also :numref:`table:expr.stat-iter`)  |                           |
-   +--------------------------------------------+---------------------------+
-   | ``ForAll``                                 | no                        |
-   +--------------------------------------------+---------------------------+
-   | Other logical operators                    | no                        |
-   | (see also :numref:`table:expr.logic-iter`) |                           |
-   +--------------------------------------------+---------------------------+
+   +------------------------------------------------------+---------------------------+
+   | Iterative operator                                   | Sparsity modifier allowed |
+   |                                                      +---------------------------+
+   |                                                      | ``$`` added               |
+   +======================================================+===========================+
+   | ``Sort``, ``NBest``                                  | yes                       |
+   +------------------------------------------------------+---------------------------+
+   | ``Intersection``                                     | yes                       |
+   +------------------------------------------------------+---------------------------+
+   | :any:`First`, :any:`Last`, ``Nth``                   | no                        |
+   +------------------------------------------------------+---------------------------+
+   | ``ArgMin``, ``ArgMax``                               | yes                       |
+   +------------------------------------------------------+---------------------------+
+   | ``Sum``, ``Union``                                   | no                        |
+   +------------------------------------------------------+---------------------------+
+   | ``Prod``                                             | yes                       |
+   +------------------------------------------------------+---------------------------+
+   | :any:`Min`, :any:`Max`                               | yes                       |
+   +------------------------------------------------------+---------------------------+
+   | Statistical operators                                | yes                       |
+   | (see also :ref:`this table <table:expr.stat-iter>`)  |                           |
+   +------------------------------------------------------+---------------------------+
+   | ``ForAll``                                           | no                        |
+   +------------------------------------------------------+---------------------------+
+   | Other logical operators                              | no                        |
+   | (see also :ref:`this table <table:expr.logic-iter>`) |                           |
+   +------------------------------------------------------+---------------------------+
 
 .. rubric:: Usage of sparsity modifiers
 

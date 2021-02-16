@@ -10,7 +10,7 @@ implemented in AIMMS as a combination of a system module that can be
 included into your model, and a number of supporting functions in the
 ``GMP::Stochastic`` namespace of the GMP library. The procedures and
 functions of the ``GMP::Stochastic`` namespace are listed in
-:numref:`table:gmp.stochastic`.
+:ref:`this table <table:gmp.stochastic>`.
 
 .. _GMP::Stochastic::UpdateBendersSubproblem-LR:
 

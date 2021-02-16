@@ -220,7 +220,7 @@ the identical string representation, and the numerical value represented
 by a set element. If ``S`` is a set identifier, ``i`` an index bound to
 ``S``, :math:`l` an element, and :math:`n` a positive integer, then
 possible calls to the :any:`Ord`, :any:`Card`, :any:`Element`, :any:`ElementCast`
-and :any:`Val` functions are given in :numref:`table:set-expr.set-func`.
+and :any:`Val` functions are given in :ref:`this table <table:set-expr.set-func>`.
 
 .. _table:set-expr.set-func:
 
@@ -336,7 +336,7 @@ Element-valued Iterative Expressions
 .. rubric:: Selecting elements
 
 AIMMS offers special iterative operators that let you select a specific
-element from a domain. :numref:`table:set-expr.elem-iter` shows all such
+element from a domain. :ref:`this table <table:set-expr.elem-iter>` shows all such
 operators that result in a set element value. The syntax of iterative
 operators is explained in :ref:`sec:set-expr.set.sort`. The second
 column in this table refers to the required number of expression
@@ -448,7 +448,7 @@ beginning and the end of a set.
 Let ``S`` be a set, ``i`` a set element expression, and :math:`k` an
 integer-valued expression. The lag and lead operators ``+``, ``++``,
 ``-``, ``--`` return the element of ``S`` as defined in
-:numref:`table:set-expr.lag-lead`. Please note that these operators are
+:ref:`this table <table:set-expr.lag-lead>`. Please note that these operators are
 also available in the form of ``+=``, ``-=``, ``++=`` and ``--=``. The
 operators in this form can be used in statements like:
 
@@ -508,7 +508,7 @@ Consider the set ``Cities`` initialized through the assignment
 
 Assuming that the index ``i`` and the element parameter ``CurrentCity``
 both currently refer to ``'Rotterdam'``,
-:numref:`table:set-expr.lag-lead-examp` illustrates the results of
+:ref:`this table <table:set-expr.lag-lead-examp>` illustrates the results of
 various lag/lead expressions.
 
 .. _table:set-expr.lag-lead-examp:

@@ -209,7 +209,7 @@ and uses various types of techniques, such as:
 .. rubric:: Supported operators
 
 The presolve algorithm can handle nonlinear expressions build up by the
-operators listed in :numref:`table:nlp.opr-presolve`. If a nonlinear
+operators listed in :ref:`this table <table:nlp.opr-presolve>`. If a nonlinear
 constraint contains an operator that is not in this table then it will
 be ignored by the presolve algorithm.
 

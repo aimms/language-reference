@@ -5,7 +5,7 @@ Supporting Functions for Robust Optimization Models
 
 .. rubric:: Supporting functions for robust models
 
-:numref:`table:gmp.robust` lists the functions available in the
+:ref:`this table <table:gmp.robust>` lists the functions available in the
 ``GMP::Robust`` namespace in support of working with robust optimization
 models.
 

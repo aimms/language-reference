@@ -7,7 +7,7 @@ Synchronization Events
 
 To allow for more advanced thread synchronization during parallel
 solves, AIMMS offers synchronization objects called *events*, which can
-be manipulated using the function listed in :numref:`table:gmp.event`.
+be manipulated using the function listed in :ref:`this table <table:gmp.event>`.
 
 .. _GMP::Event::Reset-LR:
 

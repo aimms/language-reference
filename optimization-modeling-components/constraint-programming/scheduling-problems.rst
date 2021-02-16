@@ -111,7 +111,7 @@ length (difference between end and begin), size (number of active slots)
 and presence of an activity. These variables can be used inside
 constraints, for example ``myActivity.End <= myDeadLine+1``. On the
 other hand, an activity is defined using its attributes as presented in
-:numref:`table:cp.attr-activity`. We will first discuss the attributes
+:ref:`this table <table:cp.attr-activity>`. We will first discuss the attributes
 of an activity, and then these suffixes in more detail.
 
 .. _table:cp.attr-activity:
@@ -517,7 +517,7 @@ constraints implied by its attributes as discussed below.
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	
 A resource is defined using the attributes presented in
-:numref:`table:cp.attr-resource`.
+:ref:`this table <table:cp.attr-resource>`.
 
 .. _resource.usage:
 
@@ -1757,7 +1757,7 @@ variables. Note that the scheduling constraint can be exploited more
 effectively during the solving process than the equivalent algebraic
 formulation. A list of available scheduling constraints for precedence
 relations is given in
-:numref:`table:constraint.programming.special.scheduling.restrictions`.
+:ref:`this table <table:constraint.programming.special.scheduling.restrictions>`.
 
 .. _table:constraint.programming.special.scheduling.restrictions:
 
@@ -1860,7 +1860,7 @@ relations is given in
 In addition to these precedence constraints and the constraints that are
 defined by resources, AIMMS offers several other global constraints that
 are helpful in modeling scheduling problems.
-:numref:`table:constraint.programming.special.scheduling.restrictions`
+:ref:`this table <table:constraint.programming.special.scheduling.restrictions>`
 presents the global scheduling constraints and functions available in
 AIMMS. These constraints are based on activities and can be used to
 represent hierarchical planning problems (:any:`cp::Span`), to schedule
@@ -1873,7 +1873,7 @@ There are several functions available that provide control over the
 value to be used for the suffixes of activities in the case of absence.
 In addition, there are functions available for relating adjacent
 activities on a resource.
-:numref:`table:constraint.programming.special.scheduling.functions`
+:ref:`this table <table:constraint.programming.special.scheduling.functions>`
 lists the functions available that operate on activities. As an example,
 consider a model whereby the length of two adjacent jobs is limited:
 

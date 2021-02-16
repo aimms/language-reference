@@ -49,7 +49,7 @@ until the first occurrence.
 
 .. rubric:: Discrete distributions overview
 
-:numref:`table:app.discr_distributions` shows the relation between the
+:ref:`this table <table:app.discr_distributions>` shows the relation between the
 discrete distributions. The continuous :any:`Exponential` and :any:`Gamma`
 distribution naturally fit in this table as they represent the
 distribution of the time it takes before the first/:math:`n`-th

@@ -295,7 +295,7 @@ Model Edit Functions and briefly describes them.
 
 .. rubric:: Creating and deleting
 
-:numref:`table:me.library` lists the Model Edit Functions. A new runtime
+:ref:`this table <table:me.library>` lists the Model Edit Functions. A new runtime
 library can be created using the function :any:`me::CreateLibrary`. if
 successful this function returns the library as an element in
 :any:`AllSymbols`. The function :any:`me::Create` creates a new node or

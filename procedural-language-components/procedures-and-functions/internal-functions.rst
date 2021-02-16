@@ -100,7 +100,7 @@ arguments.
 .. rubric:: Function attributes
 
 The attributes of functions are listed in
-:numref:`table:intern.attr-func`. Most of them are the same as those of
+:ref:`this table <table:intern.attr-func>`. Most of them are the same as those of
 procedures.
 
 .. _table:intern.attr-func:

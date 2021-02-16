@@ -6,7 +6,7 @@ Managing Generated Mathematical Program Instances
 .. rubric:: Managing math program instances
 
 The procedures and functions of the ``GMP::Instance`` namespace are
-listed in :numref:`table:gmp.instance` and take care of the creation and
+listed in :ref:`this table <table:gmp.instance>` and take care of the creation and
 management of generated mathematical program instances. Mathematical
 program instances also provide access to the solution repository and
 solver sessions associated with the instance.
