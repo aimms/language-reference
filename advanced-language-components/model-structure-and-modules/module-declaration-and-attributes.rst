@@ -19,16 +19,17 @@ child of the main ``Model`` node, of a ``Section`` node, or of another
 
 .. table:: 
 
-	============== ================= =============================================================
-	Attribute      Value-type        See also page
-	============== ================= =============================================================
-	``SourceFile`` *string*          :ref:`The SourceFile attribute <attr:module.source-file>`
-	``Property``   ``NoSave``        :ref:`The Property attribute <attr:module.property>`
-	``Prefix``     *identifier*         
-	``Public``     *identifier-list*    
-	``Protected``  *identifier-list*    
-	``Comment``    *comment string*  :ref:`The Text and Comment attributes <attr:prelim.comment>`
-	============== ================= =============================================================
+	================== ===================== =============================================================
+	Attribute          Value-type            See also page
+	================== ===================== =============================================================
+	``SourceFile``     *string*              :ref:`The SourceFile attribute <attr:module.source-file>`
+	``Property``       ``NoSave``            :ref:`The Property attribute <attr:module.property>`
+	``Prefix``         *identifier*         
+	``Public``         *identifier-list*    
+	``Protected``      *identifier-list*    
+	``Required Units`` *quantity::unit-list*
+	``Comment``        *comment string*      :ref:`The Text and Comment attributes <attr:prelim.comment>`
+	================== ===================== =============================================================
 	
 .. _module.source_file:
 
@@ -307,6 +308,20 @@ With the ``Public`` attribute of ``Module2`` defined as in the previous
 example, the unique global representation of the parameter ``Distance``
 in ``Module2`` becomes ``m1::Distance``, as it effectively causes
 ``Distance`` to be contained in the namespace of ``Module1``.
+
+.. _module.requiredunits:
+
+.. rubric:: The ``Required Units`` attribute
+
+It is recommended to declare all quantities and units at one place in the main model, and thus
+not declare quantities in a module as this could lead to a model where the same quantities and units are
+declared multiple times. With the ``Required Units`` attribute of a ``Module`` node,
+you can specify the units that are used in the module and thus should be  
+present in the model that includes this module. If the required units
+are SI units, then they will be added automatically to the model that includes this module.
+The value of this attribute is a list of ``quantity::unit`` specifications. For example:
+``SI_Time_Duration::hour, SI_Length::inch``. Note that this attribute is only available if the module 
+has the source file attribute specified.
 
 .. rubric:: Display and data transfer
 
