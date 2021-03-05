@@ -8,9 +8,9 @@ Data Initialization
 The initialization of sets, parameters, and variables in an AIMMS
 application can be done in several ways:
 
--  through the *``InitialData`` attribute* of sets, and parameters,
+-  through the :ref:`InitialData attribute <attr-par-initialdata>` of sets, and parameters,
 
--  by reading in data from an *text file* in AIMMS data format,
+-  by reading in data from a *text file* in AIMMS data format,
 
 -  by reading in data from a previous AIMMS session stored in a binary
    *case file*,
