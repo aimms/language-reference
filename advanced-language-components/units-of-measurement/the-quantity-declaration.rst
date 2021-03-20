@@ -312,7 +312,7 @@ The conversion syntax is as follows.
 .. rubric:: Unit conversion explained
 
 A unit conversion must be defined using a linear expression of the form
-:math:`(\hbox{\texttt{\#}}\cdot a+b)` where ``#`` is a special token,
+:math:`(\texttt{\#}\cdot a+b)` where ``#`` is a special token,
 and the operator :math:`\cdot` stands for either multiplication or
 division. The coefficients :math:`a` and :math:`b` can be either
 numerical constants or references to scalar parameters. An example in
