@@ -85,7 +85,7 @@ actions directly after compiling the model:
 -  AIMMS fills the contents of any global set or parameter with the
    contents of its ``InitialData`` attribute,
 
--  aimms executes the predefined procedures ``MainInitialization``,
+-  AIMMS executes the predefined procedures ``MainInitialization``,
 
 -  AIMMS executes the predefined procedure ``LibraryInitialization`` for
    each library,
@@ -122,7 +122,7 @@ prior to closing the project:
 -  AIMMS executes the predefined procedure ``PreLibraryTermination`` for
    each library,
 
--  aimms executes the predefined procedures ``MainTermination``, and
+-  AIMMS executes the predefined procedures ``MainTermination``, and
 
 -  finally AIMMS executes the predefined procedure
    ``LibraryTermination`` for each library.
