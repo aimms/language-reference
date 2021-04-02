@@ -22,14 +22,15 @@ attributes of ``LibraryModule`` nodes are listed in
 
 .. table:: 
 
-	============= ================= =============================================================
-	Attribute     Value-type        See also page
-	============= ================= =============================================================
-	``Prefix``    *identifier*         
-	``Interface`` *identifier-list*    
-	``Property``  ``NoSave``        :ref:`The Property attribute <attr:module.property>`
-	``Comment``   *comment string*  :ref:`The Text and Comment attributes <attr:prelim.comment>`
-	============= ================= =============================================================
+	================== ===================== =============================================================
+	Attribute          Value-type            See also page
+	================== ===================== =============================================================
+	``Prefix``         *identifier*         
+	``Interface``      *identifier-list*    
+	``Property``       ``NoSave``            :ref:`The Property attribute <attr:module.property>`
+	``Required Units`` *quantity::unit-list*
+	``Comment``        *comment string*      :ref:`The Text and Comment attributes <attr:prelim.comment>`
+	================== ===================== =============================================================
 	
 .. rubric:: Library modules and namespaces
 
@@ -59,6 +60,19 @@ With the *mandatory* ``Prefix`` attribute of a ``LibraryModule`` node,
 you must specify a module-specific prefix to be used in conjunction with
 the ``::`` operator. The value of the ``Prefix`` attribute should be a
 unique name within the main model.
+
+.. _library_module.requiredunits:
+
+.. rubric:: The ``Required Units`` attribute
+
+It is recommended to declare all quantities and units at one place in the main model, and thus
+not declare quantities in a library as this could lead to a model where the same quantities and units are
+declared multiple times. With the ``Required Units`` attribute of a ``LibraryModule`` node,
+you can specify the units that are used in the library and thus should be  
+present in the model that includes this library. If the required units
+are SI units, then they will be added automatically to the model that includes this library.
+The value of this attribute is a list of ``quantity::unit`` specifications. For example:
+``SI_Time_Duration::hour, SI_Length::inch``.
 
 .. rubric:: No propagation to global namespace
 
