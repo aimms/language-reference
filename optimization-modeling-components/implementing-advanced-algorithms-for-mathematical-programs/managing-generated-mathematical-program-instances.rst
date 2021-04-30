@@ -169,7 +169,7 @@ program instance to a name that already exists in the set
 :any:`AllGeneratedMathematicalPrograms`, the associated mathematical
 program instance will be deleted prior to renaming.
 
-.. rubric:: CLEANDEPEN-DENTS statement
+.. rubric:: CLEANDEPENDENTS statement
 
 Note that also the ``CLEANDEPENDENTS`` statement may remove mathematical
 program instances from memory when it affects any constraint or variable
@@ -248,7 +248,7 @@ Each of these procedures expects an element of the set
 Callback procedures for each type of callback should be declared as
 follows:
 
-   *``AnExampleCallback``\ (solverSession)*
+   ``AnExampleCallback(solverSession)``
 
 where the *solverSession* argument should be a scalar input element
 parameter into the set :any:`AllSolverSessions`. Callback procedures should
