@@ -132,14 +132,12 @@ which all refer to exactly the same time, 9:00 AM on January 20\ *th*,
 
 .. rubric:: Time zone and DST offsets
 
-AIMMS always assumes that reference dates are specified according to the
-local time zone without daylight saving time. However, for calendars
+AIMMS always assumes that reference dates are specified according to UTC. However, for calendars
 with granularity ``day`` AIMMS will ignore any timezone and daylight
 saving time offsets, and just take the day as specified. In the example
 above, a daily calendar with the above ``BeginDate`` will always start
 with period ``1996-01-20``, while an hourly calendar may start with a
-period ``1996-01-19 23:00`` if the difference between the local time
-zone, and the time zone specification in the timeslot format is 10
+period ``1996-01-19 23:00`` if the difference between UTC and the time zone specification in the timeslot format is 10
 hours.
 
 .. _calendar.timeslot_format:
