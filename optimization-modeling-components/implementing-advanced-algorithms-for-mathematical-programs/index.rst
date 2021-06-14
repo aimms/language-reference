@@ -46,9 +46,10 @@ completely expressed in terms of the procedures in this library.
    managing-generated-mathematical-program-instances
    matrix-manipulation-procedures
    managing-the-solution-repository
+   multi-objective-optimization
    using-solver-sessions
    synchronization-events
-   multi-objective-optimization
+   solver-environments
    supporting-functions-for-stochastic-programs
    supporting-functions-for-robust-optimization-models
    supporting-functions-for-benders-decomposition
