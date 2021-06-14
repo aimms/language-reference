@@ -358,7 +358,7 @@ Solution Pool Filtering
 .. rubric:: Solution pool
 
 During the solution process of a MIP problem, the solvers CPLEX and
-GUROBI are capable of storing multiple feasible integer solutions in a
+Gurobi are capable of storing multiple feasible integer solutions in a
 solution pool, for instance, to capture solutions with attractive
 properties that are hard to express in a linear fashion.
 
@@ -448,7 +448,7 @@ introduce unwanted side-effects and numerical instabilities into a
 mathematical program. Using indicator constraints, such relationships
 between a constraint and a variable can be directly expressed in the
 constraint declaration. Indicator constraints are supported by the
-solvers CPLEX, GUROBI and ODH-CPLEX.
+solvers CPLEX, Gurobi and ODH-CPLEX.
 
 .. rubric:: The ``IndicatorConstraint`` property
 
@@ -495,7 +495,7 @@ as follows
 
 The constraint only becomes effective, whenever the binary variable
 ``y`` takes the value 0. To solve the model with the indicator
-constraint, you need the CPLEX, GUROBI or ODH-CPLEX solver.
+constraint, you need the CPLEX, Gurobi or ODH-CPLEX solver.
 
 .. rubric:: Lazy constraints
 
@@ -503,17 +503,17 @@ Sometimes, for a MIP formulation, a user can already identify a group of
 constraints that are unlikely to be violated (lazy constraints). Simply
 including these constraints in the original formulation could make the
 LP subproblem of a MIP optimization very large or too expensive to
-solve. CPLEX, GUROBI and ODH-CPLEX can handle problems with lazy
+solve. CPLEX, Gurobi and ODH-CPLEX can handle problems with lazy
 constraints more efficiently, and therefore AIMMS allows you to identify
 lazy constraints in your model.
 
 .. rubric:: The ``IncludeInLazyConstraintPool`` property
 
 You can specify that a constraint should be added to the pool of lazy
-constraints considered by CPLEX, GUROBI or ODH-CPLEX by setting the
-property ``IncludeInLazyConstraintPool``. You need the CPLEX, GUROBI or
+constraints considered by CPLEX, Gurobi or ODH-CPLEX by setting the
+property ``IncludeInLazyConstraintPool``. You need the CPLEX, Gurobi or
 ODH-CPLEX solver to use this constraint property. When solving your MIP
-model, CPLEX, GUROBI and ODH-CPLEX will only consider these constraints
+model, CPLEX, Gurobi and ODH-CPLEX will only consider these constraints
 when they are violated.
 
 .. rubric:: User cut pools

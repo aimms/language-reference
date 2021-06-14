@@ -107,7 +107,7 @@ various purposes. Typical examples are:
                             called for every new incumbent
    ``CallbackAddCut``       Name of callback procedure to be
                             called to add additional cuts
-                            (CPLEX and GUROBI)
+                            (CPLEX and Gurobi)
    ``CallbackReturnStatus`` Return status of callback
    ``CallbackAOA``          Name of AOA callback procedure
    ======================== ================================

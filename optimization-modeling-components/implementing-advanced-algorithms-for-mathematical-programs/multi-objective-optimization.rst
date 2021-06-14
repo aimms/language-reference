@@ -13,7 +13,7 @@ For example, minimizing the travelling distance while minimizing the
 travelling time (which might conflict if the shortest route is not the
 fastest). AIMMS allows you to define multiple objectives for linear
 models only. Multi-objective optimization in AIMMS is currently only
-supported by CPLEX and GUROBI.
+supported by CPLEX and Gurobi.
 
 .. rubric:: Blended or lexicographic objective
 

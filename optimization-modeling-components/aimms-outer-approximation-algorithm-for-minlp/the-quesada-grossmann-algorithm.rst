@@ -9,7 +9,7 @@ the MIP problems in which a significant amount of rework is done. They
 proposed an algorithm in which only one MIP problem is solved. The
 algorithm implemented in AIMMS uses a callback procedure for lazy
 constraints which is supported by modern MIP solvers like CPLEX and
-GUROBI.
+Gurobi.
 
 .. rubric:: Convex models
 

@@ -362,7 +362,7 @@ constraint in your model.
 
 .. rubric:: Indicator conditions
 
-When you are using the CPLEX, GUROBI or ODH-CPLEX solver, you can
+When you are using the CPLEX, Gurobi or ODH-CPLEX solver, you can
 declaratively specify indicator constraints through the
 ``IndicatorConstraint`` property of a constraint declaration (see
 :ref:`sec:var.constr.indicator`). You can also set and delete indicator
@@ -372,7 +372,7 @@ constraints programmatically for a given *GMP* using the functions
 
 .. rubric:: Lazy and cut pool constraints
 
-When you are using the CPLEX, GUROBI or ODH-CPLEX solver, you can
+When you are using the CPLEX, Gurobi or ODH-CPLEX solver, you can
 declaratively specify constraints to be part of a pool of lazy
 constraints or cuts through the ``IncludeInLazyConstraintPool`` and
 ``IncludeInCutPool`` properties of a constraint declaration respectively

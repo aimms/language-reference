@@ -24,22 +24,22 @@ performs these necessary solution transfer steps for you, and uses the
 fixed solution number 1 for all of its communication.
 
 Some solvers are capable of finding multiple solutions instead of at
-most one. Examples of such solvers are BARON, CPLEX and GUROBI. When
+most one. Examples of such solvers are BARON, CPLEX and Gurobi. When
 such a solver finds multiple solutions, these solutions are stored in
 the solution repository from number 1 on upwards. The control mechanism
 to let solvers find multiple solutions is solver specific:
 
--  ``BARON 19``: For more information see the **Help** file for option
+-  ``BARON 21``: For more information see the **Help** file for option
    ``Number of best solutions`` in option category ``Specific solvers``
-   - ``BARON 19`` - ``General``.
+   - ``BARON 21`` - ``General``.
 
--  ``CPLEX 12.9``: For more information see the **Help** file for option
+-  ``CPLEX 20.1``: For more information see the **Help** file for option
    ``Do populate`` in option category ``Specific solvers`` -
-   ``CPLEX 12.9`` - ``MIP solution pool``.
+   ``CPLEX 20.1`` - ``MIP solution pool``.
 
--  ``GUROBI 8.1``: For more information see the **Help** file for option
+-  ``Gurobi 9.1``: For more information see the **Help** file for option
    ``Pool search mode`` in option category ``Specific solvers`` -
-   ``GUROBI 8.1`` - ``Solution pool``.
+   ``Gurobi 9.1`` - ``Solution pool``.
 
 .. rubric:: Solution repository functions
 

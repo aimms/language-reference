@@ -249,7 +249,7 @@ such nested solves, for instance, for finding a heuristic solution
 during a ``Heuristic`` callback. Once you have found a heuristic
 solution, you can pass it onto the running solver session using the
 function :any:`GMP::Solution::SendToSolverSession`. Note that this
-functionality is currently only supported by CPLEX and GUROBI.
+functionality is currently only supported by CPLEX and Gurobi.
 
 .. rubric:: No asynchronous solves
 
@@ -273,7 +273,7 @@ and all its descendant nodes, while a global cut will remain to exist
 for all nodes onwards. The result of the procedure will be the temporary
 addition of row to the matrix, as if :any:`GMP::Row::Generate` had been
 called. Note that this functionality is currently only supported by
-CPLEX, GUROBI and ODH-CPLEX.
+CPLEX, Gurobi and ODH-CPLEX.
 
 .. rubric:: Rejecting incumbents
 

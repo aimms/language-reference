@@ -7,7 +7,7 @@ Declaration of MPCC Models
 
 .. rubric:: MPCC models
 
-Through the KNITRO solver, AIMMS also supports **m**\ athematical
+Through the Knitro solver, AIMMS also supports **m**\ athematical
 **p**\ rograms with **c**\ omplementarity **c**\ onstraints (MPCC
 models). MPCC models are also more commonly denoted by other modeling
 languages as MPEC models, which form a more general, and much more
@@ -26,9 +26,9 @@ complementary models, a MPCC model has an objective function.
 
 .. rubric:: Solving MPCC models
 
-To solve MPCC models in AIMMS, you need a license for the KNITRO solver.
-If you do not have a license for the KNITRO solver, AIMMS will return an
+To solve MPCC models in AIMMS, you need a license for the Knitro solver.
+If you do not have a license for the Knitro solver, AIMMS will return an
 error that it has no suitable solver available for the ``mpcc`` class,
-whenever you try to solve a MPCC model. The KNITRO solver can also be
+whenever you try to solve a MPCC model. The Knitro solver can also be
 used for solving pure mixed complementarity problems, but is, in
 general, far less efficient in that case than dedicated ``mcp`` solvers.

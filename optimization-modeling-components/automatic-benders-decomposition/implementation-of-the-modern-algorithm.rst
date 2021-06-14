@@ -15,7 +15,7 @@ a feasible integer solution for the master problem, the subproblem
 
 .. rubric:: Callbacks
 
-Modern MIP solvers like CPLEX and GUROBI allow the user control over the
+Modern MIP solvers like CPLEX and Gurobi allow the user control over the
 solution process by so-called *callbacks*. Callbacks allow user code in
 AIMMS to be executed regularly during an optimization process. If the
 solver finds a new candidate integer solution then the user has the
