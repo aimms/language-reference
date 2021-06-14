@@ -6,7 +6,7 @@ Solver Environment Procedures
 .. rubric:: Solver environments
 
 The procedures and functions in the ``GMP::Solver`` namespace deal with solver environments and
-are listed in :numref:`table:gmp.environments`.
+are listed in :ref:`this table <table:gmp.environments>`.
 Normally AIMMS initializes one solver environment for each active solver at startup and frees it
 when AIMMS is closed. In some cases it is more practical to initialize a solver environment just
 before solving a mathematical program and free it afterwards, and possibly repeat this process
