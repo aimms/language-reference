@@ -139,9 +139,9 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 	+--------------------------------------------------------------------------+
 	| ``RetrieveFromModel``\ (*GMP*, *SolNr*)                                  |
 	+--------------------------------------------------------------------------+
-	| ``SendToModel``\ (*GMP*, *SolNr*\ [, *merge*])                           |
+	| ``SendToModel``\ (*GMP*, *SolNr*)                                        |
 	+--------------------------------------------------------------------------+
-	| ``SendToModelSelection``\ (*GMP*, *SolNr*, *Identifiers*, *Suffices*\ [, *merge*]) |
+	| ``SendToModelSelection``\ (*GMP*, *SolNr*, *Identifiers*, *Suffices*)    |
 	+--------------------------------------------------------------------------+
 	| ``RetrieveFromSolverSession``\ (*solverSession*, *SolNr*)                |
 	+--------------------------------------------------------------------------+
@@ -169,13 +169,13 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 	+--------------------------------------------------------------------------+
 	| ``SetIterationCount``\ (*GMP*, *SolNr*, *IterCnt*)                       |
 	+--------------------------------------------------------------------------+
-	| ``GetColumnValue``\ (*GMP*, *SolNr*, *column*\ [, *valueType*])          |
+	| ``GetColumnValue``\ (*GMP*, *SolNr*, *column*)                           |
 	+--------------------------------------------------------------------------+
-	| ``SetColumnValue``\ (*GMP*, *SolNr*, *column*, *value*\ [, *valueType*]) |
+	| ``SetColumnValue``\ (*GMP*, *SolNr*, *column*, *value*)                  |
 	+--------------------------------------------------------------------------+
-	| ``GetRowValue``\ (*GMP*, *SolNr*, *row*\ [, *valueType*])                |
+	| ``GetRowValue``\ (*GMP*, *SolNr*, *row*)                                 |
 	+--------------------------------------------------------------------------+
-	| ``SetRowValue``\ (*GMP*, *SolNr*, *row*, *value*\ [, *valueType*])       |
+	| ``SetRowValue``\ (*GMP*, *SolNr*, *row*, *value*)                        |
 	+--------------------------------------------------------------------------+
 	| ``Check``\ (*GMP*, *SolNr*, *NumInf*, *SumInf*, *MaxInf*\ [, *skipObj*]) |
 	+--------------------------------------------------------------------------+
