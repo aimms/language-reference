@@ -51,6 +51,10 @@ expression* (i.e. a constant, a constant enumerated set or a constant
 list expression) or a ``DataTable``. The table format is explained in
 :ref:`sec:text.table`.
 
+.. _MainInitialization:
+
+.. _PostMainInitialization:
+
 .. rubric:: The ``MainInitialization`` and ``PostMainInitialization`` procedures
 
 AIMMS will add the procedures ``MainInitialization`` and
@@ -63,6 +67,10 @@ mathematical program. Both the ``MainInitialization`` and
 ``PostMainInitialization`` procedure are aimed at initializing your
 model. The distinction between the two becomes apparent in the presence
 of libraries in your model (cf. :ref:`sec:module.library`).
+
+.. _LibraryInitialization:
+
+.. _PostLibraryInitialization:
 
 .. rubric:: Library initialization
 
@@ -100,6 +108,10 @@ Thus, as a guideline, any model initialization that depends on (other)
 libraries should go into a ``PostLibraryInitialization`` or the
 ``PostMainInitialization`` procedure, to make sure that it can be
 executed successfully.
+
+.. _LibraryTermination:
+
+.. _PreLibraryTermination:
 
 .. rubric:: Library termination
 
