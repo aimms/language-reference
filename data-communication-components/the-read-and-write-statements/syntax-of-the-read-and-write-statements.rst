@@ -1143,7 +1143,7 @@ raise an error message about duplicate keys being written. Functionally,
 the insert mode is equivalent to the replace rows mode, with the
 non-existing primary keys restriction. Especially when writing to
 database tables which already contain a lot of rows, the speed advantage
-of the insert mode becomes more visible.
+of the insert mode becomes more visible. 
 
 .. rubric:: Writing in backup mode
 
@@ -1178,7 +1178,8 @@ statement. Care should be taken that writing in *dense* mode does not
 lead to an excessive amount of records being stored in the database. The
 mode combination *merge* and *dense* is not allowed, because it is
 ambiguous whether or not a non-default entry in the database should be
-overwritten by a default value of AIMMS.
+overwritten by a default value of AIMMS. 
+The mode combination *insert* and *dense* is also not possible.
 
 .. rubric:: Replacing sets
 
