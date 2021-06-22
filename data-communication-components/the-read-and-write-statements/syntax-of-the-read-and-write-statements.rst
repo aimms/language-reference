@@ -1179,7 +1179,7 @@ lead to an excessive amount of records being stored in the database. The
 mode combination *merge* and *dense* is not allowed, because it is
 ambiguous whether or not a non-default entry in the database should be
 overwritten by a default value of AIMMS. 
-The mode combination *insert* and *dense* is also not possible.
+For the same reason, the mode combination *insert* and *dense* is also not allowed.
 
 .. rubric:: Replacing sets
 
