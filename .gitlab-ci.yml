@@ -16,6 +16,7 @@ before_script:
 
 linkcheck:
   stage: test
+  allow_failure: true
   script:
   - python3.8 -msphinx -W -b linkcheck . _build/linkcheck
   tags: 

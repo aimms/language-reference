@@ -43,7 +43,7 @@ certain number of successes have occurred is known as the :any:`Gamma`
 distribution and is discussed in :ref:`app:distribution.cont`. The
 :any:`NegativeBinomial` distribution is a special case of the :any:`Geometric`
 distribution and describes the number of failures before the first
-success occurs. Similarly, the ``Exponetial`` distribution is a special
+success occurs. Similarly, the :any:`Exponential` distribution is a special
 case of the :any:`Gamma` distribution and describes the amount of time
 until the first occurrence.
 
