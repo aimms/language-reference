@@ -31,9 +31,9 @@ The attributes of mathematical programs are listed in
 	+----------------------+----------------------------+------------------------------------+
 	| ``ViolationPenalty`` | *reference*                | :ref:`sec:mp.infeas`               |
 	+----------------------+----------------------------+------------------------------------+
-	| ``Text``             | *string*                   | :ref:`here <attr:prelim.text>`     |
+	| ``Text``             | *string*                   |  :ref:`attr:prelim.text`           |
 	+----------------------+----------------------------+------------------------------------+
-	| ``Comment``          | *comment string*           | :ref:`here <attr:prelim.comment>`  |
+	| ``Comment``          | *comment string*           |  :ref:`attr:prelim.comment`        |
 	+----------------------+----------------------------+------------------------------------+
 	| ``Convention``       | *convention*               | :ref:`sec:units.convention`        |
 	+----------------------+----------------------------+------------------------------------+

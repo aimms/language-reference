@@ -121,7 +121,7 @@ of an activity, and then these suffixes in more detail.
 	+--------------------+---------------------------+-------------------------------------+
 	| Attribute          | Value-type                | See also page                       |
 	+====================+===========================+=====================================+
-	| ``IndexDomain``    | *index-domain*            | :ref:`here <attr:var.index-domain>` |
+	| ``IndexDomain``    | *index-domain*            |  :ref:`attr:var.index-domain`       |
 	+--------------------+---------------------------+-------------------------------------+
 	| ``ScheduleDomain`` | *set range or expression* |                                     |
 	+--------------------+---------------------------+-------------------------------------+
@@ -131,11 +131,11 @@ of an activity, and then these suffixes in more detail.
 	+--------------------+---------------------------+-------------------------------------+
 	| ``Size``           | *expression*              |                                     |
 	+--------------------+---------------------------+-------------------------------------+
-	| ``Priority``       | *reference*               | :ref:`here <attr:var.priority>`     |
+	| ``Priority``       | *reference*               |  :ref:`attr:var.priority`           |
 	+--------------------+---------------------------+-------------------------------------+
-	| ``Text``           | *string*                  | :ref:`here <attr:prelim.text>`      |
+	| ``Text``           | *string*                  |  :ref:`attr:prelim.text`            |
 	+--------------------+---------------------------+-------------------------------------+
-	| ``Comment``        | *comment string*          | :ref:`here <attr:prelim.comment>`   |
+	| ``Comment``        | *comment string*          |  :ref:`attr:prelim.comment`         |
 	+--------------------+---------------------------+-------------------------------------+
 	
 .. _activity.schedule_domain:
@@ -473,11 +473,11 @@ constraints implied by its attributes as discussed below.
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| Attribute           | Value-type                           | See also page                                            |
 	+=====================+======================================+==========================================================+
-	| ``IndexDomain``     | *index-domain*                       | :ref:`here <attr:var.index-domain>`                      |
+	| ``IndexDomain``     | *index-domain*                       |  :ref:`attr:var.index-domain`                            |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| ``Usage``           | ``Parallel`` or ``Sequential``       |                                                          |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
-	| ``ScheduleDomain``  | *set range or expression*            | :ref:`here <attr:activity.schedule-domain>`              |
+	| ``ScheduleDomain``  | *set range or expression*            |  :ref:`attr:activity.schedule-domain`                    |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| ``Activities``      | *collection of activities*           |                                                          |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
@@ -499,7 +499,7 @@ constraints implied by its attributes as discussed below.
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| ``Precedes``        | *set of reference pairs*             |                                                          |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
-	| ``Unit``            | *unit-valued expression*             | :ref:`here <attr:par.unit>`, :ref:`here <attr:var.unit>` |
+	| ``Unit``            | *unit-valued expression*             |  :ref:`attr:par.unit`, :ref:`attr:var.unit`              |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| ``LevelRange``      | *numeric range*                      |                                                          |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
@@ -511,9 +511,9 @@ constraints implied by its attributes as discussed below.
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	| ``EndChange``       | *per activity : expression*          |                                                          |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
-	| ``Text``            | *string*                             | :ref:`here <attr:prelim.text>`                           |
+	| ``Text``            | *string*                             |  :ref:`attr:prelim.text`                                 |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
-	| ``Comment``         | *comment string*                     | :ref:`here <attr:prelim.comment>`                        |
+	| ``Comment``         | *comment string*                     |  :ref:`attr:prelim.comment`                              |
 	+---------------------+--------------------------------------+----------------------------------------------------------+
 	
 A resource is defined using the attributes presented in
@@ -1842,7 +1842,7 @@ relations is given in
    +----------------------------------------------------------------------------+-------------------------------------------------------------------------------+
    | :any:`cp::EndOfPrevious`\ ( :math:`r`, :math:`s`, :math:`e`, :math:`a`)    | End of previous activity                                                      |
    +----------------------------------------------------------------------------+-------------------------------------------------------------------------------+
-   | :any:`cp::GroupOfNext`\ ( :math:`r`, :math:`s`, :math:`e`, :math:`a`)      | Group of next activity, see also :ref:`here <attr:resource-group-definition>` |
+   | :any:`cp::GroupOfNext`\ ( :math:`r`, :math:`s`, :math:`e`, :math:`a`)      | Group of next activity, see also  :ref:`attr:resource-group-definition`       |
    +----------------------------------------------------------------------------+-------------------------------------------------------------------------------+
    | :any:`cp::GroupOfPrevious`\ ( :math:`r`, :math:`s`, :math:`e`, :math:`a`)  | Group of previous activity                                                    |
    +----------------------------------------------------------------------------+-------------------------------------------------------------------------------+
