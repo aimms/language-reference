@@ -72,12 +72,12 @@ outline is as follows.
 
 .. code-block:: aimms
 
-	<<Initialize algorithmic parameters>>
+	! <<Initialize algorithmic parameters>>
 
 	while ( Card(SelectedDepots) < Card(Depots) and
 	        CapacityOfSelectedDepots < TotalAverageDemand + TotalDemandDeviation ) do
-	    <<Determine depot frequencies prior to selecting a new depot>>
-	    <<Select a new depot and update algorithmic parameters>>
+	    ! <<Determine depot frequencies prior to selecting a new depot>>
+	    ! <<Select a new depot and update algorithmic parameters>>
 	endwhile;
 
 The AIMMS function :any:`Card` determines the cardinality of a set, that is
