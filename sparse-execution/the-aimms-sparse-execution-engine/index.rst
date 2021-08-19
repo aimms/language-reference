@@ -52,3 +52,8 @@ operators.
    storage-and-basic-operations-of-the-execution-engine
    modifying-the-sparsity
    overview-of-operator-efficiency
+   
+See also
+^^^^^^^^
+
+This material is presented differently in the `AIMMS Academy <https://academy.aimms.com>`_ master course "Execution Efficiency".

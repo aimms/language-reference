@@ -97,6 +97,11 @@ want to follow the suggested option.
 -  Are you using ordered sets? Reordering the elements in a set can slow
    execution significantly as detailed in :ref:`sec:eff.set.ordering`.
 
+If you want hands on experience with such examples, please check out the last chapter of 
+the `AIMMS Academy <https://academy.aimms.com>`_ course "Execution Efficiency".  
+In this course, concrete AIMMS 4.79 projects are offered to experiment with.
+
+
 .. _subsection:eff.tuning-stmts.for-stmt:
 
 Consider the Use of ``FOR`` Statements
