@@ -52,7 +52,9 @@ extensions = [
 bibtex_bibfiles = ['appendices/bibbase.bib']
 
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
-                                  (None,'objects-functionreference.inv'))}
+                                  (None,'objects-functionreference.inv')),
+                       'docs': ('https://documentation.aimms.com/',None),
+                       'axll': ('https://documentation.aimms.com/aimmsxllibrary/',None),}
 
 if os.name != 'nt':
 
@@ -85,7 +87,7 @@ language = None
 exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'aimmslexer'
+pygments_style = 'default'
 
 # -- Options for HTML output -------------------------------------------------
 

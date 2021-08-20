@@ -16,31 +16,18 @@ but to consider to use the spreadsheet functions, described in this
 chapter, instead. Please note that there are no ODBC drivers available
 for OpenOffice Calc, so the remarks above apply to the Excel case only.
 
-.. rubric:: The Excel Add-In
+.. rubric:: The AIMMSXLLibrary
 
-On the other hand, *from within Excel*, it is possible to exchange data
-with an AIMMS model in a variety of list and tabular formats using the
-Excel add-in provided with AIMMS. The Excel add-in is described in full
-detail in the *Excel Add-In `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__*.
+The :doc:`axll:index`
+is the preferred way to communicate with excel files from AIMMS applications.
+This library can also communicate with Excel files in server environments 
+where Excel is not installed. This is particularly useful when one deploys 
+applications on :doc:`docs:pro/index` 
+which is typically installed on a machine with no Office or Excel instance.
 
-.. rubric:: The OpenOffice Calc function library
+.. rubric:: The Data Exchange library
 
-From AIMMS version 3.12 FR1 on, it is also possible to communicate with
-OpenOffice Calc workbooks from within the AIMMS model (there is no
-equivalent of the Excel add-in for OpenOffice Calc). The function
-library is the same as used for the communication with Excel from within
-the AIMMS model. To use the functions with OpenOffice Calc workbooks
-instead of Excel workbooks, simply use the extension ``.ods`` in the
-``WorkbookName`` argument of the functions.
+The :doc:`docs:dataexchange/index` 
+allows you to flexibly map any JSON, XML format, 
+and CSV or Excel sheet onto appropriate identifiers in your AIMMS model. 
 
-.. rubric:: This chapter
-
-This chapter provides a brief description of an AIMMS function library
-that allows you programmatic access, *from within your model*, to the
-extensive data exchange capabilities provided by the Excel add-in.
-
-.. toctree::
-   :maxdepth: 1
-
-   an-example
-   function-overview
