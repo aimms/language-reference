@@ -34,7 +34,7 @@ deploy:
   script:
     - python3.8 -msphinx -b html . _build/html 
     - python3.8 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
-    - rsync -rt _build/html/ support@data.aimms.com:/home/aimms/www/documentation.aimms.com/language-reference
+    - rsync -rt --delete-excluded _build/html/ support@data.aimms.com:/home/aimms/www/documentation.aimms.com/language-reference
   tags: 
     - ubuntu
   only:
