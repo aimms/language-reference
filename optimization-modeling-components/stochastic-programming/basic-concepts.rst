@@ -98,7 +98,7 @@ illustrated in :numref:`fig:stoch.single-scen`.
 .. figure:: basic-concepts-pspic1.svg
    :name: fig:stoch.single-scen
 
-   A tree representing a single scenario *sc\ :math:`_1`*
+   A tree representing a single scenario sc\ :math:`_1`
 
 For multiple scenarios, the specific outcomes of the stochastic events
 up to a certain stage usually coincide for a subset of the scenarios.
