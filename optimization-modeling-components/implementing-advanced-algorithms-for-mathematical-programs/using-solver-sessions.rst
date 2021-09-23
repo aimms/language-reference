@@ -30,8 +30,6 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _GMP::SolverSession::GenerateCut-LR:
 
-.. _GMP::SolverSession::SetSolverStatus:
-
 .. _GMP::SolverSession::GetSolverStatus-LR:
 
 .. _GMP::SolverSession::GetProgramStatus-LR:
@@ -61,6 +59,10 @@ implicitly by AIMMS or explicitly by calling the procedure
 .. _GMP::SolverSession::GetCallbackInterruptStatus-LR:
 
 .. _GMP::SolverSession::GetInstance-LR:
+
+.. _GMP::SolverSession::GetIIS-LR:
+
+.. _GMP::SolverSession::RejectIncumbent-LR:
 
 .. _GMP::SolverSession::AsynchronousExecute-LR:
 
@@ -93,8 +95,6 @@ implicitly by AIMMS or explicitly by calling the procedure
 	+---------------------------------------------------------------------------------------------+
 	| ``GetSolver``\ (*solverSession*) →         :any:`AllSolvers`                                |
 	+---------------------------------------------------------------------------------------------+
-	| ``GetCallbackInterruptStatus``\ (*solverSession*) →         :any:`AllSolverInterrupts`      |
-	+---------------------------------------------------------------------------------------------+
 	| ``GetIterationsUsed``\ (*solverSession*)                                                    |
 	+---------------------------------------------------------------------------------------------+
 	| ``GetMemoryUsed``\ (*solverSession*)                                                        |
@@ -111,7 +111,7 @@ implicitly by AIMMS or explicitly by calling the procedure
 	+---------------------------------------------------------------------------------------------+
 	| ``GetSolverStatus``\ (*solverSession*) →         :any:`AllSolutionStates`                   |
 	+---------------------------------------------------------------------------------------------+
-	| ``SetSolverStatus``\ (*solverSession*)                                                      |
+	| ``GetCallbackInterruptStatus``\ (*solverSession*) →         :any:`AllSolverInterrupts`      |
 	+---------------------------------------------------------------------------------------------+
 	| :any:`GenerateCut`\ (*solverSession*, *row*\ [, *local*][, *purgeable*])                    |
 	+---------------------------------------------------------------------------------------------+
@@ -126,6 +126,8 @@ implicitly by AIMMS or explicitly by calling the procedure
 	| ``GetNodesUsed``\ (*solverSession*)                                                         |
 	+---------------------------------------------------------------------------------------------+
 	| ``GetNumberOfBranchNodes``\ (*solverSession*)                                               |
+	+---------------------------------------------------------------------------------------------+
+	| ``GetIIS``\ (*solverSession*, *rowSet*, *colSet*)                                           |
 	+---------------------------------------------------------------------------------------------+
 	| ``Transfer``\ (*solverSession*, *GMP*)                                                      |
 	+---------------------------------------------------------------------------------------------+
@@ -237,7 +239,7 @@ if you need the mathematical program instance associated with the given
 solver session, and you can retrieve the current objective values using
 the functions
 
--  :any:`GMP::SolverSession::GetBestBound`, and
+-  :any:`GMP::SolverSession::GetBestBound`,
 
 -  :any:`GMP::SolverSession::GetObjective`.
 
@@ -289,3 +291,10 @@ function :any:`GMP::SolverSession::SetOptionValue`. These option values
 override the option values for the associated *GMP*, set through
 :any:`GMP::Instance::SetOptionValue`, which in their turn override the
 project options.
+
+.. rubric:: Retrieving an irreducible infeasible set
+
+If the generated math program appears to be infeasible then the procedure
+:any:`GMP::SolverSession::GetIIS` can be used to retrieve an irreducible
+infeasible set (IIS). This procedure returns the numbers of the rows and
+columns that are part of the IIS.
