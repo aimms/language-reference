@@ -988,7 +988,7 @@ When a reference is preceded by a *case reference*, AIMMS will not
 retrieve the requested identifier data from the case in memory, but from
 the case file associated with the case reference. Case references are
 elements of the (predefined) set :any:`AllCases`, which contains all the
-cases available in the data manager of AIMMS. The AIMMS `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__
+cases available in the data manager of AIMMS. :doc:`data-management/case-management/index`
 describes all the mechanisms that are available and functions that you
 can use to let an end-user of your application select one or more cases
 from the set of all available cases. Case referencing is useful when you

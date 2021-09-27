@@ -1,9 +1,9 @@
 What is in the AIMMS documentation
 ==================================
 
-.. rubric:: The `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__
+.. rubric:: The :doc:`User's Guide <ug:index>`
 
-The AIMMS `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__ provides a global overview of how to use the
+The AIMMS :doc:`User's Guide <ug:index>` provides a global overview of how to use the
 AIMMS system itself. It is aimed at application builders, and explores
 AIMMS' capabilities to help you create a model-based application in an
 easy and maintainable manner. The guide describes the various graphical

@@ -54,6 +54,7 @@ bibtex_bibfiles = ['appendices/bibbase.bib']
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
                                   (None,'objects-functionreference.inv')),
                        'docs': ('https://documentation.aimms.com/',None),
+                       'ug': ('https://documentation.aimms.com/user-guide/', None),
                        'axll': ('https://documentation.aimms.com/aimmsxllibrary/',None),}
 
 if os.name != 'nt':

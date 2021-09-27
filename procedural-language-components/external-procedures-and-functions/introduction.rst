@@ -145,6 +145,6 @@ into a model.
 
 When you want to protect the interface to your external library, you can
 accomplish this by encrypting the include file containing the function
-library (see also the AIMMS `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__). Thus, the interface to the
+library. Thus, the interface to the
 external library becomes invisible, effectively preventing misuse of the
 library outside AIMMS.

@@ -19,7 +19,7 @@ To support you in structuring your model, AIMMS lets you organize all
 identifier declarations and procedures of your model in the form of a
 tree, called the *model tree*. You can access the model tree in a
 graphical manner, using the **Model Explorer** tool (see also
-Chapter 4 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__). Several language constructs of
+:doc:`creating-and-managing-a-model/the-model-explorer/index`). Several language constructs of
 the AIMMS language, such as collections of identifiers declarations, or
 the procedures and functions included in your model, are visible as
 separate nodes within the model tree.
@@ -174,15 +174,14 @@ model development, but a developer can also create end-user pages and
 menus as part of the library project. When a library project is included
 in a main project, the associated overall application can then be
 composed by combining the model source, pages, and menus created as part
-of all its included libraries. Library projects are discussed in full
-detail in Chapter 3 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__.
+of all its included libraries. Library projects are discussed in :doc:`introduction-to-aimms/collaborative-project-development/library-projects-and-the-library-manager`.
 
 .. rubric:: Library modules
 
 Library modules are the source code modules associated with library
 projects. They can only be added to your model through the **Library
-Manager** discussed in Section 3.1 of the
-`User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__. AIMMS will insert library modules into the model tree as a
+Manager** discussed in :doc:`introduction-to-aimms/collaborative-project-development/library-projects-and-the-library-manager`. 
+AIMMS will insert library modules into the model tree as a
 separate ``LibraryModule`` root node. The attributes of
 ``LibraryModule`` nodes are discussed in full detail in
 :ref:`sec:module.library`.
