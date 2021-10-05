@@ -433,6 +433,24 @@ following two ways:
    in the identifier selector, but the identifier selector accepts them
    when typed in.
 
+.. _rubric:runtime.usesruntimelibs:
+
+.. rubric:: Access to Runtime Identifiers in non-runtime Procedures
+
+Starting from the version 4.82, procedures, with an exception of 
+predefined procedures, have a new attribute: ``Uses runtime libs``. 
+
+A procedure with this attribute specified enables developers to use 
+runtime identifiers in their models without the need to having them 
+explicitly already available during modeling; 
+so far, a compilation error would occur making this impossible. 
+
+This attribute is intended to enable a procedure persistent in a model 
+code to refer to identifiers from runtime libraries that do not exist 
+at model compile-time. 
+Thus, this new attribute is not required for runtime procedures referring 
+to identifiers from other runtime libraries.
+
 .. rubric:: Limitations
 
 The following limitations apply:
