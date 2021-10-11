@@ -82,8 +82,7 @@ except for quantity.
 
 Model edit functions are only allowed to operate on runtime identifiers.
 Runtime identifiers exist at runtime but do not yet exist at compile
-time; the names of runtime identifiers cannot be used directly in the
-main model. This enforces a separation between identifiers in the main
+time. The names of runtime identifiers can only be used in the main model in procedures specificaly designated for this, by specifying the 'Uses runtime libs' attribute. Such procedures will be compiled runtime, and recompiled upon change in the runtime libraries specified. Such procedures are not allowed to use model editing functionality themselves. This enforces a separation between identifiers in the main
 application and runtime identifiers as depicted in
 :numref:`fig:module.runtime.library`. On the left side of this
 architecture there is a main application consisting of a main model and
@@ -102,6 +101,19 @@ presence of errors.
    :name: fig:module.runtime.library
 
    Separation between main application and runtime libraries
+
+.. rubric:: Example of using a runtime identifier directly
+
+In this example, a runtime identifier is used directly. This yields the same
+result as the next example. This usage is far less flexible however and somewhat compromises the separation of the runtime data.     
+
+.. code-block:: aimms
+
+	Procedure DisplayDataOfRuntimeIdentifierTabular {
+		Uses runtime libs: mr1;
+		Body {
+			display { mr1::P }
+		}
 
 .. rubric:: Example of creating an identifier
 
