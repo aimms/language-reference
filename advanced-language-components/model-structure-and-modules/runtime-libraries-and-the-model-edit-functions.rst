@@ -82,8 +82,7 @@ except for quantity.
 
 Model edit functions are only allowed to operate on runtime identifiers.
 Runtime identifiers exist at runtime but do not yet exist at compile
-time; the names of runtime identifiers cannot be used directly in the
-main model. This enforces a separation between identifiers in the main
+time. The names of runtime identifiers can only be used in the main model in procedures specificaly designated for this, by specifying the 'Uses runtime libs' attribute. Such procedures will be compiled runtime, and recompiled upon change in the runtime libraries specified. Such procedures are not allowed to use model editing functionality themselves. This enforces a separation between identifiers in the main
 application and runtime identifiers as depicted in
 :numref:`fig:module.runtime.library`. On the left side of this
 architecture there is a main application consisting of a main model and
@@ -102,6 +101,19 @@ presence of errors.
    :name: fig:module.runtime.library
 
    Separation between main application and runtime libraries
+
+.. rubric:: Example of using a runtime identifier directly
+
+In this example, a runtime identifier is used directly. This yields the same
+result as the next example. This usage is far less flexible however and somewhat compromises the separation of the runtime data.     
+
+.. code-block:: aimms
+
+	Procedure DisplayDataOfRuntimeIdentifierTabular {
+		Uses runtime libs: mr1;
+		Body {
+			display { mr1::P }
+		}
 
 .. rubric:: Example of creating an identifier
 
@@ -433,16 +445,34 @@ following two ways:
    in the identifier selector, but the identifier selector accepts them
    when typed in.
 
+.. _rubric:runtime.usesruntimelibs:
+
+.. rubric:: Access to Runtime Identifiers in non-runtime Procedures
+
+Starting from the version `AIMMS 4.82 <https://documentation.aimms.com/release-notes.html#aimms-4-82>`_, procedures, with an exception of 
+:doc:`predefined procedures <creating-and-managing-a-model/the-model-explorer/creating-and-managing-models>`, have a new attribute: :ref:`procedure.usesruntimelibs`. 
+
+A procedure with this attribute specified enables developers to use 
+runtime identifiers in their models without the need to having them 
+explicitly already available during modeling; 
+If this attribute is not specified, a compilation error will occur making this impossible. 
+
+This attribute is intended to enable a procedure persistent in a model 
+code to refer to identifiers from runtime libraries that do not exist 
+at model compile-time. 
+Thus, this new attribute is not required for runtime procedures referring 
+to identifiers from other runtime libraries.
+
 .. rubric:: Limitations
 
 The following limitations apply:
 
 -  Local declarations are not supported; only global identifiers
-   corresponding to elements in .
+   corresponding to elements in :any:`AllIdentifiers`.
 
 -  Quantities are not supported.
 
 -  The ``source file``, ``module code`` and ``user data`` attributes are
    not supported.
 
--  The current maximum number of identifiers is thirty thousand.
+-  The current maximum number of runtime identifiers is 30000.
