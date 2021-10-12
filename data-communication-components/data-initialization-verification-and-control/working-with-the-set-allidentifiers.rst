@@ -27,10 +27,9 @@ When compiling your model, AIMMS automatically creates an identifier set
 for every section in your model. Each such set contains all the
 identifier names that are declared in the corresponding section. In
 addition, for every identifier type, AIMMS fills a predeclared set
-``All``\ *IdentifierType* (e.g. :any:`AllParameters`, :any:`AllSets`) with all
+:any:`AllIdentifierTypes` (e.g. :any:`AllParameters`, :any:`AllSets`) with all
 the identifiers of that type. The complete list of identifier type
-related sets defined by AIMMS can be found in the AIMMS Function
-Reference. You can use both type of sets to perform set algebra to
+related sets defined by AIMMS can be found in :doc:`functionreference:index`. You can use both type of sets to perform set algebra to
 construct particular identifier subsets of interest to your model.
 
 .. rubric:: Example
