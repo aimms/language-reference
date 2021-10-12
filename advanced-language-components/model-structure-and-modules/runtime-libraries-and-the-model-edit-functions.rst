@@ -449,13 +449,13 @@ following two ways:
 
 .. rubric:: Access to Runtime Identifiers in non-runtime Procedures
 
-Starting from the version 4.82, procedures, with an exception of 
-predefined procedures, have a new attribute: ``Uses runtime libs``. 
+Starting from the version `AIMMS 4.82 <https://documentation.aimms.com/release-notes.html#aimms-4-82>`_, procedures, with an exception of 
+:doc:`predefined procedures <creating-and-managing-a-model/the-model-explorer/creating-and-managing-models>`, have a new attribute: :ref:`procedure.usesruntimelibs`. 
 
 A procedure with this attribute specified enables developers to use 
 runtime identifiers in their models without the need to having them 
 explicitly already available during modeling; 
-so far, a compilation error would occur making this impossible. 
+If this attribute is not specified, a compilation error will occur making this impossible. 
 
 This attribute is intended to enable a procedure persistent in a model 
 code to refer to identifiers from runtime libraries that do not exist 
@@ -468,11 +468,11 @@ to identifiers from other runtime libraries.
 The following limitations apply:
 
 -  Local declarations are not supported; only global identifiers
-   corresponding to elements in .
+   corresponding to elements in :any:`AllIdentifiers`.
 
 -  Quantities are not supported.
 
 -  The ``source file``, ``module code`` and ``user data`` attributes are
    not supported.
 
--  The current maximum number of identifiers is thirty thousand.
+-  The current maximum number of runtime identifiers is 30000.
