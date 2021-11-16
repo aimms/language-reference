@@ -582,6 +582,79 @@ All procedures in :ref:`this table <table:gmp.multiproc>` contain an index bindi
 specifies which columns or rows will be modified. If the procedure contains a value argument then the size of this vector is defined by the 
 index binding argument. Further information on index binding can be found in :ref:`chap:bind`.
 
+.. rubric:: Alternative procedures
+
+An alternative approach to change the data of multiple columns or rows is using the *raw* procedures, of the ``GMP`` namespace,
+mentioned in :ref:`this table <table:gmp.rawproc>`.
+
+.. _GMP::Coefficient::SetRaw-LR:
+
+.. _GMP::Column::DeleteRaw-LR:
+
+.. _GMP::Column::FreezeRaw-LR:
+
+.. _GMP::Column::UnfreezeRaw-LR:
+
+.. _GMP::Column::SetLowerBoundRaw-LR:
+
+.. _GMP::Column::SetUpperBoundRaw-LR:
+
+.. _GMP::Column::SetTypeRaw-LR:
+
+.. _GMP::Row::DeleteRaw-LR:
+
+.. _GMP::Row::ActivateRaw-LR:
+
+.. _GMP::Row::DeactivateRaw-LR:
+
+.. _table:gmp.rawproc:
+
+.. table:: 
+
+	+-----------------------------------------------------------------------------+
+	| ``Coefficient::SetRaw``\ (*GMP*, *rowSet*, *colSet*, *value*, *changeZero*) |
+	+-----------------------------------------------------------------------------+
+	| ``Column::DeleteRaw``\ (*GMP*, *colSet*)                                    |
+	+-----------------------------------------------------------------------------+
+	| ``Column::FreezeRaw``\ (*GMP*, *colSet*, *value*)                           |
+	+-----------------------------------------------------------------------------+
+	| ``Column::UnfreezeRaw``\ (*GMP*, *colSet*)                                  |
+	+-----------------------------------------------------------------------------+
+	| ``Column::SetLowerBoundRaw``\ (*GMP*, *colSet*, *value*)                    |
+	+-----------------------------------------------------------------------------+
+	| ``Column::SetUpperBoundRaw``\ (*GMP*, *colSet*, *value*)                    |
+	+-----------------------------------------------------------------------------+
+	| ``Column::SetTypeRaw``\ (*GMP*, *colSet*, *type*)                           |
+	+-----------------------------------------------------------------------------+
+	| ``Row::DeleteRaw``\ (*GMP*, *rowSet*)                                       |
+	+-----------------------------------------------------------------------------+
+	| ``Row::ActivateRaw``\ (*GMP*, *rowSet*)                                     |
+	+-----------------------------------------------------------------------------+
+	| ``Row::DeactivateRaw``\ (*GMP*, *rowSet*)                                   |
+	+-----------------------------------------------------------------------------+
+	| ``Row::SetRightHandSideRaw``\ (*GMP*, *rowSet*, *value*)                    |
+	+-----------------------------------------------------------------------------+
+	| ``Row::SetTypeRaw``\ (*GMP*, *rowSet*, *type*)                              |
+	+-----------------------------------------------------------------------------+
+
+These procedures use a set of column and/or row numbers as input. These
+sets of column and row numbers can be retrieved by using one of the functions, of the
+``GMP::Instance`` namespace, listed in the :ref:`table <table:gmp.getcolrowsets>` below.
+
+.. _GMP::Instance::GetColumnNumbers-LR:
+
+.. _GMP::Instance::GetRowNumbers-LR:
+
+.. _table:gmp.getcolrowsets:
+
+.. table:: 
+
+	+-------------------------------------------------+
+	| ``GetColumnNumbers``\ (*GMP*, *variableSet*)    |
+	+-------------------------------------------------+
+	| ``GetRowNumbers``\ (*GMP*, *constraintSet*)     |
+	+-------------------------------------------------+
+
 .. _sec:matrix.extended:
 
 Modifying an Extended Math Program Instance
