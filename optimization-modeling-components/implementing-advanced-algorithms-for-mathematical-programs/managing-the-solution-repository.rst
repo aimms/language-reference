@@ -151,9 +151,9 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetBestBound <GMP::Solution::GetBestBound>`\ (*GMP*, *SolNr*)                                                                           |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`GetProgramStatus <GMP::Solution::GetProgramStatus>`\ (*GMP*, *SolNr*)\ :math:`\to`\ :any:`AllSolutionStatus`                            |
+	| :any:`GetProgramStatus <GMP::Solution::GetProgramStatus>`\ (*GMP*, *SolNr*)\ :math:`\to`\ :any:`AllSolutionStates`                            |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`GetSolverStatus <GMP::Solution::GetSolverStatus>`\ (*GMP*, *SolNr*)\ :math:`\to`\ :any:`AllSolutionStatus`                              |
+	| :any:`GetSolverStatus <GMP::Solution::GetSolverStatus>`\ (*GMP*, *SolNr*)\ :math:`\to`\ :any:`AllSolutionStates`                              |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetIterationsUsed <GMP::Solution::GetIterationsUsed>`\ (*GMP*, *SolNr*)                                                                 |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
