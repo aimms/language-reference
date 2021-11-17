@@ -54,8 +54,7 @@ application.
 
 In addition, AIMMS provides you with two tools for analyzing execution
 bottlenecks, namely the **Identifier Cardinalities** and **Profiler**
-tools. The use of both tools is described in Chapter 8 of the
-AIMMS `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__.
+tools. The use of both tools is described in :doc:`creating-and-managing-a-model/debugging-and-profiling-an-aimms-model/index`.
 
 .. rubric:: Analyzing cardinalities
 
@@ -87,7 +86,7 @@ alternative formulations for particular statements and constraints.
 Before you begin tuning your application, you may want to set aside a
 copy of the application and inputs with known results. You can then set
 up a script that executes each of these tests using the AIMMS command
-line option ``--run-only`` (see also Chapter 18 of the AIMMS `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__). 
+line option ``--run-only`` (see also :doc:`miscellaneous/calling-aimms/index`). 
 In addition, you may wish to regularly commit your
 sources to a version control system in order to track the changes you
 make over time.

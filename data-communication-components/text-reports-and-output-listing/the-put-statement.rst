@@ -535,7 +535,7 @@ With the format field you specify
 
 Customized default values for the justification, field width and
 precision can be specified through ``PUT``-related options, which can be
-set via the Options menu. :ref:`this table <table:report.put-arg>` shows a number
+set via the Options menu. :ref:`The following table <table:report.put-arg>` shows a number
 of examples of format fields, where :math:`m` and :math:`n` are
 expressions evaluating to integers.
 
@@ -544,7 +544,7 @@ expressions evaluating to integers.
 .. table:: 
 
 	+----------------------------------------------+---------------+--------------------------+-----------+
-	| **\``PUT`\` argument**                       | Justification | Field width (characters) | Precision |
+	| ``PUT`` **argument**                         | Justification | Field width (characters) | Precision |
 	+==============================================+===============+==========================+===========+
 	| *item*                                       | default       | default                  | default   |
 	+----------------------------------------------+---------------+--------------------------+-----------+

@@ -39,7 +39,7 @@ modifications to the part of the model contained in such a ``Section``
 node will also be stored in this source file when you save the model.
 When you select an existing source file for the ``SourceFile`` attribute
 of a ``Section`` node in the **Model Explorer** (see also
-Section 4.2 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__), any previous contents of
+:doc:`creating-and-managing-a-model/the-model-explorer/index`), any previous contents of
 that section will be lost.
 
 .. _attr:module.property:

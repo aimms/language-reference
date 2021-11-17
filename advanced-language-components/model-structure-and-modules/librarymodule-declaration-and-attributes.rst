@@ -14,7 +14,7 @@ always stored in a separate source file. Contrary to ``Section`` and
 ``Module`` nodes, the name of this source file cannot be specified in
 the ``LibraryModule`` declaration. Rather, it is specified when you add
 the library to your project using the **Library Manager**, as discussed
-in Section 3.1 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__. The
+in :doc:`introduction-to-aimms/collaborative-project-development/library-projects-and-the-library-manager`. The
 attributes of ``LibraryModule`` nodes are listed in
 :ref:`the following table <table:module.attr-library>`.
 

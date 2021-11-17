@@ -54,6 +54,7 @@ bibtex_bibfiles = ['appendices/bibbase.bib']
 intersphinx_mapping = {'functionreference': ('https://documentation.aimms.com/functionreference/',
                                   (None,'objects-functionreference.inv')),
                        'docs': ('https://documentation.aimms.com/',None),
+                       'ug': ('https://documentation.aimms.com/user-guide/', None),
                        'axll': ('https://documentation.aimms.com/aimmsxllibrary/',None),}
 
 if os.name != 'nt':
@@ -120,9 +121,8 @@ html_theme_options = {
     'display_community_embeddable' : Display_3rd_Party_Extensions,
     'display_local_toc' : True,
     'titles_only' : True,
-    'display_algolia_search': False,
-    'google_analytics_id': 'UA-1290545-13',
-    'generate_google_analytics' : Display_3rd_Party_Extensions,
+    'google_tag_manager_id': 'GTM-5T37RFM',
+    'generate_google_tag_manager' : Display_3rd_Party_Extensions,
     'display_algolia_search' : Display_3rd_Party_Extensions,
     'algolia_appid': 'BH4D9OD16A', 
     'algolia_appkey': 'f7e44f5b57ababa5c5ceb1e1087ae3b1', 

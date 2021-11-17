@@ -28,14 +28,15 @@ given in :ref:`this table <table:intern.attr-proc>`.
 
 .. table:: 
 
-	============= ================ ================
-	Attribute     Value-type       See also page
-	============= ================ ================
-	``Arguments`` *argument-list*     
-	``Property``  ``UndoSafe``        
-	``Body``      *statements*     :ref:`chap:exec`
-	``Comment``   *comment string*    
-	============= ================ ================
+	====================== ==================================================== =======================================
+	Attribute              Value-type                                           See also page
+	====================== ==================================================== =======================================
+	``Arguments``          *argument-list*     
+	``Property``           ``UndoSafe``        
+	``Uses Runtime libs``  *list of comma-separated runtime libraries prefices* :ref:`rubric:runtime.usesruntimelibs` 
+	``Body``               *statements*                                         :ref:`chap:exec`
+	``Comment``            *comment string*    
+	====================== ==================================================== =======================================
 	
 .. _procedure.arguments:
 
@@ -412,6 +413,17 @@ end-user undo actions intact. Normally, procedure calls made from within
 the end-user interface will clear the undo stack, because such calls
 usually make additional modifications to (global) data based on end-user
 edits.
+
+.. _procedure.usesruntimelibs:
+
+.. rubric:: The ``Uses Runtime libs`` attribute
+
+This attribute is available for non-predefined procedures.
+It is a comma-separated list of prefices of runtime 
+libraries, identifiers from which are used in the procedure.
+For more information please refer to the section 
+:ref:`sec:module.runtime` and in particular rubric 
+:ref:`rubric:runtime.usesruntimelibs`
 
 .. rubric:: Procedures summarized
 
