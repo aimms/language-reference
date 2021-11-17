@@ -19,7 +19,7 @@ be manipulated using the function listed in :ref:`this table <table:gmp.event>`.
 
 .. _table:gmp.event:
 
-.. table:: 
+.. table:: : ``GMP::Event`` procedures
 
 	+--------------------------------------------------------------------------------+
 	| :any:`Create <GMP::Event::Create>`\ (*name*)\ :math:`\to`\ :any:`AllGMPEvents` |

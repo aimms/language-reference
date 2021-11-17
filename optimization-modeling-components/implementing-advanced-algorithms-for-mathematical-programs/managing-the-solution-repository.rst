@@ -122,7 +122,7 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 
 .. _table:gmp.solution:
 
-.. table:: 
+.. table:: : ``GMP::Solution`` functions and procedures
 
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`Copy <GMP::Solution::Copy>`\ (*GMP*, *fromSol*, *toSol*)                                                                                |

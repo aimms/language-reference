@@ -11,39 +11,9 @@ management of generated mathematical program instances. Mathematical
 program instances also provide access to the solution repository and
 solver sessions associated with the instance.
 
-.. rubric:: Creation of mathematical program instances
-
-New mathematical program instances can be created by calling
-
--  the ``SOLVE`` statement,
-
--  the :any:`GMP::Instance::Generate` function,
-
--  the :any:`GMP::Instance::GenerateRobustCounterpart` function,
-
--  the :any:`GMP::Instance::GenerateStochasticProgram` function,
-
--  the :any:`GMP::Instance::Copy` function,
-
--  the :any:`GMP::Instance::CreateBlockMatrices` function,
-
--  the :any:`GMP::Instance::CreateDual` function,
-
--  the :any:`GMP::Instance::CreateFeasibility` function,
-
--  the :any:`GMP::Instance::CreatePresolved` function,
-
--  the :any:`GMP::Instance::CreateMasterMIP` function,
-
--  the :any:`GMP::Stochastic::CreateBendersRootproblem` function,
-
--  the :any:`GMP::Stochastic::BendersFindFeasibilityReference` function, or
-
--  the :any:`GMP::Stochastic::BendersFindReference` function.
-
 .. _table:gmp.instance:
 
-.. table:: Procedures and functions in ``GMP::Instance`` namespace
+.. table:: : Procedures and functions in the ``GMP::Instance`` namespace
 
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`Generate <GMP::Instance::Generate>`\ (*MP*, *name*)\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms`                                                                                                                                                                                  |
@@ -138,6 +108,36 @@ New mathematical program instances can be created by calling
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`FindApproximatelyFeasibleSolution <GMP::Instance::FindApproximatelyFeasibleSolution>`\ (*GMP*, *sol1*, *sol2*, *nrIter*\ [, *maxIter*][, *feasTol*]\ [, *moveTol*][, *imprTol*][, *maxTime*][, *useSum*][, *augIter*][, *useBest*])                                                        |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. rubric:: Creation of mathematical program instances
+
+New mathematical program instances can be created by calling
+
+-  the ``SOLVE`` statement,
+
+-  the :any:`GMP::Instance::Generate` function,
+
+-  the :any:`GMP::Instance::GenerateRobustCounterpart` function,
+
+-  the :any:`GMP::Instance::GenerateStochasticProgram` function,
+
+-  the :any:`GMP::Instance::Copy` function,
+
+-  the :any:`GMP::Instance::CreateBlockMatrices` function,
+
+-  the :any:`GMP::Instance::CreateDual` function,
+
+-  the :any:`GMP::Instance::CreateFeasibility` function,
+
+-  the :any:`GMP::Instance::CreatePresolved` function,
+
+-  the :any:`GMP::Instance::CreateMasterMIP` function,
+
+-  the :any:`GMP::Stochastic::CreateBendersRootproblem` function,
+
+-  the :any:`GMP::Stochastic::BendersFindFeasibilityReference` function, or
+
+-  the :any:`GMP::Stochastic::BendersFindReference` function.
 
 All mathematical program instances created through each of these calls,
 are uniquely represented by elements in the predefined set

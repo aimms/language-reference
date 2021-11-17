@@ -70,7 +70,7 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _table:gmp.solver:
 
-.. table:: 
+.. table:: : ``GMP::SolverSession`` functions and procedures
 
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`Execute <GMP::SolverSession::Execute>`\ (*solverSession*)                                                                                   |

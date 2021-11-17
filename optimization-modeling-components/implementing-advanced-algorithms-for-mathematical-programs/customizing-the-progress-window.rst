@@ -37,7 +37,7 @@ every aspect of the solver part of the AIMMS progress window.
 
 .. _table:gmp.progress:
 
-.. table:: 
+.. table:: : ``GMP::ProgressWindow`` procedures
 
 	+-----------------------------------------------------------------------------------------------------------------+
 	| :any:`DisplaySolver <GMP::ProgressWindow::DisplaySolver>`\ (*name*\ [, *Category*])                             |

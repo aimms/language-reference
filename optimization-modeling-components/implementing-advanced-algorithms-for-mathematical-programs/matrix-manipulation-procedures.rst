@@ -167,7 +167,7 @@ mathematical program instance.
 
 .. _table:gmp.coefficient:
 
-.. table:: 
+.. table:: : ``GMP::Coefficient`` routines
 
 	+----------------------------------------------------------------------------------------------+
 	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                 |
@@ -215,7 +215,7 @@ than the objective of a generated mathematical program instance.
 
 .. _table:gmp.quadratic:
 
-.. table:: 
+.. table:: : ``GMP::QuadraticCoefficient`` routines
 
 	+--------------------------------------------------------------------------------------------+
 	| :any:`Get <GMP::QuadraticCoefficient::Get>`\ (*GMP*, *row*, *column1*, *column2*)          |
@@ -287,7 +287,7 @@ of existing rows and the creation of new rows.
 
 .. _table:gmp.row:
 
-.. table:: 
+.. table:: : ``GMP::Row`` routines
 
 	+---------------------------------------------------------------------------------------------------+
 	| :any:`Add <GMP::Row::Add>`\ (*GMP*, *row*)                                                        |
@@ -428,7 +428,7 @@ properties of existing columns and the creation of new columns.
 
 .. _table:gmp.column:
 
-.. table:: 
+.. table:: : ``GMP::Column`` routines
 
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`Add <GMP::Column::Add>`\ (*GMP*, *column*)                                                       |
@@ -538,7 +538,7 @@ procedures of the ``GMP`` namespace are listed in :ref:`this table <table:gmp.mu
 
 .. _table:gmp.multiproc:
 
-.. table:: 
+.. table:: : Multi procedures
 
 	+------------------------------------------------------------------------------------------------------------------+
 	| :any:`Coefficient::SetMulti <GMP::Coefficient::SetMulti>`\ (*GMP*, *binding*, *row*, *column*, *value*)          |
@@ -609,10 +609,10 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 
 .. _table:gmp.rawproc:
 
-.. table:: 
+.. table:: : Raw procedures
 
 	+-----------------------------------------------------------------------------------------------------------+
-	| :any:`Coefficient::SetRaw <GMP::Coefficient::SetRaw>`\ (*GMP*, *rowSet*, *colSet*, *value*, *changeZero*) |
+	| :any:`Coefficient::SetRaw <GMP::Coefficient::SetRaw>`\ (*GMP*, *rowSet*, *colSet*, *coef*, *changeZero*)  |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Column::DeleteRaw <GMP::Column::DeleteRaw>`\ (*GMP*, *colSet*)                                      |
 	+-----------------------------------------------------------------------------------------------------------+
@@ -624,7 +624,7 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Column::SetUpperBoundRaw <GMP::Column::SetUpperBoundRaw>`\ (*GMP*, *colSet*, *value*)               |
 	+-----------------------------------------------------------------------------------------------------------+
-	| :any:`Column::SetTypeRaw <CGMP::olumn::SetTypeRaw>`\ (*GMP*, *colSet*, *type*)                            |
+	| :any:`Column::SetTypeRaw <GMP::Column::SetTypeRaw>`\ (*GMP*, *colSet*, *type*)                            |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Row::DeleteRaw <GMP::Row::DeleteRaw>`\ (*GMP*, *rowSet*)                                            |
 	+-----------------------------------------------------------------------------------------------------------+

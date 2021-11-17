@@ -26,7 +26,7 @@ if multiple mathematical programs have to be solved.
 
 .. _table:gmp.environments:
 
-.. table:: 
+.. table:: : ``GMP::Solver`` functions and procedures
 
 	+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`InitializeEnvironment <GMP::Solver::InitializeEnvironment>`\ (*solver*\ [, *computeserver*][, *password*][, *priority]*][, *timeout*][, *logfile*]) |

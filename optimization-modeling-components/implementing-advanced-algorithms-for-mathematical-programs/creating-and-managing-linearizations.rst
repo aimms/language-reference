@@ -49,7 +49,7 @@ listed in :ref:`this table <table:gmp.linearization>`.
 
 .. _table:gmp.linearization:
 
-.. table:: 
+.. table:: : ``GMP::Linearization`` functions and procedures
 
 	+--------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`Add <GMP::Linearization::Add>`\ (*GMP1*, *GMP2*, *solNr*, *conSet*, *devPermitted*, *penalty*, *linNr*\ [, *jacTol*])          |

@@ -24,7 +24,7 @@ functions of the ``GMP::Benders`` namespace are listed in
 
 .. _table:gmp.benders:
 
-.. table:: 
+.. table:: : ``GMP::Benders`` functions and procedures
 
 	+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`CreateMasterProblem <GMP::Benders::CreateMasterProblem>`\ (*GMP*, *Variables*, *name*\ [, *feasibilityOnly*][, *addConstraints*])\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms` |

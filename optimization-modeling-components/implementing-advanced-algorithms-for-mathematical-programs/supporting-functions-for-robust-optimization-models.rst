@@ -13,7 +13,7 @@ models.
 
 .. _table:gmp.robust:
 
-.. table:: 
+.. table:: : ``GMP::Robust`` procedures
 
 	+------------------------------------------------------------------------------------------------------------------+
 	| :any:`EvaluateAdjustableVariables <GMP::Robust::EvaluateAdjustableVariables>`\ (*GMP*, *Variables*\ [, *merge*]) |

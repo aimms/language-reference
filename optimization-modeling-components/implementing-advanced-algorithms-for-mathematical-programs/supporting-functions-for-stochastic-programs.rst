@@ -34,7 +34,7 @@ functions of the ``GMP::Stochastic`` namespace are listed in
 
 .. _table:gmp.stochastic:
 
-.. table:: 
+.. table:: : ``GMP::Stochastic`` functions and procedures
 
 	+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`BendersFindFeasibilityReference <GMP::Stochastic::BendersFindFeasibilityReference>`\ (*GMP*, *stage*, *scenario*):math:`\to`:any:`AllGeneratedMathematicalPrograms` |
