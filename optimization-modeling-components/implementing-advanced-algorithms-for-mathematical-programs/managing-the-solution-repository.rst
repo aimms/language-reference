@@ -120,6 +120,8 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 
 .. _GMP::Solution::Copy-LR:
 
+.. _GMP::Solution::SetMIPStartFlag-LR:
+
 .. _table:gmp.solution:
 
 .. table:: : ``GMP::Solution`` functions and procedures
@@ -184,6 +186,8 @@ listed in :ref:`this table <table:gmp.solution>`. Through these functions you ca
 	| :any:`IsPrimalDegenerated <GMP::Solution::IsPrimalDegenerated>`\ (*GMP*, *SolNr*)                                                             |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`IsDualDegenerated <GMP::Solution::IsDualDegenerated>`\ (*GMP*, *SolNr*)                                                                 |
+	+-----------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`SetMIPStartFlag <GMP::Solution::SetMIPStartFlag>`\ (*GMP*, *SolNr*, *flag*\ [, *effortLevel*])                                          |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetFirstOrderDerivative <GMP::Solution::GetFirstOrderDerivative>`\ (*GMP*, *SolNr*, *row*, *column*)                                    |
 	+-----------------------------------------------------------------------------------------------------------------------------------------------+
