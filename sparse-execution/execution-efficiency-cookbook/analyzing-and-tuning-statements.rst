@@ -177,9 +177,14 @@ purpose of your text report file, there might be very good alternatives
 available:
 
 -  When this reporting is for printing purposes only, you may want to
-   consider the AIMMS print pages as explained in AIMMS The `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__
-   Chapter 14. These print pages look far better than text
+   consider the AIMMS print pages as explained in :doc:`miscellaneous/project-settings-and-options/print-configuration`.
+   These print pages look far better than text
    reports.
+   
+   .. warning:: 
+      
+      Print pages functions are about to be deprecated with the WinUI, 
+      please refer to :doc:`deprecation-table`. You may use the :doc:`webui/index` instead.
 
 -  When the report file is for communication with other programs, you
    may want to consider whether communication using relational databases

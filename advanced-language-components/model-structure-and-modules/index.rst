@@ -32,7 +32,7 @@ the AIMMS language itself. The available AIMMS system modules include
 
 Finally, this chapter discusses the concept of a *library module*, which
 is the source module associated with a library project (see
-Section 3.1 of the `User's Guide <https://documentation.aimms.com/_downloads/AIMMS_user.pdf>`__). Library
+:doc:`introduction-to-aimms/collaborative-project-development/library-projects-and-the-library-manager`). Library
 modules can only be added to an AIMMS model through the **Library
 Manager**, and are always displayed as a separate root in the model
 tree.

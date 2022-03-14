@@ -37,25 +37,25 @@ every aspect of the solver part of the AIMMS progress window.
 
 .. _table:gmp.progress:
 
-.. table:: 
+.. table:: : ``GMP::ProgressWindow`` procedures
 
-	+------------------------------------------------------------------+
-	| ``DisplaySolver``\ (*name*\ [, *Category*])                      |
-	+------------------------------------------------------------------+
-	| ``DisplayLine``\ (*lineNr*, *title*, *value*\ [, *Category*])    |
-	+------------------------------------------------------------------+
-	| ``DisplayProgramStatus``\ (*status*\ [, *Category*][, *lineNo*]) |
-	+------------------------------------------------------------------+
-	| ``DisplaySolverStatus``\ (*status*\ [, *Category*][, *lineNo*])  |
-	+------------------------------------------------------------------+
-	| ``FreezeLine``\ (*lineNo*, *totalFreeze*\ [, *Category*])        |
-	+------------------------------------------------------------------+
-	| ``UnfreezeLine``\ (*lineNo*\ [, *Category*])                     |
-	+------------------------------------------------------------------+
-	| ``DeleteCategory``\ (*Category*)                                 |
-	+------------------------------------------------------------------+
-	| ``Transfer``\ (*Category*, *solverSession*)                      |
-	+------------------------------------------------------------------+
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`DisplaySolver <GMP::ProgressWindow::DisplaySolver>`\ (*name*\ [, *Category*])                             |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`DisplayLine <GMP::ProgressWindow::DisplayLine>`\ (*lineNr*, *title*, *value*\ [, *Category*])             |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`DisplayProgramStatus <GMP::ProgressWindow::DisplayProgramStatus>`\ (*status*\ [, *Category*][, *lineNo*]) |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`DisplaySolverStatus <GMP::ProgressWindow::DisplaySolverStatus>`\ (*status*\ [, *Category*][, *lineNo*])   |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`FreezeLine <GMP::ProgressWindow::FreezeLine>`\ (*lineNo*, *totalFreeze*\ [, *Category*])                  |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`UnfreezeLine <GMP::ProgressWindow::UnfreezeLine>`\ (*lineNo*\ [, *Category*])                             |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`DeleteCategory <GMP::ProgressWindow::DeleteCategory>`\ (*Category*)                                       |
+	+-----------------------------------------------------------------------------------------------------------------+
+	| :any:`Transfer <GMP::ProgressWindow::Transfer>`\ (*Category*, *solverSession*)                                  |
+	+-----------------------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Creating a new progress category
 

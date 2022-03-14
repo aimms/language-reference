@@ -55,7 +55,7 @@ Specifying an Iteration Limit
 .. rubric:: Parameter ``IterationLimit``
 
 The parameter ``IterationLimit`` can be used to set a limit on the
-number of iterations used by the multistart algorithm. This limit is use
+number of iterations used by the multistart algorithm. This limit is used
 in the basic algorithm and in the first phase of the dynamic algorithm.
 
 .. _sec:multistart.time.limit:
@@ -105,9 +105,9 @@ multistart algorithm will then also be the same. In contrast,
 opportunistic implies that the results, and the number of NLP problems
 solved, might be different. Usually the opportunistic mode provides
 better performance. The parameter ``UseOpportunisticAlgorithm`` can be
-used to switch to the opportunistic mode. Note that if the multistart
-algorithm uses only one thread then the algorithm will always be
-deterministic.
+used to switch to the opportunistic mode. Note that the multistart
+algorithm will always be deterministic if the algorithm uses only one
+thread.
 
 .. _sec:multistart.multiple.solutions:
 

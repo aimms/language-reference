@@ -30,8 +30,6 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _GMP::SolverSession::GenerateCut-LR:
 
-.. _GMP::SolverSession::SetSolverStatus:
-
 .. _GMP::SolverSession::GetSolverStatus-LR:
 
 .. _GMP::SolverSession::GetProgramStatus-LR:
@@ -62,73 +60,77 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _GMP::SolverSession::GetInstance-LR:
 
+.. _GMP::SolverSession::GetIIS-LR:
+
+.. _GMP::SolverSession::RejectIncumbent-LR:
+
 .. _GMP::SolverSession::AsynchronousExecute-LR:
 
 .. _GMP::SolverSession::Execute-LR:
 
 .. _table:gmp.solver:
 
-.. table:: 
+.. table:: : ``GMP::SolverSession`` functions and procedures
 
-	+---------------------------------------------------------------------------------------------+
-	| :any:`Execute`\ (*solverSession*)                                                           |
-	+---------------------------------------------------------------------------------------------+
-	| ``AsynchronousExecute``\ (*solverSession*)                                                  |
-	+---------------------------------------------------------------------------------------------+
-	| ``ExecutionStatus``\ (*solverSession*) →         :any:`AllExecutionStatuses`                |
-	+---------------------------------------------------------------------------------------------+
-	| ``Interrupt``\ (*solverSession*)                                                            |
-	+---------------------------------------------------------------------------------------------+
-	| ``WaitForCompletion``\ (*Objects*)                                                          |
-	+---------------------------------------------------------------------------------------------+
-	| ``WaitForSingleCompletion``\ (*Objects*) →         :any:`AllSolverSessionCompletionObjects` |
-	+---------------------------------------------------------------------------------------------+
-	| ``CreateProgressCategory``\ (*solverSession*\ [, *Name*][, *Size*])                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetOptionValue``\ (*solverSession*, *optionName*)                                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``SetOptionValue``\ (*solverSession*, *optionName*, *value*)                                |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetInstance``\ (*solverSession*) →         :any:`AllGeneratedMathematicalPrograms`        |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetSolver``\ (*solverSession*) →         :any:`AllSolvers`                                |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetCallbackInterruptStatus``\ (*solverSession*) →         :any:`AllSolverInterrupts`      |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetIterationsUsed``\ (*solverSession*)                                                    |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetMemoryUsed``\ (*solverSession*)                                                        |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetTimeUsed``\ (*solverSession*)                                                          |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetBestBound``\ (*solverSession*)                                                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetCandidateObjective``\ (*solverSession*)                                                |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetObjective``\ (*solverSession*)                                                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetProgramStatus``\ (*solverSession*) →         :any:`AllSolutionStates`                  |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetSolverStatus``\ (*solverSession*) →         :any:`AllSolutionStates`                   |
-	+---------------------------------------------------------------------------------------------+
-	| ``SetSolverStatus``\ (*solverSession*)                                                      |
-	+---------------------------------------------------------------------------------------------+
-	| :any:`GenerateCut`\ (*solverSession*, *row*\ [, *local*][, *purgeable*])                    |
-	+---------------------------------------------------------------------------------------------+
-	| ``RejectIncumbent``\ (*solverSession*)                                                      |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetNodeNumber``\ (*solverSession*)                                                        |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetNodeObjective``\ (*solverSession*)                                                     |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetNodesLeft``\ (*solverSession*)                                                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetNodesUsed``\ (*solverSession*)                                                         |
-	+---------------------------------------------------------------------------------------------+
-	| ``GetNumberOfBranchNodes``\ (*solverSession*)                                               |
-	+---------------------------------------------------------------------------------------------+
-	| ``Transfer``\ (*solverSession*, *GMP*)                                                      |
-	+---------------------------------------------------------------------------------------------+
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Execute <GMP::SolverSession::Execute>`\ (*solverSession*)                                                                                   |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`AsynchronousExecute <GMP::SolverSession::AsynchronousExecute>`\ (*solverSession*)                                                           |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`ExecutionStatus <GMP::SolverSession::ExecutionStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllExecutionStatuses`                         |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Interrupt <GMP::SolverSession::Interrupt>`\ (*solverSession*)                                                                               |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`WaitForCompletion <GMP::SolverSession::WaitForCompletion>`\ (*Objects*)                                                                     |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`WaitForSingleCompletion <GMP::SolverSession::WaitForSingleCompletion>`\ (*Objects*)\ :math:`\to`\ :any:`AllSolverSessionCompletionObjects`  |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`CreateProgressCategory <GMP::SolverSession::CreateProgressCategory>`\ (*solverSession*\ [, *Name*][, *Size*])                               |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetOptionValue <GMP::SolverSession::GetOptionValue>`\ (*solverSession*, *optionName*)                                                       |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`SetOptionValue <GMP::SolverSession::SetOptionValue>`\ (*solverSession*, *optionName*, *value*)                                              |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetInstance <GMP::SolverSession::GetInstance>`\ (*solverSession*)\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms`                     |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetSolver <GMP::SolverSession::GetSolver>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolvers`                                               |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetIterationsUsed <GMP::SolverSession::GetIterationsUsed>`\ (*solverSession*)                                                               |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetMemoryUsed <GMP::SolverSession::GetMemoryUsed>`\ (*solverSession*)                                                                       |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetTimeUsed <GMP::SolverSession::GetTimeUsed>`\ (*solverSession*)                                                                           |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetBestBound <GMP::SolverSession::GetBestBound>`\ (*solverSession*)                                                                         |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetCandidateObjective <GMP::SolverSession::GetCandidateObjective>`\ (*solverSession*)                                                       |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetObjective <GMP::SolverSession::GetObjective>`\ (*solverSession*)                                                                         |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetProgramStatus <GMP::SolverSession::GetProgramStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolutionStates`                          |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetSolverStatus <GMP::SolverSession::GetSolverStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolutionStates`                            |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetCallbackInterruptStatus <GMP::SolverSession::GetCallbackInterruptStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolverInterrupts`    |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GenerateCut <GMP::SolverSession::GenerateCut>`\ (*solverSession*, *row*\ [, *local*][, *purgeable*])                                        |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`RejectIncumbent <GMP::SolverSession::RejectIncumbent>`\ (*solverSession*)                                                                   |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetNodeNumber <GMP::SolverSession::GetNodeNumber>`\ (*solverSession*)                                                                       |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetNodeObjective <GMP::SolverSession::GetNodeObjective>`\ (*solverSession*)                                                                 |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetNodesLeft <GMP::SolverSession::GetNodesLeft>`\ (*solverSession*)                                                                         |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetNodesUsed <GMP::SolverSession::GetNodesUsed>`\ (*solverSession*)                                                                         |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetNumberOfBranchNodes <GMP::SolverSession::GetNumberOfBranchNodes>`\ (*solverSession*)                                                     |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetIIS <GMP::SolverSession::GetIIS>`\ (*solverSession*, *rowSet*, *colSet*)                                                                 |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Transfer <GMP::SolverSession::Transfer>`\ (*solverSession*, *GMP*)                                                                          |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Solving a mathematical program instance
 
@@ -237,7 +239,7 @@ if you need the mathematical program instance associated with the given
 solver session, and you can retrieve the current objective values using
 the functions
 
--  :any:`GMP::SolverSession::GetBestBound`, and
+-  :any:`GMP::SolverSession::GetBestBound`,
 
 -  :any:`GMP::SolverSession::GetObjective`.
 
@@ -289,3 +291,10 @@ function :any:`GMP::SolverSession::SetOptionValue`. These option values
 override the option values for the associated *GMP*, set through
 :any:`GMP::Instance::SetOptionValue`, which in their turn override the
 project options.
+
+.. rubric:: Retrieving an irreducible infeasible set
+
+If the generated math program appears to be infeasible then the procedure
+:any:`GMP::SolverSession::GetIIS` can be used to retrieve an irreducible
+infeasible set (IIS). This procedure returns the row and column numbers
+of the rows and columns that are part of the IIS.

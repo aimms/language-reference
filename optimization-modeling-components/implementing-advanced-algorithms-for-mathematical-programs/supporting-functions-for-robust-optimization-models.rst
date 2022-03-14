@@ -13,11 +13,11 @@ models.
 
 .. _table:gmp.robust:
 
-.. table:: 
+.. table:: : ``GMP::Robust`` procedures
 
-	+--------------------------------------------------------------------+
-	| ``EvaluateAdjustableVariables``\ (*GMP*, *Variables*\ [, *merge*]) |
-	+--------------------------------------------------------------------+
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`EvaluateAdjustableVariables <GMP::Robust::EvaluateAdjustableVariables>`\ (*GMP*, *Variables*\ [, *merge*]) |
+	+------------------------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Overview of functionality
 

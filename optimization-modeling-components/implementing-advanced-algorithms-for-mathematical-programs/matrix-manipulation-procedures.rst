@@ -167,17 +167,17 @@ mathematical program instance.
 
 .. _table:gmp.coefficient:
 
-.. table:: 
+.. table:: : ``GMP::Coefficient`` routines
 
-	+------------------------------------------------------------+
-	| ``Get``\ (*GMP*, *row*, *column*)                          |
-	+------------------------------------------------------------+
-	| ``Set``\ (*GMP*, *row*, *column*, *value*)                 |
-	+------------------------------------------------------------+
-	| ``GetQuadratic``\ (*GMP*, *column1*, *column2*)            |
-	+------------------------------------------------------------+
-	| ``SetQuadratic``\ (*GMP*, *column1*, *column2*, *value*)   |
-	+------------------------------------------------------------+
+	+----------------------------------------------------------------------------------------------+
+	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                 |
+	+----------------------------------------------------------------------------------------------+
+	| :any:`Set <GMP::Coefficient::Set>`\ (*GMP*, *row*, *column*, *value*)                        |
+	+----------------------------------------------------------------------------------------------+
+	| :any:`GetQuadratic <GMP::Coefficient::GetQuadratic>`\ (*GMP*, *column1*, *column2*)          |
+	+----------------------------------------------------------------------------------------------+
+	| :any:`SetQuadratic <GMP::Coefficient::SetQuadratic>`\ (*GMP*, *column1*, *column2*, *value*) |
+	+----------------------------------------------------------------------------------------------+
 	
 .. rubric:: Modifying coefficients
 
@@ -215,13 +215,13 @@ than the objective of a generated mathematical program instance.
 
 .. _table:gmp.quadratic:
 
-.. table:: 
+.. table:: : ``GMP::QuadraticCoefficient`` routines
 
-	+--------------------------------------------------------+
-	| ``Get``\ (*GMP*, *row*, *column1*, *column2*)          |
-	+--------------------------------------------------------+
-	| ``Set``\ (*GMP*, *row*, *column1*, *column2*, *value*) |
-	+--------------------------------------------------------+
+	+--------------------------------------------------------------------------------------------+
+	| :any:`Get <GMP::QuadraticCoefficient::Get>`\ (*GMP*, *row*, *column1*, *column2*)          |
+	+--------------------------------------------------------------------------------------------+
+	| :any:`Set <GMP::QuadraticCoefficient::Set>`\ (*GMP*, *row*, *column1*, *column2*, *value*) |
+	+--------------------------------------------------------------------------------------------+
 	
 .. rubric:: Modifying coefficients
 
@@ -287,55 +287,55 @@ of existing rows and the creation of new rows.
 
 .. _table:gmp.row:
 
-.. table:: 
+.. table:: : ``GMP::Row`` routines
 
-	+--------------------------------------------------------------------+
-	| ``Add``\ (*GMP*, *row*)                                            |
-	+--------------------------------------------------------------------+
-	| ``Delete``\ (*GMP*, *row*)                                         |
-	+--------------------------------------------------------------------+
-	| ``Activate``\ (*GMP*, *row*)                                       |
-	+--------------------------------------------------------------------+
-	| ``Deactivate``\ (*GMP*, *row*)                                     |
-	+--------------------------------------------------------------------+
-	| ``Generate``\ (*GMP*, *row*)                                       |
-	+--------------------------------------------------------------------+
-	| ``GetLeftHandSide``\ (*GMP*, *row*)                                |
-	+--------------------------------------------------------------------+
-	| ``SetLeftHandSide``\ (*GMP*, *row*, *value*)                       |
-	+--------------------------------------------------------------------+
-	| ``GetRightHandSide``\ (*GMP*, *row*)                               |
-	+--------------------------------------------------------------------+
-	| ``SetRightHandSide``\ (*GMP*, *row*, *value*)                      |
-	+--------------------------------------------------------------------+
-	| ``GetType``\ (*GMP*, *row*) :math:`\to` :any:`AllRowTypes`         |
-	+--------------------------------------------------------------------+
-	| ``SetType``\ (*GMP*, *row*, *type*)                                |
-	+--------------------------------------------------------------------+
-	| ``GetStatus``\ (*GMP*, *row*) :math:`\to` ``AllRowColumnStatuses`` |
-	+--------------------------------------------------------------------+
-	| ``DeleteIndicatorCondition``\ (*GMP*, *row*)                       |
-	+--------------------------------------------------------------------+
-	| ``GetIndicatorColumn``\ (*GMP*, *row*)                             |
-	+--------------------------------------------------------------------+
-	| ``GetIndicatorCondition``\ (*GMP*, *row*)                          |
-	+--------------------------------------------------------------------+
-	| ``SetIndicatorCondition``\ (*GMP*, *row*, *column*, *value*)       |
-	+--------------------------------------------------------------------+
-	| ``GetConvex``\ (*GMP*, *row*)                                      |
-	+--------------------------------------------------------------------+
-	| ``GetRelaxationOnly``\ (*GMP*, *row*)                              |
-	+--------------------------------------------------------------------+
-	| ``SetConvex``\ (*GMP*, *row*, *value*)                             |
-	+--------------------------------------------------------------------+
-	| ``SetRelaxationOnly``\ (*GMP*, *row*, *value*)                     |
-	+--------------------------------------------------------------------+
-	| ``SetPoolType``\ (*GMP*, *row*, *value*\ [, *mode*])               |
-	+--------------------------------------------------------------------+
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`Add <GMP::Row::Add>`\ (*GMP*, *row*)                                                        |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`Delete <GMP::Row::Delete>`\ (*GMP*, *row*)                                                  |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`Activate <GMP::Row::Activate>`\ (*GMP*, *row*)                                              |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`Deactivate <GMP::Row::Deactivate>`\ (*GMP*, *row*)                                          |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`Generate <GMP::Row::Generate>`\ (*GMP*, *row*)                                              |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetLeftHandSide <GMP::Row::GetLeftHandSide>`\ (*GMP*, *row*)                                |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetLeftHandSide <GMP::Row::SetLeftHandSide>`\ (*GMP*, *row*, *value*)                       |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetRightHandSide <GMP::Row::GetRightHandSide>`\ (*GMP*, *row*)                              |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetRightHandSide <GMP::Row::SetRightHandSide>`\ (*GMP*, *row*, *value*)                     |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetType <GMP::Row::GetType>`\ (*GMP*, *row*) :math:`\to` :any:`AllRowTypes`                 |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetType <GMP::Row::SetType>`\ (*GMP*, *row*, *type*)                                        |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetStatus <GMP::Row::GetStatus>`\ (*GMP*, *row*) :math:`\to` :any:`AllRowColumnStatuses`    |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetIndicatorColumn <GMP::Row::GetIndicatorColumn>`\ (*GMP*, *row*)                          |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`DeleteIndicatorCondition <GMP::Row::DeleteIndicatorCondition>`\ (*GMP*, *row*)              |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetIndicatorCondition <GMP::Row::GetIndicatorCondition>`\ (*GMP*, *row*)                    |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetIndicatorCondition <GMP::Row::SetIndicatorCondition>`\ (*GMP*, *row*, *column*, *value*) |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetConvex <GMP::Row::GetConvex>`\ (*GMP*, *row*)                                            |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetConvex <GMP::Row::SetConvex>`\ (*GMP*, *row*, *value*)                                   |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetRelaxationOnly <GMP::Row::GetRelaxationOnly>`\ (*GMP*, *row*)                            |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetRelaxationOnly <GMP::Row::SetRelaxationOnly>`\ (*GMP*, *row*, *value*)                   |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`SetPoolType <GMP::Row::SetPoolType>`\ (*GMP*, *row*, *value*\ [, *mode*])                   |
+	+---------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Row types
 
-The row type refers to one of the four possibilities
+The row type refers to one of the four possibilities:
 
 -  ``'<='``,
 
@@ -428,41 +428,41 @@ properties of existing columns and the creation of new columns.
 
 .. _table:gmp.column:
 
-.. table:: 
+.. table:: : ``GMP::Column`` routines
 
-	+-----------------------------------------------------------------------+
-	| ``Add``\ (*GMP*, *column*)                                            |
-	+-----------------------------------------------------------------------+
-	| ``Delete``\ (*GMP*, *column*)                                         |
-	+-----------------------------------------------------------------------+
-	| ``Freeze``\ (*GMP*, *column*, *value*)                                |
-	+-----------------------------------------------------------------------+
-	| ``Unfreeze``\ (*GMP*, *column*)                                       |
-	+-----------------------------------------------------------------------+
-	| ``GetLowerBound``\ (*GMP*, *column*)                                  |
-	+-----------------------------------------------------------------------+
-	| ``SetLowerBound``\ (*GMP*, *column*, *value*)                         |
-	+-----------------------------------------------------------------------+
-	| ``GetUpperBound``\ (*GMP*, *column*)                                  |
-	+-----------------------------------------------------------------------+
-	| ``SetUpperBound``\ (*GMP*, *column*, *value*)                         |
-	+-----------------------------------------------------------------------+
-	| ``GetType``\ (*GMP*, *column*) :math:`\to` :any:`AllColumnTypes`      |
-	+-----------------------------------------------------------------------+
-	| ``SetType``\ (*GMP*, *column*, *type*)                                |
-	+-----------------------------------------------------------------------+
-	| ``GetStatus``\ (*GMP*, *column*) :math:`\to` ``AllRowColumnStatuses`` |
-	+-----------------------------------------------------------------------+
-	| ``SetDecomposition``\ (*GMP*, *column*, *value*)                      |
-	+-----------------------------------------------------------------------+
-	| ``SetAsObjective``\ (*GMP*, *column*)                                 |
-	+-----------------------------------------------------------------------+
-	| ``SetAsMultiObjective``\ (*GMP*, *column*, *priority*, *weight*)      |
-	+-----------------------------------------------------------------------+
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`Add <GMP::Column::Add>`\ (*GMP*, *column*)                                                       |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`Delete <GMP::Column::Delete>`\ (*GMP*, *column*)                                                 |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`Freeze <GMP::Column::Freeze>`\ (*GMP*, *column*, *value*)                                        |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`Unfreeze <GMP::Column::Unfreeze>`\ (*GMP*, *column*)                                             |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetLowerBound <GMP::Column::GetLowerBound>`\ (*GMP*, *column*)                                   |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetLowerBound <GMP::Column::SetLowerBound>`\ (*GMP*, *column*, *value*)                          |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetUpperBound <GMP::Column::GetUpperBound>`\ (*GMP*, *column*)                                   |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetUpperBound <GMP::Column::SetUpperBound>`\ (*GMP*, *column*, *value*)                          |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetType <GMP::Column::GetType>`\ (*GMP*, *column*) :math:`\to` :any:`AllColumnTypes`             |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetType <GMP::Column::SetType>`\ (*GMP*, *column*, *type*)                                       |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetStatus <GMP::Column::GetStatus>`\ (*GMP*, *column*) :math:`\to` :any:`AllRowColumnStatuses`   |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetDecomposition <GMP::Column::SetDecomposition>`\ (*GMP*, *column*, *value*)                    |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetAsObjective <GMP::Column::SetAsObjective>`\ (*GMP*, *column*)                                 |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`SetAsMultiObjective <GMP::Column::SetAsMultiObjective>`\ (*GMP*, *column*, *priority*, *weight*) |
+	+--------------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Column types
 
-The column type refers to one of the three possibilities
+The column type refers to one of the three possibilities:
 
 -  ``'integer'``,
 
@@ -538,49 +538,112 @@ procedures of the ``GMP`` namespace are listed in :ref:`this table <table:gmp.mu
 
 .. _table:gmp.multiproc:
 
-.. table:: 
+.. table:: : Multi procedures
 
-	+--------------------------------------------------------------------------+
-	| ``Coefficient::SetMulti``\ (*GMP*, *binding*, *row*, *column*, *value*)  |
-	+--------------------------------------------------------------------------+
-	| ``Column::AddMulti``\ (*GMP*, *binding*, *column*)                       |
-	+--------------------------------------------------------------------------+
-	| ``Column::DeleteMulti``\ (*GMP*, *binding*, *column*)                    |
-	+--------------------------------------------------------------------------+
-	| ``Column::FreezeMulti``\ (*GMP*, *binding*, *column*, *value*)           |
-	+--------------------------------------------------------------------------+
-	| ``Column::UnfreezeMulti``\ (*GMP*, *binding*, *column*)                  |
-	+--------------------------------------------------------------------------+
-	| ``Column::SetLowerBoundMulti``\ (*GMP*, *binding*, *column*, *value*)    |
-	+--------------------------------------------------------------------------+
-	| ``Column::SetUpperBoundMulti``\ (*GMP*, *binding*, *column*, *value*)    |
-	+--------------------------------------------------------------------------+
-	| ``Column::SetTypeMulti``\ (*GMP*, *binding*, *column*, *type*)           |
-	+--------------------------------------------------------------------------+
-	| ``Column::SetDecompositionMulti``\ (*GMP*, *binding*, *column*, *value*) |
-	+--------------------------------------------------------------------------+
-	| ``Row::AddMulti``\ (*GMP*, *binding*, *row*)                             |
-	+--------------------------------------------------------------------------+
-	| ``Row::DeleteMulti``\ (*GMP*, *binding*, *row*)                          |
-	+--------------------------------------------------------------------------+
-	| ``Row::GenerateMulti``\ (*GMP*, *binding*, *row*)                        |
-	+--------------------------------------------------------------------------+
-	| ``Row::ActivateMulti``\ (*GMP*, *binding*, *row*)                        |
-	+--------------------------------------------------------------------------+
-	| ``Row::DeactivateMulti``\ (*GMP*, *binding*, *row*)                      |
-	+--------------------------------------------------------------------------+
-	| ``Row::SetRightHandSideMulti``\ (*GMP*, *binding*, *row*, *value*)       |
-	+--------------------------------------------------------------------------+
-	| ``Row::SetTypeMulti``\ (*GMP*, *binding*, *row*, *type*)                 |
-	+--------------------------------------------------------------------------+
-	| ``Row::SetPoolTypeMulti``\ (*GMP*, *binding*, *row*, *value*, *mode*)    |
-	+--------------------------------------------------------------------------+
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Coefficient::SetMulti <GMP::Coefficient::SetMulti>`\ (*GMP*, *binding*, *row*, *column*, *value*)          |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::AddMulti <GMP::Column::AddMulti>`\ (*GMP*, *binding*, *column*)                                    |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::DeleteMulti <GMP::Column::DeleteMulti>`\ (*GMP*, *binding*, *column*)                              |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::FreezeMulti <GMP::Column::FreezeMulti>`\ (*GMP*, *binding*, *column*, *value*)                     |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::UnfreezeMulti <GMP::Column::UnfreezeMulti>`\ (*GMP*, *binding*, *column*)                          |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetLowerBoundMulti <GMP::Column::SetLowerBoundMulti>`\ (*GMP*, *binding*, *column*, *value*)       |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetUpperBoundMulti <GMP::Column::SetLowerBoundMulti>`\ (*GMP*, *binding*, *column*, *value*)       |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetTypeMulti <GMP::Column::SetTypeMulti>`\ (*GMP*, *binding*, *column*, *type*)                    |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetDecompositionMulti <GMP::Column::SetDecompositionMulti>`\ (*GMP*, *binding*, *column*, *value*) |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::AddMulti <GMP::Row::AddMulti>`\ (*GMP*, *binding*, *row*)                                             |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::DeleteMulti <GMP::Row::DeleteMulti>`\ (*GMP*, *binding*, *row*)                                       |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::GenerateMulti <GMP::Row::GenerateMulti>`\ (*GMP*, *binding*, *row*)                                   |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::ActivateMulti <GMP::Row::ActivateMulti>`\ (*GMP*, *binding*, *row*)                                   |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::DeactivateMulti <GMP::Row::DeactivateMulti>`\ (*GMP*, *binding*, *row*)                               |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::SetRightHandSideMulti <GMP::Row::SetRightHandSideMulti>`\ (*GMP*, *binding*, *row*, *value*)          |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::SetTypeMulti <GMP::Row::SetTypeMulti>`\ (*GMP*, *binding*, *row*, *type*)                             |
+	+------------------------------------------------------------------------------------------------------------------+
+	| :any:`Row::SetPoolTypeMulti <GMP::Row::SetPoolTypeMulti>`\ (*GMP*, *binding*, *row*, *value*, *mode*)            |
+	+------------------------------------------------------------------------------------------------------------------+
 
 .. rubric:: Binding argument
 
 All procedures in :ref:`this table <table:gmp.multiproc>` contain an index binding argument. The index binding argument
 specifies which columns or rows will be modified. If the procedure contains a value argument then the size of this vector is defined by the 
 index binding argument. Further information on index binding can be found in :ref:`chap:bind`.
+
+.. rubric:: Alternative procedures
+
+An alternative approach to change the data of multiple columns or rows is using the *raw* procedures, of the ``GMP`` namespace,
+mentioned in :ref:`this table <table:gmp.rawproc>`.
+
+.. _GMP::Coefficient::SetRaw-LR:
+
+.. _GMP::Column::DeleteRaw-LR:
+
+.. _GMP::Column::FreezeRaw-LR:
+
+.. _GMP::Column::UnfreezeRaw-LR:
+
+.. _GMP::Column::SetLowerBoundRaw-LR:
+
+.. _GMP::Column::SetUpperBoundRaw-LR:
+
+.. _GMP::Column::SetTypeRaw-LR:
+
+.. _GMP::Row::DeleteRaw-LR:
+
+.. _GMP::Row::ActivateRaw-LR:
+
+.. _GMP::Row::DeactivateRaw-LR:
+
+.. _table:gmp.rawproc:
+
+.. table:: : Raw procedures
+
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Coefficient::SetRaw <GMP::Coefficient::SetRaw>`\ (*GMP*, *rowSet*, *colSet*, *coef*, *changeZero*)  |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::DeleteRaw <GMP::Column::DeleteRaw>`\ (*GMP*, *colSet*)                                      |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::FreezeRaw <GMP::Column::FreezeRaw>`\ (*GMP*, *colSet*, *value*)                             |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::UnfreezeRaw <GMP::Column::UnfreezeRaw>`\ (*GMP*, *colSet*)                                  |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetLowerBoundRaw <GMP::Column::SetLowerBoundRaw>`\ (*GMP*, *colSet*, *value*)               |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetUpperBoundRaw <GMP::Column::SetUpperBoundRaw>`\ (*GMP*, *colSet*, *value*)               |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::SetTypeRaw <GMP::Column::SetTypeRaw>`\ (*GMP*, *colSet*, *type*)                            |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::DeleteRaw <GMP::Row::DeleteRaw>`\ (*GMP*, *rowSet*)                                            |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::ActivateRaw <GMP::Row::ActivateRaw>`\ (*GMP*, *rowSet*)                                        |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::DeactivateRaw <GMP::Row::DeactivateRaw>`\ (*GMP*, *rowSet*)                                    |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::SetRightHandSideRaw <GMP::Row::SetRightHandSideRaw>`\ (*GMP*, *rowSet*, *value*)               |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::SetTypeRaw <GMP::Row::SetTypeRaw>`\ (*GMP*, *rowSet*, *type*)                                  |
+	+-----------------------------------------------------------------------------------------------------------+
+
+These procedures use a set of column and/or row numbers as input. These
+sets of column and row numbers can be obtained by using the functions
+
+-  :any:`GMP::Instance::GetColumnNumbers`, and
+-  :any:`GMP::Instance::GetRowNumbers`
+
+respectively.
 
 .. _sec:matrix.extended:
 
@@ -715,7 +778,7 @@ will store the dual solution in the suffices
 
 .. rubric:: Extended suffices for linearization
 
-By calling the procedures ``GMP::Linearization:Add`` or
+By calling the procedures :any:`GMP::Linearization::Add` or
 :any:`GMP::Linearization::AddSingle`, AIMMS will add the linearization for
 a single nonlinear constraint instance, or for all nonlinear constraints
 from a set of nonlinear constraints to a given math program instance.
