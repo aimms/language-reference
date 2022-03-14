@@ -73,8 +73,6 @@ various purposes. Typical examples are:
    ``SumOfInfeasibilities``    Final sum of the infeasibilities
    =========================== =======================================
 
-.. _callbackaoa:
-
 .. _callbackreturnstatus:
 
 .. _callbackaddcut:
@@ -109,7 +107,6 @@ various purposes. Typical examples are:
                             called to add additional cuts
                             (CPLEX and Gurobi)
    ``CallbackReturnStatus`` Return status of callback
-   ``CallbackAOA``          Name of AOA callback procedure
    ======================== ================================
 
 .. _NumberOfNonlinearNonzeros:
