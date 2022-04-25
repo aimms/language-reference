@@ -105,7 +105,8 @@ presence of errors.
 .. rubric:: Example of using a runtime identifier directly
 
 In this example, a runtime identifier is used directly. This yields the same
-result as the next example. This usage is far less flexible however and somewhat compromises the separation of the runtime data.     
+result as the next example. This feature is very convenient to get access to runtime identifiers or procedures that
+are exposed to the model by generic libraries extending AIMMS functionality such as CDM or DEX. 
 
 .. code-block:: aimms
 
