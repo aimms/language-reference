@@ -165,19 +165,23 @@ mathematical program instance.
 
 .. _GMP::Coefficient::Get-LR:
 
+.. _GMP::Coefficient::GetMultiRaw-LR:
+
 .. _table:gmp.coefficient:
 
 .. table:: : ``GMP::Coefficient`` routines
 
-	+----------------------------------------------------------------------------------------------+
-	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                 |
-	+----------------------------------------------------------------------------------------------+
-	| :any:`Set <GMP::Coefficient::Set>`\ (*GMP*, *row*, *column*, *value*)                        |
-	+----------------------------------------------------------------------------------------------+
-	| :any:`GetQuadratic <GMP::Coefficient::GetQuadratic>`\ (*GMP*, *column1*, *column2*)          |
-	+----------------------------------------------------------------------------------------------+
-	| :any:`SetQuadratic <GMP::Coefficient::SetQuadratic>`\ (*GMP*, *column1*, *column2*, *value*) |
-	+----------------------------------------------------------------------------------------------+
+	+----------------------------------------------------------------------------------------------------+
+	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                       |
+	+----------------------------------------------------------------------------------------------------+
+	| :any:`GetMultiRaw <GMP::Coefficient::GetMultiRaw>`\ (*GMP*, *rowSet*, *columnSet*, *coefficients*) |
+	+----------------------------------------------------------------------------------------------------+
+	| :any:`Set <GMP::Coefficient::Set>`\ (*GMP*, *row*, *column*, *value*)                              |
+	+----------------------------------------------------------------------------------------------------+
+	| :any:`GetQuadratic <GMP::Coefficient::GetQuadratic>`\ (*GMP*, *column1*, *column2*)                |
+	+----------------------------------------------------------------------------------------------------+
+	| :any:`SetQuadratic <GMP::Coefficient::SetQuadratic>`\ (*GMP*, *column1*, *column2*, *value*)       |
+	+----------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Modifying coefficients
 
@@ -271,6 +275,8 @@ of existing rows and the creation of new rows.
 
 .. _GMP::Row::GetRightHandSide-LR:
 
+.. _GMP::Row::GetRightHandSideMultiRaw-LR:
+
 .. _GMP::Row::SetLeftHandSide-LR:
 
 .. _GMP::Row::GetLeftHandSide-LR:
@@ -305,6 +311,8 @@ of existing rows and the creation of new rows.
 	| :any:`SetLeftHandSide <GMP::Row::SetLeftHandSide>`\ (*GMP*, *row*, *value*)                       |
 	+---------------------------------------------------------------------------------------------------+
 	| :any:`GetRightHandSide <GMP::Row::GetRightHandSide>`\ (*GMP*, *row*)                              |
+	+---------------------------------------------------------------------------------------------------+
+	| :any:`GetRightHandSideMultiRaw <GMP::Row::GetRightHandSideMultiRaw>`\ (*GMP*, *rowSet*, *rhs*)    |
 	+---------------------------------------------------------------------------------------------------+
 	| :any:`SetRightHandSide <GMP::Row::SetRightHandSide>`\ (*GMP*, *row*, *value*)                     |
 	+---------------------------------------------------------------------------------------------------+
@@ -412,9 +420,13 @@ properties of existing columns and the creation of new columns.
 
 .. _GMP::Column::GetUpperBound-LR:
 
+.. _GMP::Column::GetUpperBoundMultiRaw-LR:
+
 .. _GMP::Column::SetLowerBound-LR:
 
 .. _GMP::Column::GetLowerBound-LR:
+
+.. _GMP::Column::GetLowerBoundMultiRaw-LR:
 
 .. _GMP::Column::SetDecomposition-LR:
 
@@ -441,9 +453,13 @@ properties of existing columns and the creation of new columns.
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`GetLowerBound <GMP::Column::GetLowerBound>`\ (*GMP*, *column*)                                   |
 	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetLowerBoundMultiRaw <GMP::Column::GetLowerBoundMultiRaw>`\ (*GMP*, *columnSet*, *lbs*)         |
+	+--------------------------------------------------------------------------------------------------------+
 	| :any:`SetLowerBound <GMP::Column::SetLowerBound>`\ (*GMP*, *column*, *value*)                          |
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`GetUpperBound <GMP::Column::GetUpperBound>`\ (*GMP*, *column*)                                   |
+	+--------------------------------------------------------------------------------------------------------+
+	| :any:`GetUpperBoundMultiRaw <GMP::Column::GetUpperBoundMultiRaw>`\ (*GMP*, *columnSet*, *ubs*)         |
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`SetUpperBound <GMP::Column::SetUpperBound>`\ (*GMP*, *column*, *value*)                          |
 	+--------------------------------------------------------------------------------------------------------+
