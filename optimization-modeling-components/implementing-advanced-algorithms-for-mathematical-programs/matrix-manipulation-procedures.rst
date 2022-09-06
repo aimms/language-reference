@@ -167,25 +167,21 @@ mathematical program instance.
 
 .. _GMP::Coefficient::GetMinAndMax-LR:
 
-.. _GMP::Coefficient::GetRaw-LR:
-
 .. _table:gmp.coefficient:
 
 .. table:: : ``GMP::Coefficient`` routines
 
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                                           |
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`GetMinAndMax <GMP::Coefficient::GetMinAndMax>`\ (*GMP*, *rowSet*, *columnSet*, *minCoef*, *maxCoef*, *absSense*) |
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`GetRaw <GMP::Coefficient::GetRaw>`\ (*GMP*, *rowSet*, *columnSet*, *coefficients*)                               |
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`Set <GMP::Coefficient::Set>`\ (*GMP*, *row*, *column*, *value*)                                                  |
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`GetQuadratic <GMP::Coefficient::GetQuadratic>`\ (*GMP*, *column1*, *column2*)                                    |
-	+------------------------------------------------------------------------------------------------------------------------+
-	| :any:`SetQuadratic <GMP::Coefficient::SetQuadratic>`\ (*GMP*, *column1*, *column2*, *value*)                           |
-	+------------------------------------------------------------------------------------------------------------------------+
+	+-------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Get <GMP::Coefficient::Get>`\ (*GMP*, *row*, *column*)                                                            |
+	+-------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetMinAndMax <GMP::Coefficient::GetMinAndMax>`\ (*GMP*, *rowSet*, *colSet*, *minCoef*, *maxCoef*\ [, *absSense*]) |
+	+-------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Set <GMP::Coefficient::Set>`\ (*GMP*, *row*, *column*, *value*)                                                   |
+	+-------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetQuadratic <GMP::Coefficient::GetQuadratic>`\ (*GMP*, *column1*, *column2*)                                     |
+	+-------------------------------------------------------------------------------------------------------------------------+
+	| :any:`SetQuadratic <GMP::Coefficient::SetQuadratic>`\ (*GMP*, *column1*, *column2*, *value*)                            |
+	+-------------------------------------------------------------------------------------------------------------------------+
 	
 .. rubric:: Modifying coefficients
 
@@ -279,8 +275,6 @@ of existing rows and the creation of new rows.
 
 .. _GMP::Row::GetRightHandSide-LR:
 
-.. _GMP::Row::GetRightHandSideRaw-LR:
-
 .. _GMP::Row::SetLeftHandSide-LR:
 
 .. _GMP::Row::GetLeftHandSide-LR:
@@ -315,8 +309,6 @@ of existing rows and the creation of new rows.
 	| :any:`SetLeftHandSide <GMP::Row::SetLeftHandSide>`\ (*GMP*, *row*, *value*)                       |
 	+---------------------------------------------------------------------------------------------------+
 	| :any:`GetRightHandSide <GMP::Row::GetRightHandSide>`\ (*GMP*, *row*)                              |
-	+---------------------------------------------------------------------------------------------------+
-	| :any:`GetRightHandSideRaw <GMP::Row::GetRightHandSideRaw>`\ (*GMP*, *rowSet*, *rhs*)              |
 	+---------------------------------------------------------------------------------------------------+
 	| :any:`SetRightHandSide <GMP::Row::SetRightHandSide>`\ (*GMP*, *row*, *value*)                     |
 	+---------------------------------------------------------------------------------------------------+
@@ -424,13 +416,9 @@ properties of existing columns and the creation of new columns.
 
 .. _GMP::Column::GetUpperBound-LR:
 
-.. _GMP::Column::GetUpperBoundRaw-LR:
-
 .. _GMP::Column::SetLowerBound-LR:
 
 .. _GMP::Column::GetLowerBound-LR:
-
-.. _GMP::Column::GetLowerBoundRaw-LR:
 
 .. _GMP::Column::SetDecomposition-LR:
 
@@ -457,13 +445,9 @@ properties of existing columns and the creation of new columns.
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`GetLowerBound <GMP::Column::GetLowerBound>`\ (*GMP*, *column*)                                   |
 	+--------------------------------------------------------------------------------------------------------+
-	| :any:`GetLowerBoundRaw <GMP::Column::GetLowerBoundRaw>`\ (*GMP*, *columnSet*, *lbs*)                   |
-	+--------------------------------------------------------------------------------------------------------+
 	| :any:`SetLowerBound <GMP::Column::SetLowerBound>`\ (*GMP*, *column*, *value*)                          |
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`GetUpperBound <GMP::Column::GetUpperBound>`\ (*GMP*, *column*)                                   |
-	+--------------------------------------------------------------------------------------------------------+
-	| :any:`GetUpperBoundRaw <GMP::Column::GetUpperBoundRaw>`\ (*GMP*, *columnSet*, *ubs*)                   |
 	+--------------------------------------------------------------------------------------------------------+
 	| :any:`SetUpperBound <GMP::Column::SetUpperBound>`\ (*GMP*, *column*, *value*)                          |
 	+--------------------------------------------------------------------------------------------------------+
@@ -604,8 +588,10 @@ index binding argument. Further information on index binding can be found in :re
 
 .. rubric:: Alternative procedures
 
-An alternative approach to change the data of multiple columns or rows is using the *raw* procedures, of the ``GMP`` namespace,
+An alternative approach to change or retrieve the data of multiple columns or rows is using the *raw* procedures, of the ``GMP`` namespace,
 mentioned in :ref:`this table <table:gmp.rawproc>`.
+
+.. _GMP::Coefficient::GetRaw-LR:
 
 .. _GMP::Coefficient::SetRaw-LR:
 
@@ -615,7 +601,11 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 
 .. _GMP::Column::UnfreezeRaw-LR:
 
+.. _GMP::Column::GetLowerBoundRaw-LR:
+
 .. _GMP::Column::SetLowerBoundRaw-LR:
+
+.. _GMP::Column::GetUpperBoundRaw-LR:
 
 .. _GMP::Column::SetUpperBoundRaw-LR:
 
@@ -627,10 +617,18 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 
 .. _GMP::Row::DeactivateRaw-LR:
 
+.. _GMP::Row::GetRightHandSideRaw-LR:
+
+.. _GMP::Row::SetRightHandSideRaw-LR:
+
+.. _GMP::Row::SetTypeRaw-LR:
+
 .. _table:gmp.rawproc:
 
 .. table:: : Raw procedures
 
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Coefficient::GetRaw <GMP::Coefficient::GetRaw>`\ (*GMP*, *rowSet*, *colSet*, *coef*)                |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Coefficient::SetRaw <GMP::Coefficient::SetRaw>`\ (*GMP*, *rowSet*, *colSet*, *coef*, *changeZero*)  |
 	+-----------------------------------------------------------------------------------------------------------+
@@ -640,7 +638,11 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Column::UnfreezeRaw <GMP::Column::UnfreezeRaw>`\ (*GMP*, *colSet*)                                  |
 	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::GetLowerBoundRaw <GMP::Column::GetLowerBoundRaw>`\ (*GMP*, *colSet*, *lbs*)                 |
+	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Column::SetLowerBoundRaw <GMP::Column::SetLowerBoundRaw>`\ (*GMP*, *colSet*, *value*)               |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Column::GetUpperBoundRaw <GMP::Column::GetUpperBoundRaw>`\ (*GMP*, *colSet*, *ubs*)                 |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Column::SetUpperBoundRaw <GMP::Column::SetUpperBoundRaw>`\ (*GMP*, *colSet*, *value*)               |
 	+-----------------------------------------------------------------------------------------------------------+
@@ -651,6 +653,8 @@ mentioned in :ref:`this table <table:gmp.rawproc>`.
 	| :any:`Row::ActivateRaw <GMP::Row::ActivateRaw>`\ (*GMP*, *rowSet*)                                        |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Row::DeactivateRaw <GMP::Row::DeactivateRaw>`\ (*GMP*, *rowSet*)                                    |
+	+-----------------------------------------------------------------------------------------------------------+
+	| :any:`Row::GetRightHandSideRaw <GMP::Row::GetRightHandSideRaw>`\ (*GMP*, *rowSet*, *rhs*)                 |
 	+-----------------------------------------------------------------------------------------------------------+
 	| :any:`Row::SetRightHandSideRaw <GMP::Row::SetRightHandSideRaw>`\ (*GMP*, *rowSet*, *value*)               |
 	+-----------------------------------------------------------------------------------------------------------+
