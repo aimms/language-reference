@@ -45,8 +45,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.builders.linkcheck',
     'sphinx_aimms_theme',
-    'sphinxcontrib.bibtex',
-    'sphinx_last_updated_by_git'
+    'sphinxcontrib.bibtex'
 ]
 
 bibtex_bibfiles = ['appendices/bibbase.bib']
@@ -62,6 +61,7 @@ if os.name != 'nt':
     #Imports sitemap extension to build the sitemap automatically
     extensions.append('sphinx_sitemap')
     html_baseurl = "https://documentation.aimms.com/language-reference/"
+    #extensions.append('sphinx_last_updated_by_git')
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
