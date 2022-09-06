@@ -298,3 +298,4 @@ If the generated math program appears to be infeasible then the procedure
 :any:`GMP::SolverSession::GetIIS` can be used to retrieve an irreducible
 infeasible set (IIS). This procedure returns the row and column numbers
 of the rows and columns that are part of the IIS.
+
