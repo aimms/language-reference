@@ -176,10 +176,10 @@ followed by a dot ``.``, as illustrated in the example below.
 
 .. code-block:: aimms
 
-	option  'Cplex 20.1'.lp_method := 'dual simplex';
+	option  'Cplex 22.1'.lp_method := 'dual simplex';
 
 This statement will set the option ``lp_method`` of the solver that is
-known to the system as ``'Cplex 20.1'`` equal to ``'dual simplex'``. The
+known to the system as ``'Cplex 22.1'`` equal to ``'dual simplex'``. The
 solver name can be either a quoted solver name, or an element parameter
 into the predefined set :any:`AllSolvers`.
 

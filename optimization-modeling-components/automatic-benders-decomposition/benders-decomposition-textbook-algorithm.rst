@@ -79,7 +79,7 @@ If the dual subproblem is unbounded, implying that the primal subproblem
 is infeasible, then an unbounded extreme ray :math:`\overline{\pi}` is
 selected and the Benders' feasibility cut
 :math:`\overline{\pi}^T (r - Tx) \leq 0` is added to the master problem.
-Modern solvers like CPLEX and Gurobi can provide an unbounded extreme
+Modern solvers like CPLEX, Gurobi and COPT can provide an unbounded extreme
 ray in case a LP problem is unbounded. After adding the feasibility cut
 the Benders' decomposition algorithm continues by solving the master
 problem.

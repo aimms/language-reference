@@ -357,8 +357,8 @@ Solution Pool Filtering
 
 .. rubric:: Solution pool
 
-During the solution process of a MIP problem, the solvers CPLEX and
-Gurobi are capable of storing multiple feasible integer solutions in a
+During the solution process of a MIP problem, the solvers CPLEX, Gurobi
+and COPT are capable of storing multiple feasible integer solutions in a
 solution pool, for instance, to capture solutions with attractive
 properties that are hard to express in a linear fashion.
 
