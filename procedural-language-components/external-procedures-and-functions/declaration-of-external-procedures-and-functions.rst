@@ -191,6 +191,16 @@ call to an external procedure. As a result of this, however, the actual
 data transfer of ``Handle`` arguments to the DLL function must
 completely take place via the AIMMS API (see also :ref:`chap:api`).
 
+.. note::
+
+	Unfortunately, in AIMMS versions lower than 4.90, in terms of compilation it did not matter whether you specified an argument as a ``Handle`` or as a real typed argument, like, for example, a two-dimensional string parameter. In other words: because of the 'handle' in the actual body call, the argument itself implicitly acted as being of type ``Handle``. So, you did not get any type errors during compilation.
+	
+	In AIMMS 4.90 you now get a warning when the actual passed-in argument to a procedure does not match the type or dimension of the argument declaration. However, compilation and execution will continue as it did in earlier versions. 
+	
+	It is recommended to have a look at these warnings and try to fix them. The easiest way is to make the argument a ``Handle`` as well but perhaps you can make the argument really match and thus make the call more type safe. In a future version of AIMMS these warnings will be treated as errors and then you are forced to modify the code.
+	
+	If you encounter these warnings in libraries that you cannot change yourself, for example in a repository library of AIMMS itself, then please have a look whether there exists a more recent and upgraded version of that library. If not, and it is a library provided by AIMMS, please let us know.
+
 .. _external_procedure.body_call:
 
 .. _external_function.body_call:
