@@ -2,45 +2,35 @@ stages:
   - test
   - deploy
 
-
-before_script:
-  - sudo apt-get install software-properties-common -y
-  - sudo add-apt-repository ppa:deadsnakes/ppa -y
-  - sudo apt-get update -y
-  - sudo apt-get install python3.8 python3.8-dev python3.8-venv python3-pip python3-venv python-enchant -y
-  - sudo rm -rf myenv
-  - python3.8 -mvenv ../myenv
-  - source ../myenv/bin/activate
-  - python3.8 -mpip install -U  pip
-  - python3.8 -mpip install -U sphinx-aimms-theme sphinx-sitemap sphinx-last-updated-by-git sphinxcontrib-bibtex sphinxcontrib-spelling
-  - python3.8 -mpip install sphinx==4.5.0 --force-reinstall
-
+.run_on_dockerhost: &run_on_dockerhost
+  tags:
+    - docker20
+  before_script:
+    - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
+  image: gitlab.aimms.com:5050/other/dockerdev/documentation:latest
 
 linkcheck:
+  <<: *run_on_dockerhost
   stage: test
   allow_failure: true
   script:
-  - python3.8 -msphinx -W -b linkcheck . _build/linkcheck
-  tags: 
-    - ubuntu
+    - python3 -msphinx -W -b linkcheck . _build/linkcheck
 
 build:
+  <<: *run_on_dockerhost
   stage: test
   script:
-    - python3.8 -msphinx -W -b html . _build/html
-  tags: 
-    - ubuntu
+    - python3 -msphinx -W -b html . _build/html
 
 deploy:
+  <<: *run_on_dockerhost
   stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      when: always
+    - when: never
   script:
-    - python3.8 -msphinx -b html . _build/html 
-    - python3.8 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
+    - python3 -msphinx -b html . _build/html
+    - python3 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
+    - bash load_ssh_key_for_deploy.sh
     - rsync -rt --delete-excluded _build/html/ support@data.aimms.com:/home/aimms/www/documentation.aimms.com/language-reference
-  tags: 
-    - ubuntu
-  only:
-    - master
-
-
-
