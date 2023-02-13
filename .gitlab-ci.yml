@@ -27,7 +27,7 @@ deploy:
   stage: deploy
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
-      when: always
+      when: on_success
     - when: never
   script:
     - python3 -msphinx -b html . _build/html
