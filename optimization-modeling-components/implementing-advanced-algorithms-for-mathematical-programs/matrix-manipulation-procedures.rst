@@ -833,7 +833,7 @@ math program instance. When called, AIMMS will add elements of the form
 to the set :any:`AllGMPExtensions`. In addition, AIMMS will add
 
 -  a constraint
-   ``mp.ExtendedConstraint('Linearization``\ :math:`k`\ ``')`` to
+   ``mp.ExtendedConstraint('Elimination``\ :math:`k`\ ``')`` to
    exclude current solution for all binary variables from the math
    program ``mp`` at hand, and
 
