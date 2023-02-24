@@ -852,3 +852,19 @@ to the set :any:`AllGMPExtensions`. In addition, AIMMS will add
       and
 
    -  ``c.ExtendedConstraint('EliminationUpperBound``\ :math:`k`\ ``',i)``.
+
+.. rubric:: Deviation constraints
+
+By calling the procedure :any:`GMP::Instance::AddLimitBinaryDeviationRow`,
+AIMMS will add one constraint to a math program instance, which limits
+the number of binary variables of which the solution value is allowed to change.
+When called, AIMMS will add an element of the form
+
+-  ``Deviation``\ :math:`k`
+
+to the set :any:`AllGMPExtensions`. In addition, AIMMS will add
+
+-  a constraint
+   ``mp.ExtendedConstraint('Deviation``\ :math:`k`\ ``')`` to
+   limit the number of binary variables from the math
+   program ``mp`` at hand of which the solution value is allowed to change.
