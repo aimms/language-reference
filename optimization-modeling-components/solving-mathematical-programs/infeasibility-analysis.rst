@@ -277,7 +277,7 @@ shows how to proceed, where ``v`` is assumed to be an index in
 
 .. code-block:: aimms
 
-	for ( v | Card(v, 'Violation'}) ) do
+	for ( v | Card(v, 'Violation') ) do
 
 	    ! Take any action that you want to perform on this violated variable
 
