@@ -82,4 +82,7 @@ the objective.
 In case of multi-objective optimization, the variable specified in the
 ``Objective`` attribute of the mathematical program will be treated as a
 normal variable, that is, it will not be used as one of the
-multi-objectives.
+multi-objectives, unless specified as such using the procedure
+:any:`GMP::Column::SetAsMultiObjective`. Note that for multi-objective
+optimization, the mathematical program suffices ``Objective`` and ``BestBound``
+refer to the (blended) objective with the highest priority (after the solve).
