@@ -631,22 +631,6 @@ A modified version of the above example was sent to us by a customer.
 While the original formulation took several minutes to execute for a
 given large dataset, the reformulation only took a few seconds.
 
-.. rubric:: A bit of general advice
-
-Perhaps a modeling style which avoids the need for substitutions is
-best. The easy way is to let AIMMS identify the places in which such
-substitutions can be made by switching the options in the option
-category ``Aimms`` - ``Tuning`` -
-``Substitute Lower Dimension Expressions`` to appropriate settings. The
-disadvantage of this easy method is that some opportunities are missed
-as AIMMS cannot guarantee the equivalence of the formulations, and some
-replacements are missed. For instance, in the above example, AIMMS will
-create an identifier for both ``TRDistance(sr,st) <= MaxTRDistance(st)``
-and ``TRDistance(dr,dt) <= MaxTRDistance(dt)``, even though only one
-suffices. You can avoid substitutions by keeping your expressions brief
-relating only a few identifiers at a time. This will also help to keep
-your model readable.
-
 .. _subsection:eff.tuning-stmts.nz-defval:
 
 Parameters with Non-Zero Defaults
