@@ -32,5 +32,7 @@ deploy:
   script:
     - python3 -msphinx -b html . _build/html
     - python3 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
+    - cp -r _build/html language-reference
+    - az storage copy -s 'language-reference' --recursive --destination-container '$web' -- --overwrite=true --as-subdir=true
     - bash load_ssh_key_for_deploy.sh
     - rsync -rt --delete-excluded _build/html/ support@data.aimms.com:/home/aimms/www/documentation.aimms.com/language-reference
