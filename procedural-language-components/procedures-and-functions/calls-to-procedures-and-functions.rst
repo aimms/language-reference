@@ -830,6 +830,16 @@ the formal arguments. Note that consistency in the specified domains of
 the actual arguments is required when a local set is used in the index
 domain of several formal arguments.
 
+.. rubric:: Domain restrictions on actual argument
+
+When passing an identifier as the actual argument to the procedure or function a 
+possible domain restriction on that identifier is not used. In other words if the
+identifier contains inactive data outside the domain restriction this data will
+be passed to the procedure or function as well. To circumvent this problem you can add a 
+``CLEANUP`` statement just before the call which will remove the inactive data from the
+identifier.
+
+
 .. _arg-tag:
 
 .. rubric:: Tagging arguments
