@@ -8,6 +8,7 @@ Build Locally the HTML documentation
  - [Sphinx package](http://www.sphinx-doc.org/en/master/) (run `python3 -m pip install sphinx`)
  - [Sphinx AIMMS theme](https://gitlab.com/ArthurdHerbemont/sphinx-aimms-theme) (run `python3 -m pip install sphinx-aimms-theme`)
  - [AIMMS code blocks for PDF](https://gitlab.com/ArthurdHerbemont/aimms-pygments-style) (run `python3 -m pip install aimms-pygments-style`) 
+ - [BibTeX] (run `python3 -m pip install sphinxcontrib.bibtex`)
 
 After installing all the above requirements, please go to the location of your previously cloned documentation folder:
  * Open a console prompt from this location, using ``ATL+D`` and typing ``cmd`` in the URL of your file explorer (awesome)
