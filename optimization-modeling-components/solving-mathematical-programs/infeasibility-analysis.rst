@@ -246,13 +246,14 @@ original objective is optimized among all minimum cost relaxations.
 The second phase can be activated by using the option 
 ``Feasibility relaxation optimize original objective``. 
 
-Some other difference are: 
+There are some other differences, that is, if the option ``Feasibility relaxation``
+is set to ``advanced`` then:
 
--  CPLEX and Gurobi are unable to process ``ZERO`` violation penalties. 
-   The violation variables are generated AIMMS, but these variables are not 
-   sent to the FeasOpt/FeasRelax model,
+-  A penalty value of ``ZERO`` specifies that the corresponding constraint or
+   variable bound cannot be violated, and
 
--  The ``Definition`` penalty values are ignored for FeasOpt/FeasRelax model. 
+-  The ``Lower`` violation type will be ignored for equality constraints and,
+   in case of Gurobi, for ranged constraints.
 
 
 .. _sec:mp.infeas.inspect:
