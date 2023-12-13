@@ -216,7 +216,7 @@ types ``Lower``, ``Upper`` and ``Definition``.
 
 Gurobi and CPLEX offer functionality to extend the method of Violation 
 Penalties described in this section. If the option 
-``Feasibility relaxation`` is set to ``'advanced'``, AIMMS will call 
+``Feasibility relaxation`` is set to ``advanced``, AIMMS will call 
 FeasOpt (CPLEX) or FeasRelax (Gurobi). Note that this option is only 
 available for these two solvers. 
 
@@ -227,15 +227,18 @@ For the default method of handling Violation Penalties, AIMMS will
 add the penalty term to the original objective function (unless a value 
 of ``ZERO`` has been assigned to ``Definition`` violation type for the 
 original objective variable). In contrast, for FeasOpt and FeasRelax 
-the objective will ignore the original objective. This allows the user 
-to compute a minimum cost relaxation. 
+the objective will only consist of violation variables and their respectively
+penalty terms. This allows the user to compute a minimum cost relaxation. 
 
-Additionally,  the user can choose between several objective metrics. 
-The objective metric can be set in the option 
-``Feasibility relaxation objective``. The options are: 
--  ``'weighted sum of violations'``, 
--  ``'weighted sum of squared violations'``,  
--  ``'weighed number of violations'``.  
+Additionally,  the user can choose between several objective metrics for the 
+computation of the minimum cost relaxation. The objective metric can be set 
+in the option ``Feasibility relaxation objective``. The values are: 
+
+-  ``weighted sum of violations``, 
+
+-  ``weighted sum of squared violations``,  
+
+-  ``weighed number of violations``.  
 
 Optionally, after the first phase of computing a minimum cost relaxation, 
 the user can choose to activate a second phase. In the second phase, the 
@@ -244,11 +247,12 @@ The second phase can be activated by using the option
 ``Feasibility relaxation optimize original objective``. 
 
 Some other difference are: 
--  CPLEX and Gurobi are unable to process ``ZERO`` violation 
-penalties. The violation variables are generated AIMMS, but these 
-variables are not sent to the FeasOpt/FeasRelax model
--  The ``Definition`` penalty values are ignored for FeasOpt/FeasRelax 
-model. 
+
+-  CPLEX and Gurobi are unable to process ``ZERO`` violation penalties. 
+   The violation variables are generated AIMMS, but these variables are not 
+   sent to the FeasOpt/FeasRelax model,
+
+-  The ``Definition`` penalty values are ignored for FeasOpt/FeasRelax model. 
 
 
 .. _sec:mp.infeas.inspect:
