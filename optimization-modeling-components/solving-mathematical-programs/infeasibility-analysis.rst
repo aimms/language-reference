@@ -227,7 +227,7 @@ For the default method of handling Violation Penalties, AIMMS will
 add the penalty term to the original objective function (unless a value 
 of ``ZERO`` has been assigned to ``Definition`` violation type for the 
 original objective variable). In contrast, for FeasOpt and FeasRelax 
-the objective will only consist of violation variables and their respectively
+the objective will only consist of violation variables and their respective
 penalty terms. This allows the user to compute a minimum cost relaxation. 
 
 Additionally,  the user can choose between several objective metrics for the 
