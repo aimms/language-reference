@@ -403,6 +403,11 @@ been solved, AIMMS will compute the level values of all inline variables
 by evaluating their definition. However, no sensitivity information will
 be available.
 
+If bounds have been specified for an inline variable then these bounds
+will be ignored when the mathematical program is solved. To enforce the
+bounds, they should be specified in a constraint (after which the variable
+can be changed into a free variable).
+
 .. rubric:: Semi-continuous variables
 
 To any continuous or integer variable you can assign the property
