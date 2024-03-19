@@ -236,16 +236,6 @@ You can use this feature, for instance, to retain local data that must
 be initialized once and can be used during every subsequent call to the
 procedure, or to keep track of the number of calls to a procedure.
 
-.. rubric:: Execution subnodes
-
-In addition to AIMMS execution statements, you can include references to
-(named) execution subnodes to the body of a procedure. AIMMS supports
-several types of execution subnodes. They can either contain just
-execution statements or provide a graphical input form for complicated
-statements like the ``READ``, ``WRITE`` and ``SOLVE`` statement. The
-contents of the execution subnodes will be expanded by AIMMS into the
-body of the procedure at the position of their references.
-
 .. rubric:: Top-down implementation
 
 By partitioning the body of a long procedure into several execution
