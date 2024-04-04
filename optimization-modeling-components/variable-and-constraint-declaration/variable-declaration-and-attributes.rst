@@ -408,6 +408,12 @@ will be ignored when the mathematical program is solved. To enforce the
 bounds, they should be specified in a constraint (after which the variable
 can be changed into a free variable).
 
+If the nonvariable status of an inline variable has been set to a nondefault
+value, either using the ``NonvarStatus`` attribute or the ``.NonVar`` suffix,
+then this status will be ignored when the mathematical program is solved.
+Fixing an inline variable to the current value of the variable should be done
+using a constraint.
+
 .. rubric:: Semi-continuous variables
 
 To any continuous or integer variable you can assign the property
