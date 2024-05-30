@@ -184,7 +184,7 @@ available:
    .. warning:: 
       
       Print pages functions are about to be deprecated with the WinUI, 
-      please refer to :doc:`deprecation-table`. You may use the :doc:`docs:webui/index` instead.
+      please refer to :doc:`deprecation-table`. You may use the `WebUI <https://documentation.aimms.com/webui/index.html>`__ instead.
 
 -  When the report file is for communication with other programs, you
    may want to consider whether communication using relational databases
