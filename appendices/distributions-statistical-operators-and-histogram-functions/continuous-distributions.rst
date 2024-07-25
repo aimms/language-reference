@@ -34,7 +34,7 @@ The three unbounded distributions are
 
 -  the :any:`Logistic` distribution, and
 
--  the ``Extreme Value`` distribution.
+-  the :any:`ExtremeValue` distribution.
 
 .. rubric:: Parameters of continuous distributions
 
@@ -496,13 +496,13 @@ population over time, chemical reactions, and similar processes. Extreme
 values are more common than in the somewhat similar :any:`Normal`
 distribution
 
-.. rubric:: The ``Extreme Value`` distribution
+.. rubric:: The :any:`ExtremeValue` distribution
 
 .. figure:: continuous-distributions-pspic12.svg
 
 .. _extremevalue-LR:
 
-The ``Extreme Value``\ (:math:`l`,\ :math:`s`) distribution:
+The :any:`ExtremeValue`\ (:math:`l`,\ :math:`s`) distribution:
 
 .. table:: 
 
