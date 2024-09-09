@@ -56,4 +56,4 @@ operators.
 See also
 ^^^^^^^^
 
-This material is presented differently in the `AIMMS Academy <https://academy.aimms.com>`_ master course "Execution Efficiency".
+This material is presented differently in the `AIMMS Academy <https://elearning.aimms.com/course/execution-efficiency>`_ master course "Execution Efficiency".
