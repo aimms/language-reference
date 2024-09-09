@@ -83,25 +83,25 @@ facilitate the explanation of the example.
 
 .. code-block:: aimms
 
-	Procedure MyErrorHandler {
-	    Arguments  :  err;
-	    ElementParameter  err {
-	        Range      :  errh::PendingErrors;
-	        Property   :  Input;
-	    }
-	    Body: {
-	        1  if errh::Node(err) = 'DefP' then
-	        2      DialogMessage(errh::Message(err) + "; resetting P to its default.");
-	        3      Empty P ;
-	        4      errh::MarkAsHandled(err);
-	        5  elseif errh::InsideCategory(err,'IO') then
-	        6      errh::Adapt(err,message:"IO error: please consult ...; "
-	        7         + errh::Message(err)  ); ! Pass adapted message on to next handler.
-	        8  else
-	        9      ! Errors not handled will be passed on to the error/warning window.
-	        10  endif
-	    }
-	}
+    Procedure MyErrorHandler {
+        Arguments  :  err;
+        ElementParameter  err {
+            Range      :  errh::PendingErrors;
+            Property   :  Input;
+        }
+        Body: {
+            1  if errh::Node(err) = 'DefP' then
+            2      DialogMessage(errh::Message(err) + "; resetting P to its default.");
+            3      Empty P ;
+            4      errh::MarkAsHandled(err);
+            5  elseif errh::InsideCategory(err,'IO') then
+            6      errh::Adapt(err,message:"IO error: please consult ...; "
+            7         + errh::Message(err)  ); ! Pass adapted message on to next handler.
+            8  else
+            9      ! Errors not handled will be passed on to the error/warning window.
+            10  endif
+        }
+    }
 
 .. rubric:: Example explanation
 
@@ -154,26 +154,43 @@ line 8
    handled when the error handler finishes will not be deleted. Instead,
    it is being displayed in the messages/errors window.
 
+
 .. rubric:: Local error handling by means of the ``OnError`` clause
+
+
 
 The following template of a ``BLOCK`` statement illustrates local error
 handling by means of the ``OnError`` clause.
 
 .. code-block:: aimms
 
-	1    BLOCK
-	2       statement_1 ;
-	3       ...
-	4       statement_n ;
-	5    ONERROR err DO
-	6           ...
-	7           ...
-	8    ENDBLOCK ;
+    1    BLOCK
+    2       statement_1 ;
+    3       ...
+    4       statement_n ;
+    5    ONERROR err DO
+    6           ...
+    7           ...
+    8    ENDBLOCK ;
 
 All errors occuring inside ``statement_1`` ... ``statement_n`` on lines
 2 ... 4 are handled by the error handler on lines 6 and 7, where ``err``
-is an element parameter of the set :any:`errh::PendingErrors`. Block
-statements can be nested, either directly in a single body, or in other
+is an element parameter of the set :any:`errh::PendingErrors`. 
+``errh::PendingErrors`` is a set, because a single 
+statement, especially a solve statement, may raise multiple errors.
+The warnings/errors in this set are handled one at a time.
+
+The error(s) are actually handled in a while loop, whereby ``err`` refers
+to each error one at a time.  
+
+.. _OnErrorBlock:
+
+.. note:: On lines 6,7, the predefined parameter ``Loopcount`` can be used
+          and takes as value the number of the warning/error at hand. If you 
+          want to refer to a loopcount in an outer loop, you will have to use 
+          loop-count strings, see :ref:`loop-string`.
+
+Block statements can be nested, either directly in a single body, or in other
 procedures called from within block statements. This gives rise to a
 stack of error handlers as illustrated below. A detailed example of a
 local error handler is given in :ref:`sec:module.runtime`.
@@ -397,192 +414,192 @@ The syntax of the ``RAISE`` statement is straightforward.
 
 .. raw:: html
 
-	<div class="svg-container" style="overflow: auto;">	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-	<svg
-	   xmlns:dc="http://purl.org/dc/elements/1.1/"
-	   xmlns:cc="http://creativecommons.org/ns#"
-	   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	   xmlns:svg="http://www.w3.org/2000/svg"
-	   xmlns="http://www.w3.org/2000/svg"
-	   viewBox="0 0 647.00802 133.86667"
-	   height="133.86667"
-	   width="647.008"
-	   xml:space="preserve"
-	   id="svg2"
-	   version="1.1"><metadata
-	     id="metadata8"><rdf:RDF><cc:Work
-	         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-	           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-	     id="defs6" /><g
-	     transform="matrix(1.3333333,0,0,-1.3333333,0,813.59998)"
-	     id="g10"><g
-	       transform="scale(0.1)"
-	       id="g12"><path
-	         id="path14"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 80,6000 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g16"><text
-	           id="text20"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,13,596)"><tspan
-	             id="tspan18"
-	             y="0"
-	             x="0">RAISE</tspan></text>
-	</g><path
-	         id="path22"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 540,6000 50,-20 v 40" /><path
-	         id="path24"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 620,6000 -20,-50 h 40" /><path
-	         id="path26"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 800,5700 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g28"><text
-	           id="text32"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,85,566)"><tspan
-	             id="tspan30"
-	             y="0"
-	             x="0">WARNING</tspan></text>
-	</g><path
-	         id="path34"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1404,5700 50,-20 v 40" /><path
-	         id="path36"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1584,6000 -20,-50 h 40" /><path
-	         id="path38"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 872,6000 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g40"><text
-	           id="text44"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,92.2,596)"><tspan
-	             id="tspan42"
-	             y="0"
-	             x="0">ERROR</tspan></text>
-	</g><path
-	         id="path46"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1332,6000 50,-20 v 40" /><path
-	         id="path48"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1664,6000 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g50"><text
-	           id="text54"
-	           style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,171.4,596)"><tspan
-	             id="tspan52"
-	             y="0"
-	             x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/string-expressions.html#string-expression">string-expression</a></tspan></text>
-	</g><path
-	         id="path56"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2677.56,6000 50,-20 v 40" /><path
-	         id="path58"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2837.56,6000 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g60"><text
-	           id="text64"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,288.756,596)"><tspan
-	             id="tspan62"
-	             y="0"
-	             x="0">CODE</tspan></text>
-	</g><path
-	         id="path66"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 3225.56,6000 50,-20 v 40" /><path
-	         id="path68"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 3305.56,6000 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g70"><text
-	           id="text74"
-	           style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,335.556,596)"><tspan
-	             id="tspan72"
-	             y="0"
-	             x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/set-element-expressions.html#element-expression">element-expression</a></tspan></text>
-	</g><path
-	         id="path76"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 4452.56,6000 50,-20 v 40" /><path
-	         id="path78"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2757.56,6000 -20,-50 h 40" /><path
-	         id="path80"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 4532.56,6000 -20,-50 h 40" /><path
-	         id="path82"
-	         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:40, 20;stroke-dashoffset:0;stroke-opacity:1"
-	         d="m 4612.56,6000 h 240" /><path
-	         id="path84"
-	         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:40, 20;stroke-dashoffset:0;stroke-opacity:1"
-	         d="M 600,5400 H 840" /><path
-	         id="path86"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1000,5400 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g88"><text
-	           id="text92"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,105,536)"><tspan
-	             id="tspan90"
-	             y="0"
-	             x="0">WHEN</tspan></text>
-	</g><path
-	         id="path94"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1388,5400 50,-20 v 40" /><path
-	         id="path96"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 1468,5400 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g98"><text
-	           id="text102"
-	           style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,151.8,536)"><tspan
-	             id="tspan100"
-	             y="0"
-	             x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/index.html#expression">expression</a></tspan></text>
-	</g><path
-	         id="path104"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2148.2,5400 50,-20 v 40" /><path
-	         id="path106"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 920,5400 -20,-50 h 40" /><path
-	         id="path108"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2228.2,5400 -20,-50 h 40" /><path
-	         id="path110"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2308.2,5400 -50,20 v -40" /><g
-	         transform="scale(10)"
-	         id="g112"><text
-	           id="text116"
-	           style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	           transform="matrix(1,0,0,-1,237.22,536)"><tspan
-	             id="tspan114"
-	             y="0"
-	             x="0">;</tspan></text>
-	</g><path
-	         id="path118"
-	         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2508.2,5400 50,-20 v 40" /><path
-	         id="path120"
-	         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-	         d="m 2588.2,5400 -50,20 v -40" /><path
-	         id="path122"
-	         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-	         d="m 0,6000 h 80 v 0 c 0,55.23 44.773,100 100,100 h 260 c 55.227,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.773,-100 -100,-100 H 180 c -55.227,0 -100,44.77 -100,100 v 0 m 460,0 h 80 m 0,0 v -200 c 0,-55.23 44.773,-100 100,-100 v 0 h 80 v 0 c 0,55.23 44.773,100 100,100 h 404 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 H 900 c -55.227,0 -100,44.77 -100,100 v 0 m 604,0 h 80 v 0 c 55.23,0 100,44.77 100,100 v 200 m -964,0 h 100 72 80 v 0 c 0,55.23 44.773,100 100,100 h 260 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 H 972 c -55.227,0 -100,44.77 -100,100 v 0 m 460,0 h 80 172 80 v 100 H 2677.54 V 6000 5900 H 1664 v 100 m 1013.56,0 h 80 m 0,0 v 0 h 80 v 0 c 0,55.23 44.77,100 100,100 h 188 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 h -188 c -55.23,0 -100,44.77 -100,100 v 0 m 388,0 h 80 v 100 H 4452.53 V 6000 5900 H 3305.56 v 100 m 1147,0 h 80 m -1775,0 v -200 c 0,-55.23 44.77,-100 100,-100 h 747.5 80 747.5 c 55.23,0 100,44.77 100,100 v 200 h 80 M 840,5400 h 80 m 0,0 v 0 h 80 v 0 c 0,55.23 44.77,100 100,100 h 188 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 h -188 c -55.23,0 -100,44.77 -100,100 v 0 m 388,0 h 80 v 100 h 680.19 V 5400 5300 H 1468 v 100 m 680.2,0 h 80 M 920,5400 v -200 c 0,-55.23 44.773,-100 100,-100 h 514.1 80 514.1 c 55.23,0 100,44.77 100,100 v 200 h 80 v 0 c 0,55.23 44.77,100 100,100 v 0 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 v 0 c -55.23,0 -100,44.77 -100,100 v 0 m 200,0 h 80" /></g></g></svg></div>
+    <div class="svg-container" style="overflow: auto;"> <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <svg
+       xmlns:dc="http://purl.org/dc/elements/1.1/"
+       xmlns:cc="http://creativecommons.org/ns#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:svg="http://www.w3.org/2000/svg"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 647.00802 133.86667"
+       height="133.86667"
+       width="647.008"
+       xml:space="preserve"
+       id="svg2"
+       version="1.1"><metadata
+         id="metadata8"><rdf:RDF><cc:Work
+             rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         id="defs6" /><g
+         transform="matrix(1.3333333,0,0,-1.3333333,0,813.59998)"
+         id="g10"><g
+           transform="scale(0.1)"
+           id="g12"><path
+             id="path14"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 80,6000 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g16"><text
+               id="text20"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,13,596)"><tspan
+                 id="tspan18"
+                 y="0"
+                 x="0">RAISE</tspan></text>
+    </g><path
+             id="path22"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 540,6000 50,-20 v 40" /><path
+             id="path24"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 620,6000 -20,-50 h 40" /><path
+             id="path26"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 800,5700 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g28"><text
+               id="text32"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,85,566)"><tspan
+                 id="tspan30"
+                 y="0"
+                 x="0">WARNING</tspan></text>
+    </g><path
+             id="path34"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1404,5700 50,-20 v 40" /><path
+             id="path36"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1584,6000 -20,-50 h 40" /><path
+             id="path38"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 872,6000 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g40"><text
+               id="text44"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,92.2,596)"><tspan
+                 id="tspan42"
+                 y="0"
+                 x="0">ERROR</tspan></text>
+    </g><path
+             id="path46"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1332,6000 50,-20 v 40" /><path
+             id="path48"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1664,6000 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g50"><text
+               id="text54"
+               style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,171.4,596)"><tspan
+                 id="tspan52"
+                 y="0"
+                 x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/string-expressions.html#string-expression">string-expression</a></tspan></text>
+    </g><path
+             id="path56"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2677.56,6000 50,-20 v 40" /><path
+             id="path58"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2837.56,6000 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g60"><text
+               id="text64"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,288.756,596)"><tspan
+                 id="tspan62"
+                 y="0"
+                 x="0">CODE</tspan></text>
+    </g><path
+             id="path66"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 3225.56,6000 50,-20 v 40" /><path
+             id="path68"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 3305.56,6000 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g70"><text
+               id="text74"
+               style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,335.556,596)"><tspan
+                 id="tspan72"
+                 y="0"
+                 x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/set-element-expressions.html#element-expression">element-expression</a></tspan></text>
+    </g><path
+             id="path76"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 4452.56,6000 50,-20 v 40" /><path
+             id="path78"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2757.56,6000 -20,-50 h 40" /><path
+             id="path80"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 4532.56,6000 -20,-50 h 40" /><path
+             id="path82"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:40, 20;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 4612.56,6000 h 240" /><path
+             id="path84"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:40, 20;stroke-dashoffset:0;stroke-opacity:1"
+             d="M 600,5400 H 840" /><path
+             id="path86"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1000,5400 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g88"><text
+               id="text92"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,105,536)"><tspan
+                 id="tspan90"
+                 y="0"
+                 x="0">WHEN</tspan></text>
+    </g><path
+             id="path94"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1388,5400 50,-20 v 40" /><path
+             id="path96"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 1468,5400 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g98"><text
+               id="text102"
+               style="font-style:italic;font-variant:normal;font-size:11px;font-family:'Lucida Sans';-inkscape-font-specification:LucidaSans-Italic;writing-mode:lr-tb;fill:#d22d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,151.8,536)"><tspan
+                 id="tspan100"
+                 y="0"
+                 x="0"><a href="https://documentation.aimms.com/language-reference/non-procedural-language-components/set-set-element-and-string-expressions/index.html#expression">expression</a></tspan></text>
+    </g><path
+             id="path104"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2148.2,5400 50,-20 v 40" /><path
+             id="path106"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 920,5400 -20,-50 h 40" /><path
+             id="path108"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2228.2,5400 -20,-50 h 40" /><path
+             id="path110"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2308.2,5400 -50,20 v -40" /><g
+             transform="scale(10)"
+             id="g112"><text
+               id="text116"
+               style="font-variant:normal;font-size:12px;font-family:'Courier New';-inkscape-font-specification:LucidaSans-Typewriter;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,237.22,536)"><tspan
+                 id="tspan114"
+                 y="0"
+                 x="0">;</tspan></text>
+    </g><path
+             id="path118"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2508.2,5400 50,-20 v 40" /><path
+             id="path120"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 2588.2,5400 -50,20 v -40" /><path
+             id="path122"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             d="m 0,6000 h 80 v 0 c 0,55.23 44.773,100 100,100 h 260 c 55.227,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.773,-100 -100,-100 H 180 c -55.227,0 -100,44.77 -100,100 v 0 m 460,0 h 80 m 0,0 v -200 c 0,-55.23 44.773,-100 100,-100 v 0 h 80 v 0 c 0,55.23 44.773,100 100,100 h 404 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 H 900 c -55.227,0 -100,44.77 -100,100 v 0 m 604,0 h 80 v 0 c 55.23,0 100,44.77 100,100 v 200 m -964,0 h 100 72 80 v 0 c 0,55.23 44.773,100 100,100 h 260 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 H 972 c -55.227,0 -100,44.77 -100,100 v 0 m 460,0 h 80 172 80 v 100 H 2677.54 V 6000 5900 H 1664 v 100 m 1013.56,0 h 80 m 0,0 v 0 h 80 v 0 c 0,55.23 44.77,100 100,100 h 188 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 h -188 c -55.23,0 -100,44.77 -100,100 v 0 m 388,0 h 80 v 100 H 4452.53 V 6000 5900 H 3305.56 v 100 m 1147,0 h 80 m -1775,0 v -200 c 0,-55.23 44.77,-100 100,-100 h 747.5 80 747.5 c 55.23,0 100,44.77 100,100 v 200 h 80 M 840,5400 h 80 m 0,0 v 0 h 80 v 0 c 0,55.23 44.77,100 100,100 h 188 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 h -188 c -55.23,0 -100,44.77 -100,100 v 0 m 388,0 h 80 v 100 h 680.19 V 5400 5300 H 1468 v 100 m 680.2,0 h 80 M 920,5400 v -200 c 0,-55.23 44.773,-100 100,-100 h 514.1 80 514.1 c 55.23,0 100,44.77 100,100 v 200 h 80 v 0 c 0,55.23 44.77,100 100,100 v 0 c 55.23,0 100,-44.77 100,-100 v 0 0 c 0,-55.23 -44.77,-100 -100,-100 v 0 c -55.23,0 -100,44.77 -100,100 v 0 m 200,0 h 80" /></g></g></svg></div>
 
 .. rubric:: Example
 
@@ -591,9 +608,9 @@ exceeds its capacity.
 
 .. code-block:: aimms
 
-	if inflow > stockCap then
-	    RAISE ERROR "Inflow exceeds stock capacity" CODE 'TooMuchInflow' ;
-	endif ;
+    if inflow > stockCap then
+        RAISE ERROR "Inflow exceeds stock capacity" CODE 'TooMuchInflow' ;
+    endif ;
 
 .. rubric:: Error code and category
 
@@ -621,10 +638,10 @@ raise a warning, for example:
 
 .. code-block:: aimms
 
-	if card( RawMaterialTraders ) = 0 then
-	   RAISE WARNING "There are no raw material traders, this may lead to " +
-	                 "infeasibilities in the case of too many accepted deliveries." ;
-	endif ;
+    if card( RawMaterialTraders ) = 0 then
+       RAISE WARNING "There are no raw material traders, this may lead to " +
+                     "infeasibilities in the case of too many accepted deliveries." ;
+    endif ;
 
 The handling of warnings generated by a ``RAISE`` statement is
 controlled by the option ``Warning_user``, with default
@@ -655,17 +672,17 @@ checked
 
    .. code-block:: aimms
    
-   	retval := PageOpen(...) ;
-   	if retval <= 0 then
-   	   ... use CurrentErrorMessage ...
-   	endif ;
+    retval := PageOpen(...) ;
+    if retval <= 0 then
+       ... use CurrentErrorMessage ...
+    endif ;
 
 not checked
    As illustrated in the example:
 
    .. code-block:: aimms
    
-   	PageOpen(...) ;
+    PageOpen(...) ;
 
 .. rubric:: Available error handling methods
 
