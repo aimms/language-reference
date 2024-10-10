@@ -808,5 +808,5 @@ of the option ``strict_warning_default`` is ``off``.
 Train on error handling
 --------------------------
 
-You may refer to our online training about error handling `following this link <https://academy.aimms.com/course/view.php?id=50>`__ 
+You may refer to our online training about error handling `following this link <https://elearning.aimms.com/course/error-handling>`__ 
 to apply error handling on concrete models.
