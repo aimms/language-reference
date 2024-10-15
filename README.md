@@ -15,11 +15,15 @@ After installing all the above requirements, please go to the location of your p
  * run ``make html`` (the first time, this may take some time, like 20 secs. progress is shown in your console)
  > 💡 You may also run `python3 -msphinx . _build/html` (to be sure to use a specific python version). [More docs](https://www.sphinx-doc.org/en/master/man/sphinx-build.html)
 
+**Alternative**
+
 <details>
 <summary>
 <b>Click me to show an example 👇</b>
 </summary>
 ![image](/uploads/af294070a540237ba141ac325763febd/image.png) 
+
+
 
 * As you may see at the bottom of the wonderfully colored prompt, **your html pages are in `_build\html` folder**, located in the current working directory (the same as always). You may check the build by opening any of those.
 * The red text are warnings (any error would actually break the building process, as in AIMMS): **Those warnings should be avoided**. Most of the time, this is due to a misuse of sphinx. You may correct them yourself, because your are awesome. Or let them be because your don't understand them. In any case, through your development please mind that **you should avoid to create any new warnings** (ask around if you don't understand)
@@ -27,6 +31,12 @@ After installing all the above requirements, please go to the location of your p
 * ⚠️ file names are case sensitive on linux, and not on windows. Thus, your build may break on gitlab, and not locally on your computer. 
 
 </details>
+
+
+**Alternative**
+
+As an alternative to setting things up on your local computer, use a docker container, see https://aimmsopt.sharepoint.com/sites/InternalSupportDocumentation/SitePages/Using-docker-to-build-the-documentation-locally.aspx
+
 
 > **💡1:** GitLab CI is following exactly the same process when building the documentation in the pipeline. This is defined in the [.gitlab-ci.yml](.gitlab-ci.yml) file. More details below
 
