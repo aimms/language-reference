@@ -3,8 +3,7 @@
 Managing Generated Mathematical Program Instances
 =================================================
 
-Managing math program instances
---------------------------------
+.. rubric:: Managing math program instances
 
 The procedures and functions of the ``GMP::Instance`` namespace are
 listed in :ref:`this table <table:gmp.instance>` and take care of the creation and
@@ -33,9 +32,13 @@ solver sessions associated with the instance.
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`FixColumns <GMP::Instance::FixColumns>`\ (*GMP1*, *GMP2*, *solNr*, *varSet*)                                                                                                                                                                                                               |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`AddIntegerEliminationRows <GMP::Instance::AddIntegerEliminationRows>`\ (*GMP*, *solNr*, *elimNo*)                                                                                                                                                                                          |
+	| :any:`AddIntegerEliminationRows <GMP::Instance::AddIntegerEliminationRows>`\ (*GMP*, *solNr*, *refNo*)                                                                                                                                                                                           |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`DeleteIntegerEliminationRows <GMP::Instance::DeleteIntegerEliminationRows>`\ (*GMP*, *elimNo*)                                                                                                                                                                                             |
+	| :any:`DeleteIntegerEliminationRows <GMP::Instance::DeleteIntegerEliminationRows>`\ (*GMP*, *refNo*)                                                                                                                                                                                              |
+	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`AddLimitBinaryDeviationRow <GMP::Instance::AddLimitBinaryDeviationRow>`\ (*GMP*, *solNr*, *varSet*, *deviation*\ [, *refNo*])                                                                                                                                                              |
+	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`DeleteLimitBinaryDeviationRow <GMP::Instance::DeleteLimitBinaryDeviationRow>`\ (*GMP*\ [, *refNo*])                                                                                                                                                                                        |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`CreateBlockMatrices <GMP::Instance::CreateBlockMatrices>`\ (*GMP*, *colSet*, *blockValue*, *prefix*)\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms`                                                                                                                                 |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -489,6 +492,21 @@ the GMP library offers support for solving mixed integer nonlinear
 (MINLP) problems using a white box outer approximation approach. The
 AIMMS Outer Approximation solver is discussed in full detail in
 :ref:`ch:aoa`.
+
+.. rubric:: Re-optimizing with limited impact on the solution
+
+Imagine you have created a production plan based on optimizing some mathematical
+program and that something unexpected happened that (partly) ruined the plan.
+You now have to re-optimize the mathematical program, with some
+changes, but would like the solution of the new optimization to be
+close to the previous one. For that you can use the procedure
+
+-  :any:`GMP::Instance::AddLimitBinaryDeviationRow`
+
+which adds a constraint that limits the number of binary decision variables of which
+the solution value is allowed to change. This constraint can be removed using the procedure
+
+-  :any:`GMP::Instance::DeleteLimitBinaryDeviationRow`
 
 .. _sec:gmp.instance.dual:
 
