@@ -3,7 +3,8 @@
 Managing Generated Mathematical Program Instances
 =================================================
 
-.. rubric:: Managing math program instances
+Managing math program instances
+--------------------------------
 
 The procedures and functions of the ``GMP::Instance`` namespace are
 listed in :ref:`this table <table:gmp.instance>` and take care of the creation and
@@ -32,13 +33,9 @@ solver sessions associated with the instance.
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`FixColumns <GMP::Instance::FixColumns>`\ (*GMP1*, *GMP2*, *solNr*, *varSet*)                                                                                                                                                                                                               |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`AddIntegerEliminationRows <GMP::Instance::AddIntegerEliminationRows>`\ (*GMP*, *solNr*, *refNo*)                                                                                                                                                                                           |
+	| :any:`AddIntegerEliminationRows <GMP::Instance::AddIntegerEliminationRows>`\ (*GMP*, *solNr*, *elimNo*)                                                                                                                                                                                          |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`DeleteIntegerEliminationRows <GMP::Instance::DeleteIntegerEliminationRows>`\ (*GMP*, *refNo*)                                                                                                                                                                                              |
-	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`AddLimitBinaryDeviationRow <GMP::Instance::AddLimitBinaryDeviationRow>`\ (*GMP*, *solNr*, *varSet*, *deviation*\ [, *refNo*])                                                                                                                                                              |
-	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`DeleteLimitBinaryDeviationRow <GMP::Instance::DeleteLimitBinaryDeviationRow>`\ (*GMP*\ [, *refNo*])                                                                                                                                                                                        |
+	| :any:`DeleteIntegerEliminationRows <GMP::Instance::DeleteIntegerEliminationRows>`\ (*GMP*, *elimNo*)                                                                                                                                                                                             |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`CreateBlockMatrices <GMP::Instance::CreateBlockMatrices>`\ (*GMP*, *colSet*, *blockValue*, *prefix*)\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms`                                                                                                                                 |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -49,6 +46,8 @@ solver sessions associated with the instance.
 	| :any:`CreatePresolved <GMP::Instance::CreatePresolved>`\ (*GMP*, *name*)\ :math:`\to`\ :any:`AllGeneratedMathematicalPrograms`                                                                                                                                                                   |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetSymbolicMathematicalProgram <GMP::Instance::GetSymbolicMathematicalProgram>`\ (*GMP*)\ :math:`\to`\ :any:`AllMathematicalPrograms`                                                                                                                                                      |
+	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetInfeasibleData <GMP::Instance::GetInfeasibleData>`\ (*GMP*, *parSet*, *message*\ [, *method*][, *effort*][, *textFormat*])                                                                                                                                                              |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetNumberOfRows <GMP::Instance::GetNumberOfRows>`\ (*GMP*)                                                                                                                                                                                                                                 |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -491,21 +490,6 @@ the GMP library offers support for solving mixed integer nonlinear
 AIMMS Outer Approximation solver is discussed in full detail in
 :ref:`ch:aoa`.
 
-.. rubric:: Re-optimizing with limited impact on the solution
-
-Imagine you have created a production plan based on optimizing some mathematical
-program and that something unexpected happened that (partly) ruined the plan.
-You now have to re-optimize the mathematical program, with some
-changes, but would like the solution of the new optimization to be
-close to the previous one. For that you can use the procedure
-
--  :any:`GMP::Instance::AddLimitBinaryDeviationRow`
-
-which adds a constraint that limits the number of binary decision variables of which
-the solution value is allowed to change. This constraint can be removed using the procedure
-
--  :any:`GMP::Instance::DeleteLimitBinaryDeviationRow`
-
 .. _sec:gmp.instance.dual:
 
 Dealing with Degeneracy and Non-Uniqueness
@@ -685,3 +669,37 @@ uniqueness:
    program instance,
 
 -  solve the modified dual mathematical program instance.
+
+Explainability
+---------------
+
+.. rubric:: Determining data causing infeasibility
+
+.. note::
+   THIS FEATURE IS NOT AVAILABLE (YET) IN ANY OFFICIAL AIMMS RELEASE.
+
+A particular situation which requires explainability is when the mathematical optimization model is formulated correctly, but it becomes infeasible due to incorrect input data provided by the user. 
+So, in this case the infeasibility is not inherent to the model formulation and it is not found as a modeling error during the model development phase, but rather during the model deployment phase 
+due to some incorrect data instance which turns the model infeasible. 
+
+Business applications including optimization should also consider infeasibilities and include support for dealing with the infeasibility
+in this situation. More specifically, some valuable information about the cause of the infeasibility should be returned to the end user in a form which she/he can understand and use for correcting the
+input data in order to make the model feasible again.
+
+This goal can be achieved by calling the function :any:`GMP::Instance::GetInfeasibleData`. Under the assumption that an LP/MILP model is correctly formulated, this function performs in essence the following tasks:
+
+- Calculate IIS or solve Feasibility Problem
+- Remove constraints without `changeable` parameters
+- Use “reverse generation” to find `changeable` parameters used in constraints
+
+After performing these steps, the function returns a message (as output argument) and fills the parameter suffix called ``.SuspicionLevel`` with one of the possible values: High, Normal, or Low.
+The output message may be displayed in a suitable way into the graphical user interface in order to inform the user in a concise manner about the most likely cause of the infeasibility.
+
+In turn, the values of the ``.SuspicionLevel`` parameter suffixes may be used to assign identifier annotations to the parameters of interest. Such annotations may be subsequently used in order to highlight
+the suspicious values of those parameters in the graphical user interface and visually notify the user about potentially incorrect data values. For example, when such values are rendered in a table,
+the cells of the suspicious values may be coloured in light pink, pink, or red, based on the suspicion levels Low, Normal, or High, respectively.
+
+After adjusting the most critical values highlighted in the graphical user interface to more realistic numbers, the user may re-solve the model and observe the effect. If the model turns feasible, then the issue
+has been resolved/explained. If the model still stays infeasible, then a new call to the function :any:`GMP::Instance::GetInfeasibleData` may reveal additional information about potentially incorrect data 
+and the process may be repeated in a similar way until the model becomes feasible again. It could happen that a few iterations are required in order to fully explain the cause of the infeasibility and to 
+resolve the issue with the incorrect user data completely.
