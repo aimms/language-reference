@@ -9,8 +9,8 @@ Of all nonlinear solvers in AIMMS only a couple use (limited)
 preprocessing techniques. Therefore, AIMMS itself has implemented a
 presolve algorithm with the goal to reduce the size of the problem and
 to tighten the variable bounds, which may help the solver to solve
-nonlinear problems faster. Besides the BARON global solver, all
-nonlinear solvers in AIMMS are local solvers, i.e. the solution found by
+nonlinear problems faster. Besides the global solvers BARON, Gurobi and Octeract,
+all nonlinear solvers in AIMMS are local solvers, i.e. the solution found by
 the solver is a local solution and cannot be guaranteed to be a global
 solution. The presolve algorithm may help the solver in finding a better
 solution. A local solver might sometimes fail to find a solution and

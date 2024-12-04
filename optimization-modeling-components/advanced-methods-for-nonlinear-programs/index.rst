@@ -16,7 +16,7 @@ worse, may not even find a feasible solution for a given starting point.
 
 To counteract these facts, a number of possible actions can be taken.
 
--  Use a global solver, such as BARON, to solve the NLP. Global solvers,
+-  Use a global solver, such as BARON or Gurobi, to solve the NLP. Global solvers,
    however, usually only work well on relatively small NLP problems.
 
 -  Use a multistart algorithm to solve the NLP problem for multiple

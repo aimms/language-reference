@@ -41,9 +41,9 @@ to let solvers find multiple solutions is solver specific:
    ``Do populate`` in option category ``Specific solvers`` -
    ``CPLEX 22.1`` - ``MIP solution pool``.
 
--  ``Gurobi 10.0``: For more information see the **Help** file for option
+-  ``Gurobi 12.0``: For more information see the **Help** file for option
    ``Pool search mode`` in option category ``Specific solvers`` -
-   ``Gurobi 10.0`` - ``Solution pool``.
+   ``Gurobi 12.0`` - ``Solution pool``.
 
 .. rubric:: Solution repository functions
 
