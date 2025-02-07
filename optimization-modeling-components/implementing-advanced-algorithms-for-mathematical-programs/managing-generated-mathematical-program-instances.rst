@@ -688,13 +688,12 @@ uniqueness:
 
 -  solve the modified dual mathematical program instance.
 
+.. _sec:gmp.instance.explain:
+
 Explainability
 ---------------
 
 .. rubric:: Determining data causing infeasibility
-
-.. note::
-   THIS FEATURE IS NOT AVAILABLE (YET) IN ANY OFFICIAL AIMMS RELEASE.
 
 A particular situation which requires explainability is when the mathematical optimization model is formulated correctly, but it becomes infeasible due to incorrect input data provided by the user. 
 So, in this case the infeasibility is not inherent to the model formulation and it is not found as a modeling error during the model development phase, but rather during the model deployment phase 
@@ -704,11 +703,11 @@ Business applications including optimization should also consider infeasibilitie
 in this situation. More specifically, some valuable information about the cause of the infeasibility should be returned to the end user in a form which she/he can understand and use for correcting the
 input data in order to make the model feasible again.
 
-This goal can be achieved by calling the function :any:`GMP::Instance::GetInfeasibleData`. Under the assumption that an LP/MILP model is correctly formulated, this function performs in essence the following tasks:
+This goal can be achieved by calling the procedure :any:`GMP::Instance::GetInfeasibleData`. Under the assumption that an LP/MILP model is correctly formulated, this function performs in essence the following tasks:
 
 - Calculate IIS or solve Feasibility Problem
 - Remove constraints without `changeable` parameters
-- Use “reverse generation” to find `changeable` parameters used in constraints
+- Pinpoint the `changeable` parameters used in the constraints
 
 After performing these steps, the function returns a message (as output argument) and fills the parameter suffix called ``.SuspicionLevel`` with one of the possible values: High, Normal, or Low.
 The output message may be displayed in a suitable way into the graphical user interface in order to inform the user in a concise manner about the most likely cause of the infeasibility.
@@ -718,6 +717,6 @@ the suspicious values of those parameters in the graphical user interface and vi
 the cells of the suspicious values may be coloured in light pink, pink, or red, based on the suspicion levels Low, Normal, or High, respectively.
 
 After adjusting the most critical values highlighted in the graphical user interface to more realistic numbers, the user may re-solve the model and observe the effect. If the model turns feasible, then the issue
-has been resolved/explained. If the model still stays infeasible, then a new call to the function :any:`GMP::Instance::GetInfeasibleData` may reveal additional information about potentially incorrect data 
+has been resolved/explained. If the model still stays infeasible, then a new call to the procedure :any:`GMP::Instance::GetInfeasibleData` may reveal additional information about potentially incorrect data 
 and the process may be repeated in a similar way until the model becomes feasible again. It could happen that a few iterations are required in order to fully explain the cause of the infeasibility and to 
 resolve the issue with the incorrect user data completely.

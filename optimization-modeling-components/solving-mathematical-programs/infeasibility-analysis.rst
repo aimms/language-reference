@@ -61,7 +61,10 @@ While most data inconsistencies may be detected by methodically checking
 the consistency all input data prior to actually solving the
 mathematical program (for example, by using ``Assertions``, see also
 :ref:`sec:data.assert`), it is often hard to cover all possible data
-inconsistencies.
+inconsistencies. The section :ref:`sec:gmp.instance.explain` describes a
+feature which can be used by the app developers to allow the end-users to
+identify potentially incorrect input data and this way, help in resolving
+infeasibility issues.
 
 .. rubric:: Adding excess variables
 
