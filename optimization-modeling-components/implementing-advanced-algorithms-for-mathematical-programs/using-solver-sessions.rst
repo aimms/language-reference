@@ -58,6 +58,8 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _GMP::SolverSession::GetCallbackInterruptStatus-LR:
 
+.. _GMP::SolverSession::GetAttributeValue-LR:
+
 .. _GMP::SolverSession::GetInstance-LR:
 
 .. _GMP::SolverSession::GetIIS-LR:
@@ -112,6 +114,8 @@ implicitly by AIMMS or explicitly by calling the procedure
 	| :any:`GetSolverStatus <GMP::SolverSession::GetSolverStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolutionStates`                            |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetCallbackInterruptStatus <GMP::SolverSession::GetCallbackInterruptStatus>`\ (*solverSession*)\ :math:`\to`\ :any:`AllSolverInterrupts`    |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`GetAttributeValue <GMP::SolverSession::GetAttributeValue>`\ (*solverSession*, *attr*\ [, *objNo*])                                          |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GenerateCut <GMP::SolverSession::GenerateCut>`\ (*solverSession*, *row*\ [, *local*][, *purgeable*])                                        |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
