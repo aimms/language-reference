@@ -482,13 +482,13 @@ The following limitations apply:
    corresponding to elements in :any:`AllIdentifiers`.
    
    It is possible, however, to move identifiers local to a procedure or function, 
-   see `this how-to <https://how-to.aimms.com/Articles/517/517-runtime-functions-with-arguments.html>`_
+   see `Runtime Functions with Arguments <https://how-to.aimms.com/Articles/517/517-runtime-functions-with-arguments.html>`_
 
 -  Quantities are not supported.
 
 -  The ``source file``, ``module code`` and ``user data`` attributes are not supported.
 
    It is possible, however, to persist a runtime library, 
-   see `this how-to <https://how-to.aimms.com/Articles/581/581-static-lib-from-runtime-lib.html>`_
+   see `Create a Static AIMMS Library from a Runtime Library <https://how-to.aimms.com/Articles/581/581-static-lib-from-runtime-lib.html>`_
 
 -  The current maximum number of runtime identifiers is 30000.
