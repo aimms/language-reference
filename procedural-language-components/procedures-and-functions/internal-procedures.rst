@@ -410,7 +410,7 @@ edits.
 
 This attribute is available for non-predefined procedures.
 It is a comma-separated list of prefices of runtime 
-libraries, identifiers from which are used in the procedure.
+libraries, identifiers from which are used in the body of the procedure.
 For more information please refer to the section 
 :ref:`sec:module.runtime` and in particular rubric 
 :ref:`rubric:runtime.usesruntimelibs`

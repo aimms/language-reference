@@ -116,6 +116,10 @@ are exposed to the model by generic libraries extending AIMMS functionality such
 			display { mr1::P }
 		}
 
+This example illustrates that by specifying the prefix ``mrl`` the body of the procedure
+can reference the identifiers in that runtime library.
+
+
 .. rubric:: Example of creating an identifier
 
 In this example, a runtime procedure ``rp`` is created and its body
@@ -454,7 +458,7 @@ Starting from the version `AIMMS 4.82 <https://documentation.aimms.com/release-n
 :doc:`predefined procedures <creating-and-managing-a-model/the-model-explorer/creating-and-managing-models>`, have a new attribute: :ref:`procedure.usesruntimelibs`. 
 
 A procedure with this attribute specified enables developers to use 
-runtime identifiers in their models without the need to having them 
+runtime identifiers in the body of that procedure without the need to having them 
 explicitly already available during modeling; 
 If this attribute is not specified, a compilation error will occur making this impossible. 
 
@@ -464,16 +468,27 @@ at model compile-time.
 Thus, this new attribute is not required for runtime procedures referring 
 to identifiers from other runtime libraries.
 
-.. rubric:: Limitations
+.. note:: 
+
+	Limitation: The ``uses runtime libs`` attribute only permits to reference runtime identifiers  
+	in the body of a procedure, it does not permit to reference runtime identifiers from the 
+	attributes of local identifiers in that procedure.
+
+.. rubric:: Limitations of Runtime Libraries
 
 The following limitations apply:
 
 -  Local declarations are not supported; only global identifiers
    corresponding to elements in :any:`AllIdentifiers`.
+   
+   It is possible, however, to move identifiers local to a procedure or function, 
+   see `this how-to <https://how-to.aimms.com/Articles/517/517-runtime-functions-with-arguments.html>`_
 
 -  Quantities are not supported.
 
--  The ``source file``, ``module code`` and ``user data`` attributes are
-   not supported.
+-  The ``source file``, ``module code`` and ``user data`` attributes are not supported.
+
+   It is possible, however, to persist a runtime library, 
+   see `this how-to <https://how-to.aimms.com/Articles/581/581-static-lib-from-runtime-lib.html>`_
 
 -  The current maximum number of runtime identifiers is 30000.
