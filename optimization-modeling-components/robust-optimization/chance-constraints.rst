@@ -16,7 +16,7 @@ probability at least :math:`1 - \epsilon`, where
 :math:`\epsilon \in [0,1]` is a pre-specified small tolerance. Instead
 of the deterministic constraint
 
-.. math:: a^T x \le b
+.. math:: a^T x \leq b
 
 we now require that the *chance constraint*
 
@@ -227,7 +227,7 @@ to approximate the chance constraint.
 
 .. rubric:: Possible approximations per distribution
 
-:ref:`this table <table:robust.chance-approximations>` shows for each (supported)
+The :ref:`table <table:robust.chance-approximations>` below shows for each (supported)
 distribution which approximation types are possible. It also shows
 whether the approximation will result in a linear or a second-order cone
 robust counterpart.
