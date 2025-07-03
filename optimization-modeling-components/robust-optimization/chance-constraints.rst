@@ -16,7 +16,7 @@ probability at least :math:`1 - \epsilon`, where
 :math:`\epsilon \in [0,1]` is a pre-specified small tolerance. Instead
 of the deterministic constraint
 
-.. math:: a^T x \leq b
+.. math:: \text{ } a^T x \leq b
 
 we now require that the *chance constraint*
 
