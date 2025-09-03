@@ -129,15 +129,15 @@ deinitialize any external DLLs the library may depend upon.
 To terminate your model, AIMMS performs the following actions directly
 prior to closing the project:
 
--  AIMMS executes the predefined procedure ``PreMainTermination``,
-
 -  AIMMS executes the predefined procedure ``PreLibraryTermination`` for
    each library,
 
--  AIMMS executes the predefined procedures ``MainTermination``, and
+-  AIMMS executes the predefined procedure ``PreMainTermination``,
 
--  finally AIMMS executes the predefined procedure
+-  AIMMS executes the predefined procedure
    ``LibraryTermination`` for each library.
+
+-  finally AIMMS executes the predefined procedure ``MainTermination``.
 
 .. _sec:data.init.external:
 
