@@ -70,6 +70,8 @@ implicitly by AIMMS or explicitly by calling the procedure
 
 .. _GMP::SolverSession::Execute-LR:
 
+.. _GMP::SolverSession::Delete-LR:
+
 .. _table:gmp.solver:
 
 .. table:: : ``GMP::SolverSession`` functions and procedures
@@ -86,6 +88,8 @@ implicitly by AIMMS or explicitly by calling the procedure
 	| :any:`WaitForCompletion <GMP::SolverSession::WaitForCompletion>`\ (*Objects*)                                                                     |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`WaitForSingleCompletion <GMP::SolverSession::WaitForSingleCompletion>`\ (*Objects*)\ :math:`\to`\ :any:`AllSolverSessionCompletionObjects`  |
+	+---------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`Delete <GMP::SolverSession::Delete>`\ (*solverSession*)                                                                                     |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`CreateProgressCategory <GMP::SolverSession::CreateProgressCategory>`\ (*solverSession*\ [, *Name*][, *Size*])                               |
 	+---------------------------------------------------------------------------------------------------------------------------------------------------+

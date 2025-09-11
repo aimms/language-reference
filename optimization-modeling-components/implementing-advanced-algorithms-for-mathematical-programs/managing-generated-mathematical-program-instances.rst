@@ -112,8 +112,6 @@ solver sessions associated with the instance.
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`CreateSolverSession <GMP::Instance::CreateSolverSession>`\ (*GMP*\ [, *Name*][, *Solver*])\ :math:`\to`\ :any:`AllSolverSessions`                                                                                                                                                          |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| :any:`DeleteSolverSession <GMP::Instance::DeleteSolverSession>`\ (*solverSession*)                                                                                                                                                                                                               |
-	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`FindApproximatelyFeasibleSolution <GMP::Instance::FindApproximatelyFeasibleSolution>`\ (*GMP*, *sol1*, *sol2*, *nrIter*\ [, *maxIter*][, *feasTol*]\ [, *moveTol*][, *imprTol*][, *maxTime*][, *useSum*][, *augIter*][, *useBest*])                                                        |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -376,7 +374,7 @@ functions:
 
 -  :any:`GMP::Instance::CreateSolverSession`, and
 
--  :any:`GMP::Instance::DeleteSolverSession`.
+-  :any:`GMP::SolverSession::Delete`.
 
 Once created, you can use the solver session to solve the generated
 mathematical program
@@ -413,8 +411,7 @@ Once the function :any:`GMP::SolverSession::Execute` or
 internal solver representation of the mathematical program instance will
 be created. The solver representation will only be deleted-and its
 associated resources freed-when the corresponding solver session has
-been deleted by calling the function
-:any:`GMP::Instance::DeleteSolverSession`.
+been deleted by calling the procedure :any:`GMP::SolverSession::Delete`.
 
 .. rubric:: Implementing the procedure ``GMP::Instance:: Solve``
 
