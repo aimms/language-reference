@@ -211,6 +211,10 @@ identifiers and takes the following actions.
 -  For a subset of the predefined set :any:`AllIdentifiers`, AIMMS will
    discard the contents of all identifiers contained in this subset.
 
+
+    
+    
+
 .. rubric:: Use in databases
 
 You can also use the ``EMPTY`` statement in conjunction with databases.
@@ -250,6 +254,50 @@ The following statements illustrate the use of the ``EMPTY`` operator.
    .. code-block:: aimms
    
    	empty CityData ;
+
+
+.. _not_use_empty_all_identifiers:
+
+.. warning:: Avoid an inoperable application:
+
+    .. code-block:: aimms 
+
+        Empty AllIdentifiers ;
+
+    Using a blanket ``'Empty AllIdentifiers'`` will also clear identifiers from utility libraries such 
+    as `AimmsPROLibrary <https://documentation.aimms.com/pro/index.html>`_,
+    `AimmsWebUI <https://documentation.aimms.com/webui/index.html>`_, and
+    `AimmsDEX <https://documentation.aimms.com/dataexchange/index.html>`_, 
+    which makes those libraries inoperable.
+    
+    **The recommended approach:**
+    
+    #.  Create a subset of :any:`AllIdentifiers`.
+    
+    #.  Populate this subset with specific sections or modules 
+        (e.g., Business_model) to precisely control what is emptied,
+        see also :ref:`sec:data.allidentifiers`.
+    
+    #.  Then, perform the ``Empty`` command on this subset.
+    
+    Example taken from `Vessel Scheduling <https://how-to.aimms.com/Articles/590/590-vessel-scheduling.html>`_:
+    
+    .. code-block:: aimms 
+
+        Set s_idsToBeEmptied {
+            SubsetOf: AllIdentifiers;
+        }
+        Procedure pr_emptyInstance {
+            Body: {
+                s_idsToBeEmptied := Business_model ;
+
+                Empty s_idsToBeEmptied ;
+            }
+        }
+
+    In this example, the identifiers that together form the Business model are
+    captured in a section called  ``Business model``; thereby making the 
+    selection of relevant identifiers to be emptied very concise.
 
 .. _inactive_data:
 
