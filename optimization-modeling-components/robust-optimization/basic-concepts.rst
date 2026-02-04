@@ -9,6 +9,15 @@ In this section you will find a number of basic concepts that are
 commonly used in robust optimization. They will help you to
 unambiguously understand the robust optimization facilities in AIMMS.
 
+.. rubric:: The :ref:`.Robust` suffix for variables
+
+Variables can have a :ref:`.Robust` suffix in AIMMS. AIMMS uses the
+:ref:`.Robust` suffix of variables to store the solution data of a robust
+optimization model after solving it. AIMMS will create the
+:ref:`.Robust` suffix for stochastic variables for *all* variables
+that are involved in a robust optimization model, including the
+objective variable.
+
 .. rubric:: Robust counterpart
 
 In robust optimization the model with uncertain data is translated into
@@ -61,15 +70,6 @@ tractable, i.e., it can be reformulated as a second-order cone program
 (SOCP), for which efficient (polynomial time) solution methods exist.
 The reformulation of the robust counterpart is an automated process
 performed by AIMMS during the generation of your mathematical program.
-
-.. rubric:: The :ref:`.Robust` suffix for variables
-
-Variables can have a :ref:`.Robust` suffix in AIMMS. AIMMS uses the
-:ref:`.Robust` suffix of variables to store the solution data of a robust
-optimization model after solving it. AIMMS will create the
-:ref:`.Robust` suffix for stochastic variables for *all* variables
-that are involved in a robust optimization model, including the
-objective variable.
 
 .. rubric:: Integer programming
 
