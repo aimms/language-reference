@@ -62,6 +62,15 @@ tractable, i.e., it can be reformulated as a second-order cone program
 The reformulation of the robust counterpart is an automated process
 performed by AIMMS during the generation of your mathematical program.
 
+.. rubric:: The :ref:`.Robust` suffix for variables
+
+Variables can have a :ref:`.Robust` suffix in AIMMS. AIMMS uses the
+:ref:`.Robust` suffix of variables to store the solution data of a robust
+optimization model after solving it. AIMMS will create the
+:ref:`.Robust` suffix for stochastic variables for *all* variables
+that are involved in a robust optimization model, including the
+objective variable.
+
 .. rubric:: Integer programming
 
 If the uncertainty set is a multi-dimensional interval or described by
