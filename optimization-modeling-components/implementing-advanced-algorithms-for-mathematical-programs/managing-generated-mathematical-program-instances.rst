@@ -135,15 +135,9 @@ New mathematical program instances can be created by calling
 
 -  the :any:`GMP::Instance::CreateFeasibility` function,
 
--  the :any:`GMP::Instance::CreatePresolved` function,
+-  the :any:`GMP::Instance::CreatePresolved` function, or
 
--  the :any:`GMP::Instance::CreateMasterMIP` function,
-
--  the :any:`GMP::Stochastic::CreateBendersRootproblem` function,
-
--  the :any:`GMP::Stochastic::BendersFindFeasibilityReference` function, or
-
--  the :any:`GMP::Stochastic::BendersFindReference` function.
+-  the :any:`GMP::Instance::CreateMasterMIP` function.
 
 All mathematical program instances created through each of these calls,
 are uniquely represented by elements in the predefined set

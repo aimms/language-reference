@@ -40,8 +40,7 @@ The function returns an element into the set
 :any:`AllGeneratedMathematicalPrograms`. This generated math program
 instance contains a memory-efficient representation of the technology
 matrix of the stochastic model and the stochastic event data, and can be
-used to create a deterministic equivalent of the stochastic model, as
-well as the submodels necessary for a stochastic Benders approach.
+used to create a deterministic equivalent of the stochastic model.
 
 .. rubric:: Specifying stochastic identifiers
 
