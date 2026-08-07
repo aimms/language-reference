@@ -12,12 +12,9 @@ solving a stochastic model:
 
 -  by solving its *deterministic equivalent*, or
 
--  for purely linear mathematical programs only, through the *stochastic
-   Benders algorithm*, or
-
 -  using the Benders decomposition algorithm in CPLEX.
 
-Both Benders algorithms will decompose the stochastic model into
+The Benders algorithm will decompose the stochastic model into
 multiple smaller models, and thus is better suited to solve stochastic
 models where the deterministic equivalent, either by the size of the
 deterministic model or because of a huge number of scenarios, becomes
