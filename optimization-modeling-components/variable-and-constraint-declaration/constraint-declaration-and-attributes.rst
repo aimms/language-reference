@@ -696,7 +696,7 @@ automatically by BARON itself, about the constraints in your model
 through these suffices, the BARON solver may be able to optimize your
 global optimization model in a more efficient manner. For more detailed
 information about the specific capabilities of the BARON solver, you are
-referred to the BARON website http://www.theoptimizationfirm.com/.
+referred to the BARON website https://minlp.com/baron-solver.
 
 .. rubric:: The :ref:`.Convex` suffix
 
