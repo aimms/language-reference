@@ -63,6 +63,18 @@ if os.name != 'nt':
     html_baseurl = "https://documentation.aimms.com/language-reference/"
     #extensions.append('sphinx_last_updated_by_git')
 
+# A list of regular expressions matching URIs that a linkcheck build should skip.
+linkcheck_ignore = [r'http://localhost:\d+/?', r'http://0\.0\.0\.0[:/]\d+/?']
+
+# The linkcheck pipeline runs this project twice. With
+# SPHINX_IGNORE_EXTERNAL_LINKS set it checks only links internal to the project,
+# and that run gates the pipeline; without it, external links are checked too and
+# the job is allowed to fail. External sites rot and rate-limit on their own
+# schedule - support.microsoft.com answers 403 to CI runners, for one - and that
+# must never block a documentation merge.
+if os.environ.get('SPHINX_IGNORE_EXTERNAL_LINKS') == 'true':
+    linkcheck_ignore += [r'^https?://']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

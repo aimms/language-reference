@@ -1,5 +1,6 @@
 stages:
   - test
+  - build
   - deploy
 
 .run_on_dockerhost: &run_on_dockerhost
@@ -7,24 +8,48 @@ stages:
     - docker20
   image: "${DOCKER_ACCESS_URL}/other/dockerdev/documentation:latest"
 
+# Two linkcheck runs, the same pair every AIMMS docs repo has: the gating one
+# checks only links internal to this project, the informational one also checks
+# external links and is allowed to fail. Splitting them is what keeps a rotted
+# or bot-blocked third-party URL from turning the pipeline red.
 linkcheck:
   <<: *run_on_dockerhost
   stage: test
-  allow_failure: true
+  variables:
+    SPHINX_IGNORE_EXTERNAL_LINKS: "true"
   script:
-    - python3 -msphinx -W -b linkcheck . _build/linkcheck
+    - sphinx-build -W --keep-going -b linkcheck . _build/linkcheck
+
+linkcheck_external:
+  <<: *run_on_dockerhost
+  stage: test
+  script:
+    - sphinx-build -W --keep-going -b linkcheck . _build/linkcheck
+  allow_failure: true
 
 build:
   <<: *run_on_dockerhost
   stage: test
   script:
-    - python3 -msphinx -W -b html . _build/html
+    - sphinx-build -W --keep-going -b html . _build/html
+
+# Informational for now, unlike the gating spellcheck in documentation and
+# how-to. A run over this repo flags words in 131 files, a mix of AIMMS
+# identifiers the checker cannot know and genuine typos. Feed the identifiers
+# into spelling_wordlist.txt and fix the typos, then drop allow_failure so this
+# gates like the other repos.
+spellcheck:
+  <<: *run_on_dockerhost
+  stage: test
+  script:
+    - sphinx-build -W --keep-going -b spelling . _build/spelling
+  allow_failure: true
 
 # Every branch gets its own parallel Pages deployment at:
 #   <CI_PAGES_URL>/<branch-slug>/
-build_and_staging:
+build_staging:
   <<: *run_on_dockerhost
-  stage: deploy
+  stage: build
   rules:
     - if: $CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != "master"
       when: on_success
@@ -42,7 +67,7 @@ build_and_staging:
     name: docs-staging/$CI_COMMIT_REF_SLUG
     url: $CI_PAGES_URL
   script:
-    - python3 -msphinx -b html . _build/html
+    - sphinx-build -b html . _build/html
     # Pages publishes the "public" directory at the repository root
     - rm -rf public
     - mv _build/html public
@@ -59,7 +84,7 @@ deploy:
       when: on_success
     - when: never
   script:
-    - python3 -msphinx -b html . _build/html
+    - sphinx-build -b html . _build/html
     - python3 -msphinx.ext.intersphinx _build/html/objects.inv > _build/html/help_index_languagereference.txt
     - cp -r _build/html language-reference
     - az storage copy -s 'language-reference' --recursive --destination-container '$web' -- --overwrite=true --as-subdir=true
