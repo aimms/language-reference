@@ -367,7 +367,7 @@ fractional solution, uses the rounded values to construct an integer
 solution by solving two auxiliary MIPs, and passes that solution to the
 solver as a heuristic solution. The procedure interrupts the solve and
 continues it later, and can therefore only be used with a solver that
-supports continued solves, which are CPLEX and Gurobi.
+supports continued solves, i.e., CPLEX or Gurobi.
 
 .. rubric:: Multistart support
 
