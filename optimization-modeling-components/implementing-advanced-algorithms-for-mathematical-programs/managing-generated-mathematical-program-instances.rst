@@ -90,6 +90,8 @@ solver sessions associated with the instance.
 	+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`Solve <GMP::Instance::Solve>`\ (*GMP*)                                                                                                                                                                                                                                                     |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| :any:`SolveWithRoundAndRepair <GMP::Instance::SolveWithRoundAndRepair>`\ (*GMP*, *varSet*\ [, *freq*][, *fixIndices*][, *slackVars*])                                                                                                                                                            |
+	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetBestBound <GMP::Instance::GetBestBound>`\ (*GMP*)                                                                                                                                                                                                                                       |
 	+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 	| :any:`GetObjective <GMP::Instance::GetObjective>`\ (*GMP*)                                                                                                                                                                                                                                       |
@@ -351,6 +353,21 @@ statement in terms of ``GMP::Instance`` functions.
 	! Actually solve the problem using the solve procedure for an
 	! instance (which communicates through solution number 1).
 	GMP::Instance::Solve(genGMP);
+
+.. rubric:: Solving with a round-and-repair heuristic
+
+For MIP and MIQP models, the procedure
+
+-  :any:`GMP::Instance::SolveWithRoundAndRepair`
+
+solves a mathematical program instance like :any:`GMP::Instance::Solve`,
+but uses a round-and-repair heuristic to find good integer solutions
+faster. During the solve, it repeatedly rounds the binary variables of a
+fractional solution, repairs the rounded solution by solving two
+auxiliary MIPs, and passes the result to the solver as a heuristic
+solution. The procedure interrupts the solve and continues it later, and
+can therefore only be used with a solver that supports continued solves,
+which are CPLEX and Gurobi.
 
 .. rubric:: Multistart support
 
