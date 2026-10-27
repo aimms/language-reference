@@ -154,6 +154,36 @@ various purposes. Typical examples are:
    ``NumberOfNonlinearNonzeros``    Number of nonlinear nonzeros
    ================================ ======================================
 
+.. rubric:: Suffices via an element parameter
+
+The suffices in the tables above can also be used through an element
+parameter with range :any:`AllMathematicalPrograms`, or a subset of it.
+The suffix then refers to the mathematical program that is the current
+value of the element parameter, both when you read the suffix and when
+you assign to it. This allows you to write code that works for several
+mathematical programs, as in:
+
+.. code-block:: aimms
+
+	ElementParameter CurrentMP {
+	    Range : AllMathematicalPrograms;
+	}
+
+	CurrentMP := 'TransportModel';
+	CurrentMP.CallbackIncumbent := 'MyCallbackProcedure';
+	solve TransportModel;
+	BestFound := CurrentMP.Incumbent;
+
+An indexed element parameter can be used in the same way. For example,
+``sum(s, ScenarioMP(s).Objective)`` adds the objective values of the
+mathematical programs referenced by ``ScenarioMP``. When the element
+parameter is empty, reading a suffix through it gives the default value
+of the suffix, and an assignment to the suffix has no effect.
+
+Suffices that do not hold a single value of a mathematical program, such
+as ``ExtendedConstraint`` and ``ExtendedVariable``, cannot be used
+through an element parameter.
+
 .. rubric:: Solver callbacks
 
 After each iteration the external solver calls back to the AIMMS system
