@@ -171,7 +171,7 @@ mathematical programs, as in:
 
 	CurrentMP := 'TransportModel';
 	CurrentMP.CallbackIncumbent := 'MyCallbackProcedure';
-	solve TransportModel;
+	solve CurrentMP;
 	BestFound := CurrentMP.Incumbent;
 
 An indexed element parameter can be used in the same way. For example,
